@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
+from rest_framework.test import APIClient
 
 from catalog.models import Category, Merchant, Product
 
@@ -167,3 +168,58 @@ class ProductListAPITests(TestCase):
 
         self.assertEqual(second.status_code, 200)
         self.assertEqual(len(second.data["results"]), 6)
+
+    def test_query_budget_is_constant_across_page_sizes_and_search(self):
+        client = APIClient()
+        client.force_authenticate(self.user)
+        params = {"merchant_id": self.merchant.pk}
+
+        # Excludes authentication/fixture setup, matching benchmark_profile.
+        with self.assertNumQueries(3):
+            response = client.get(self.url, params)
+            response.render()
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data["results"][0]["category"], "Electronics")
+
+        additional = []
+        for number in range(30):
+            category = Category.objects.create(
+                merchant=self.merchant, name=f"Category {number:02d}"
+            )
+            additional.append(
+                Product.objects.create(
+                    merchant=self.merchant,
+                    category=category,
+                    name=f"Additional Product {number:02d}",
+                    sku=f"ADD-{number:03d}",
+                    image_url="/product-images/laptop.webp",
+                )
+            )
+
+        cases = [
+            ({}, 31, [self.product, *additional[:24]], 3),
+            ({"page": 2}, 31, additional[24:], 3),
+            ({"search": "ADD-"}, 30, additional[:25], 3),
+            ({"search": "no-such-product"}, 0, [], 2),
+        ]
+        for query, count, expected, budget in cases:
+            with self.subTest(query=query):
+                with self.assertNumQueries(budget):
+                    response = client.get(self.url, {**params, **query})
+                    response.render()
+                self.assertEqual(response.status_code, 200)
+                self.assertEqual(response.data["count"], count)
+                self.assertEqual(
+                    response.data["results"],
+                    [
+                        {
+                            "id": product.pk,
+                            "name": product.name,
+                            "sku": product.sku,
+                            "status": product.status,
+                            "category": product.category.name,
+                            "image_url": product.image_url,
+                        }
+                        for product in expected
+                    ],
+                )
