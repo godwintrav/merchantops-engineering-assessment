@@ -1,0 +1,634 @@
+{
+  "schema_version": 1,
+  "sealed": true,
+  "consolidated_utc": "2026-11-15T06:00:45.051098+00:00",
+  "profile": {
+    "path": "../baseline-full/profile.json",
+    "sha256": "1f06a10759a67ca215c8fef18643922f9e37610f63697a69f2fd1cae8f00cb8d"
+  },
+  "environment": {
+    "machdep.cpu.brand_string": "Apple M5 Pro",
+    "hw.memsize": "68719476736",
+    "hw.model": "Mac17,9",
+    "docker_limits": "18 CPUs; 8319213568 bytes RAM; Engine 29.5.3",
+    "serving_mode": "Compose Django runserver DEBUG=True; Vite development server; MySQL 8.4",
+    "notes": "Local baseline. No fixture seed value independently verified. API tests use fixed-user closed workload with 200ms think time; resource stats sample backend/db/frontend, not load-generator CPU. Higher-load continuation; run manifests record current Docker limits."
+  },
+  "matrix": {
+    "started_utc": "2026-11-15T05:08:09.016451+00:00",
+    "status": "complete",
+    "environment": "Compose development baseline: Django runserver DEBUG=True, Vite dev; Docker Engine 29.5.3, 18 CPUs, 8319213568 bytes RAM; k6 Docker 1.0.0; 15s warmup + 6s drain gap + 60s measured; 200ms think time; existing seeded fixtures, original seed not independently verified; unthrottled desktop Chromium; temporary nonstaff member if requested. Docker resource samples collected every 15s during API tests.",
+    "plan": {
+      "core_cases": 4,
+      "loads": [
+        50,
+        100
+      ],
+      "repetitions": 3,
+      "api_only": true,
+      "allow_threshold_failures": true
+    },
+    "failures": [],
+    "temporary_account_removed": true,
+    "finished_utc": "2026-11-15T05:41:28.421386+00:00",
+    "completed_runs": 24,
+    "reused_runs": 0
+  },
+  "contexts": {
+    "417da2361ba6d12e": {
+      "application_commit": "0d1602b25d913cbac66dd8dedeada3920b46c142",
+      "working_tree_status": "?? AGENTS.md\n?? IMPLEMENTATION_PLAN.MD\n?? backend/catalog/management/commands/benchmark_profile.py\n?? benchmarks/",
+      "host": {
+        "system": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+        "architecture": "arm64",
+        "cpu_count": 18
+      },
+      "profile_sha256": "1f06a10759a67ca215c8fef18643922f9e37610f63697a69f2fd1cae8f00cb8d",
+      "harness_sha256": {
+        "backend/catalog/management/commands/benchmark_profile.py": "1721c71aa2f18c4b484668acc259e9f1030c7ddb31d9c93a5a5854f53c8bf44a",
+        "benchmarks/.gitignore": "c658a2d0c75d792a7b18416f0e8f9cb3ceed39e76b3f6338b421029fd356a17d",
+        "benchmarks/README.md": "1cfe2a22845a438bbdf8167ddf23795d0feb3a6b6787efe199414cea12ac70b2",
+        "benchmarks/browser/common.mjs": "ca74779d43bdc5b6fb9bf984303c56243ea6905652adc99468a040ad247334bc",
+        "benchmarks/browser/lighthouse.mjs": "f9182c122ad769ed8d66e7a203e4cd42fca1fc94455b261d91f79d14077af54d",
+        "benchmarks/browser/workflows.mjs": "2af08234ecf4358aec78807f413d6358894d55abc4ebfb14d5405ee022d3b9cf",
+        "benchmarks/k6/api.js": "e9e001c0877dbc09b36013c8a70495c2d3d9be62529369ab1048323f5310af67",
+        "benchmarks/matrix.py": "b15c6b28bd1bf13eed4f2a64354e43cce3719202f7cf653e975377b58005a315",
+        "benchmarks/package-lock.json": "e89dcaaf43e9244154593862594bd138f264e5c20f78d43e90c437d1df6c0560",
+        "benchmarks/package.json": "25a6793be4d7e9846262aa4a2a855800cbbdc72098ac81178d8ac3d1de8e5932",
+        "benchmarks/profiling/query_plans.py": "039540012f56b10ba5b5c54d4ddea28862a866545b541cbbe5b55bd7696b46dd",
+        "benchmarks/run.py": "e2b1231b540b63128cca111364f3640410e49d9aa6eb0650a8730322ee7cf6fd",
+        "benchmarks/summarize.py": "8409ddbb3277043af260b2d1eee735aa0e6020a782c7f601b1dc8553c227b733"
+      },
+      "base_url": "http://127.0.0.1:8000",
+      "frontend_url": "http://127.0.0.1:5173",
+      "environment_notes": "Compose development baseline: Django runserver DEBUG=True, Vite dev; Docker Engine 29.5.3, 18 CPUs, 8319213568 bytes RAM; k6 Docker 1.0.0; 15s warmup + 6s drain gap + 60s measured; 200ms think time; existing seeded fixtures, original seed not independently verified; unthrottled desktop Chromium; temporary nonstaff member if requested. Docker resource samples collected every 15s during API tests."
+    },
+    "20267ca97f7f0c58": {
+      "application_commit": "0d1602b25d913cbac66dd8dedeada3920b46c142",
+      "working_tree_status": "?? AGENTS.md\n?? IMPLEMENTATION_PLAN.MD\n?? backend/catalog/management/commands/benchmark_profile.py\n?? benchmarks/",
+      "host": {
+        "system": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+        "architecture": "arm64",
+        "cpu_count": 18
+      },
+      "profile_sha256": "1f06a10759a67ca215c8fef18643922f9e37610f63697a69f2fd1cae8f00cb8d",
+      "harness_sha256": {
+        "backend/catalog/management/commands/benchmark_profile.py": "1721c71aa2f18c4b484668acc259e9f1030c7ddb31d9c93a5a5854f53c8bf44a",
+        "benchmarks/.gitignore": "c658a2d0c75d792a7b18416f0e8f9cb3ceed39e76b3f6338b421029fd356a17d",
+        "benchmarks/README.md": "1cfe2a22845a438bbdf8167ddf23795d0feb3a6b6787efe199414cea12ac70b2",
+        "benchmarks/browser/common.mjs": "ca74779d43bdc5b6fb9bf984303c56243ea6905652adc99468a040ad247334bc",
+        "benchmarks/browser/lighthouse.mjs": "f9182c122ad769ed8d66e7a203e4cd42fca1fc94455b261d91f79d14077af54d",
+        "benchmarks/browser/workflows.mjs": "2af08234ecf4358aec78807f413d6358894d55abc4ebfb14d5405ee022d3b9cf",
+        "benchmarks/k6/api.js": "e9e001c0877dbc09b36013c8a70495c2d3d9be62529369ab1048323f5310af67",
+        "benchmarks/matrix.py": "b15c6b28bd1bf13eed4f2a64354e43cce3719202f7cf653e975377b58005a315",
+        "benchmarks/package-lock.json": "e89dcaaf43e9244154593862594bd138f264e5c20f78d43e90c437d1df6c0560",
+        "benchmarks/package.json": "25a6793be4d7e9846262aa4a2a855800cbbdc72098ac81178d8ac3d1de8e5932",
+        "benchmarks/profiling/query_plans.py": "039540012f56b10ba5b5c54d4ddea28862a866545b541cbbe5b55bd7696b46dd",
+        "benchmarks/run.py": "e2b1231b540b63128cca111364f3640410e49d9aa6eb0650a8730322ee7cf6fd",
+        "benchmarks/summarize.py": "b94871555a46e412653bb9cac7fc2c891d6ccb7a008203cd1943a2409e847a5a"
+      },
+      "base_url": "http://127.0.0.1:8000",
+      "frontend_url": "http://127.0.0.1:5173",
+      "environment_notes": "Compose development baseline: Django runserver DEBUG=True, Vite dev; Docker Engine 29.5.3, 18 CPUs, 8319213568 bytes RAM; k6 Docker 1.0.0; 15s warmup + 6s drain gap + 60s measured; 200ms think time; existing seeded fixtures, original seed not independently verified; unthrottled desktop Chromium; temporary nonstaff member if requested. Docker resource samples collected every 15s during API tests."
+    },
+    "ab148fb47ba4fa0d": {
+      "application_commit": "0d1602b25d913cbac66dd8dedeada3920b46c142",
+      "working_tree_status": "?? AGENTS.md\n?? IMPLEMENTATION_PLAN.MD\n?? backend/catalog/management/commands/benchmark_profile.py\n?? benchmarks/",
+      "host": {
+        "system": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+        "architecture": "arm64",
+        "cpu_count": 18
+      },
+      "profile_sha256": "1f06a10759a67ca215c8fef18643922f9e37610f63697a69f2fd1cae8f00cb8d",
+      "harness_sha256": {
+        "backend/catalog/management/commands/benchmark_profile.py": "1721c71aa2f18c4b484668acc259e9f1030c7ddb31d9c93a5a5854f53c8bf44a",
+        "benchmarks/.gitignore": "c658a2d0c75d792a7b18416f0e8f9cb3ceed39e76b3f6338b421029fd356a17d",
+        "benchmarks/README.md": "7ef896e158f4c3893e5f1252197788e18a54f8e00862b04869cc1d6e3472ae0f",
+        "benchmarks/browser/common.mjs": "ca74779d43bdc5b6fb9bf984303c56243ea6905652adc99468a040ad247334bc",
+        "benchmarks/browser/lighthouse.mjs": "f9182c122ad769ed8d66e7a203e4cd42fca1fc94455b261d91f79d14077af54d",
+        "benchmarks/browser/workflows.mjs": "2af08234ecf4358aec78807f413d6358894d55abc4ebfb14d5405ee022d3b9cf",
+        "benchmarks/k6/api.js": "e9e001c0877dbc09b36013c8a70495c2d3d9be62529369ab1048323f5310af67",
+        "benchmarks/matrix.py": "b15c6b28bd1bf13eed4f2a64354e43cce3719202f7cf653e975377b58005a315",
+        "benchmarks/package-lock.json": "e89dcaaf43e9244154593862594bd138f264e5c20f78d43e90c437d1df6c0560",
+        "benchmarks/package.json": "25a6793be4d7e9846262aa4a2a855800cbbdc72098ac81178d8ac3d1de8e5932",
+        "benchmarks/profiling/query_plans.py": "039540012f56b10ba5b5c54d4ddea28862a866545b541cbbe5b55bd7696b46dd",
+        "benchmarks/run.py": "e2b1231b540b63128cca111364f3640410e49d9aa6eb0650a8730322ee7cf6fd",
+        "benchmarks/summarize.py": "8409ddbb3277043af260b2d1eee735aa0e6020a782c7f601b1dc8553c227b733"
+      },
+      "base_url": "http://127.0.0.1:8000",
+      "frontend_url": "http://127.0.0.1:5173",
+      "environment_notes": "Compose development baseline: Django runserver DEBUG=True, Vite dev; Docker Engine 29.5.3, 18 CPUs, 8319213568 bytes RAM; k6 Docker 1.0.0; 15s warmup + 6s drain gap + 60s measured; 200ms think time; existing seeded fixtures, original seed not independently verified; unthrottled desktop Chromium; temporary nonstaff member if requested. Docker resource samples collected every 15s during API tests."
+    },
+    "bd8927f62eef4b61": {
+      "application_commit": "0d1602b25d913cbac66dd8dedeada3920b46c142",
+      "working_tree_status": "?? AGENTS.md\n?? IMPLEMENTATION_PLAN.MD\n?? backend/catalog/management/commands/benchmark_profile.py\n?? benchmarks/",
+      "host": {
+        "system": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+        "architecture": "arm64",
+        "cpu_count": 18
+      },
+      "profile_sha256": "1f06a10759a67ca215c8fef18643922f9e37610f63697a69f2fd1cae8f00cb8d",
+      "harness_sha256": {
+        "backend/catalog/management/commands/benchmark_profile.py": "1721c71aa2f18c4b484668acc259e9f1030c7ddb31d9c93a5a5854f53c8bf44a",
+        "benchmarks/.gitignore": "c658a2d0c75d792a7b18416f0e8f9cb3ceed39e76b3f6338b421029fd356a17d",
+        "benchmarks/README.md": "1cfe2a22845a438bbdf8167ddf23795d0feb3a6b6787efe199414cea12ac70b2",
+        "benchmarks/browser/common.mjs": "ca74779d43bdc5b6fb9bf984303c56243ea6905652adc99468a040ad247334bc",
+        "benchmarks/browser/lighthouse.mjs": "f9182c122ad769ed8d66e7a203e4cd42fca1fc94455b261d91f79d14077af54d",
+        "benchmarks/browser/workflows.mjs": "2af08234ecf4358aec78807f413d6358894d55abc4ebfb14d5405ee022d3b9cf",
+        "benchmarks/k6/api.js": "e9e001c0877dbc09b36013c8a70495c2d3d9be62529369ab1048323f5310af67",
+        "benchmarks/matrix.py": "b15c6b28bd1bf13eed4f2a64354e43cce3719202f7cf653e975377b58005a315",
+        "benchmarks/package-lock.json": "e89dcaaf43e9244154593862594bd138f264e5c20f78d43e90c437d1df6c0560",
+        "benchmarks/package.json": "25a6793be4d7e9846262aa4a2a855800cbbdc72098ac81178d8ac3d1de8e5932",
+        "benchmarks/profiling/query_plans.py": "039540012f56b10ba5b5c54d4ddea28862a866545b541cbbe5b55bd7696b46dd",
+        "benchmarks/run.py": "e2b1231b540b63128cca111364f3640410e49d9aa6eb0650a8730322ee7cf6fd",
+        "benchmarks/summarize.py": "b94871555a46e412653bb9cac7fc2c891d6ccb7a008203cd1943a2409e847a5a"
+      },
+      "base_url": "http://127.0.0.1:8002",
+      "frontend_url": "http://127.0.0.1:5173",
+      "environment_notes": "UNRECORDED: document Docker limits, serving mode, hardware, fixture seed"
+    }
+  },
+  "runs": [
+    {
+      "run_id": "api-catalogue_page_1-100vu-01",
+      "context": "417da2361ba6d12e",
+      "started_utc": "2026-11-15T05:24:46.372108+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "01",
+        "case": "catalogue_page_1",
+        "vus": 100,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:26:08.695279+00:00",
+      "original_result_sha256": "a184601813901e55ad046129f55c13505487829fcd4114d77f4369fdb4544dcf"
+    },
+    {
+      "run_id": "api-catalogue_page_1-100vu-02",
+      "context": "417da2361ba6d12e",
+      "started_utc": "2026-11-15T05:26:09.368515+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "02",
+        "case": "catalogue_page_1",
+        "vus": 100,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:27:31.707884+00:00",
+      "original_result_sha256": "dce0390ca7f929018b5a5f0471b58a1242f169e3313c268873236133b1791c03"
+    },
+    {
+      "run_id": "api-catalogue_page_1-100vu-03",
+      "context": "417da2361ba6d12e",
+      "started_utc": "2026-11-15T05:27:32.226247+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "03",
+        "case": "catalogue_page_1",
+        "vus": 100,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:28:54.560679+00:00",
+      "original_result_sha256": "bdb204a784e69f7ddb9704cf12e63913ab1c786d2920499a6178c816c4ef3d2f"
+    },
+    {
+      "run_id": "api-catalogue_page_1-50vu-01",
+      "context": "20267ca97f7f0c58",
+      "started_utc": "2026-11-15T05:08:09.733989+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "01",
+        "case": "catalogue_page_1",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:09:32.008579+00:00",
+      "original_result_sha256": "e233387e6d9e42501eabc4c360c4e03e67920c2352195ada58b01ebee1081873"
+    },
+    {
+      "run_id": "api-catalogue_page_1-50vu-02",
+      "context": "417da2361ba6d12e",
+      "started_utc": "2026-11-15T05:09:32.883701+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "02",
+        "case": "catalogue_page_1",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:10:55.038609+00:00",
+      "original_result_sha256": "ba292038a952852f25b7aa8c9bf1b860276cb366b5db493d3b67a36509cfa9cd"
+    },
+    {
+      "run_id": "api-catalogue_page_1-50vu-03",
+      "context": "417da2361ba6d12e",
+      "started_utc": "2026-11-15T05:10:56.129831+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "03",
+        "case": "catalogue_page_1",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:12:18.263556+00:00",
+      "original_result_sha256": "8dcf863f8f3f39377ea9adaa25cd71e50fe13ee25215cb686ccb43c50aa7f4ae"
+    },
+    {
+      "run_id": "api-editor_25_variants-100vu-01",
+      "context": "417da2361ba6d12e",
+      "started_utc": "2026-11-15T05:33:04.105172+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "01",
+        "case": "editor_25_variants",
+        "vus": 100,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:34:26.687588+00:00",
+      "original_result_sha256": "ddcd339c4dca7e01fbfce96d266520cc75f83a22d1ef7f4c6fd1fe8afe3fe366"
+    },
+    {
+      "run_id": "api-editor_25_variants-100vu-02",
+      "context": "ab148fb47ba4fa0d",
+      "started_utc": "2026-11-15T05:34:27.244251+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "02",
+        "case": "editor_25_variants",
+        "vus": 100,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:35:49.917010+00:00",
+      "original_result_sha256": "f178b1b3bb691c03c03553a8d9ba8575a0b03e0900dd5d5bf578a5608bb587d0"
+    },
+    {
+      "run_id": "api-editor_25_variants-100vu-03",
+      "context": "ab148fb47ba4fa0d",
+      "started_utc": "2026-11-15T05:35:50.147819+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "03",
+        "case": "editor_25_variants",
+        "vus": 100,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:37:12.689687+00:00",
+      "original_result_sha256": "d665e2fb4ddf36ba23ff32cffab16c1cd17237b4c588900994fc96ed7318ef7d"
+    },
+    {
+      "run_id": "api-editor_25_variants-50vu-01",
+      "context": "417da2361ba6d12e",
+      "started_utc": "2026-11-15T05:16:28.201397+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "01",
+        "case": "editor_25_variants",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:17:50.468608+00:00",
+      "original_result_sha256": "4f49a8ac432ff3bae4e30062715f98baa19f943259aa6f7eb74d7b60b24157b8"
+    },
+    {
+      "run_id": "api-editor_25_variants-50vu-02",
+      "context": "417da2361ba6d12e",
+      "started_utc": "2026-11-15T05:17:51.117339+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "02",
+        "case": "editor_25_variants",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:19:13.391582+00:00",
+      "original_result_sha256": "77055d96875622b7fa5373530a7a8de9806711973a0de42561f0b677fec220e7"
+    },
+    {
+      "run_id": "api-editor_25_variants-50vu-03",
+      "context": "417da2361ba6d12e",
+      "started_utc": "2026-11-15T05:19:14.030109+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "03",
+        "case": "editor_25_variants",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:20:36.233122+00:00",
+      "original_result_sha256": "4e80debbfd1d703c1b0478eeb789022d5ef24cf1599f2cdd730691170950bd6b"
+    },
+    {
+      "run_id": "api-editor_2_variants-100vu-01",
+      "context": "417da2361ba6d12e",
+      "started_utc": "2026-11-15T05:28:55.141860+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "01",
+        "case": "editor_2_variants",
+        "vus": 100,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:30:17.204444+00:00",
+      "original_result_sha256": "1aa119a7a57703cce9ce38984696ef51e6b577a23d38a911a2381df4865c1f38"
+    },
+    {
+      "run_id": "api-editor_2_variants-100vu-02",
+      "context": "417da2361ba6d12e",
+      "started_utc": "2026-11-15T05:30:18.364531+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "02",
+        "case": "editor_2_variants",
+        "vus": 100,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:31:40.425558+00:00",
+      "original_result_sha256": "39fb4cefb12b4558239f4c49950bb6891ed46fca79b302a1c6a1582408cf1d84"
+    },
+    {
+      "run_id": "api-editor_2_variants-100vu-03",
+      "context": "417da2361ba6d12e",
+      "started_utc": "2026-11-15T05:31:41.234340+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "03",
+        "case": "editor_2_variants",
+        "vus": 100,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:33:03.345058+00:00",
+      "original_result_sha256": "f5f74da52f517bfae02b977bda94693586d10590d4828fede613de5e268d8d07"
+    },
+    {
+      "run_id": "api-editor_2_variants-50vu-01",
+      "context": "417da2361ba6d12e",
+      "started_utc": "2026-11-15T05:12:19.116566+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "01",
+        "case": "editor_2_variants",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:13:41.211756+00:00",
+      "original_result_sha256": "6606854dcfdd4648c4c1143410f49ed450cadba2d3b53c1a1b18f61cd359322c"
+    },
+    {
+      "run_id": "api-editor_2_variants-50vu-02",
+      "context": "417da2361ba6d12e",
+      "started_utc": "2026-11-15T05:13:42.049947+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "02",
+        "case": "editor_2_variants",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:15:04.054107+00:00",
+      "original_result_sha256": "a83d6a1861e961492896a93a79f89311cb0b46fffe646c84528596af39cc555d"
+    },
+    {
+      "run_id": "api-editor_2_variants-50vu-03",
+      "context": "417da2361ba6d12e",
+      "started_utc": "2026-11-15T05:15:04.965645+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "03",
+        "case": "editor_2_variants",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:16:27.194598+00:00",
+      "original_result_sha256": "cd8f5c4722566c2cd568dc48f813ad4b09487a0f1918431f5afc368b28e93030"
+    },
+    {
+      "run_id": "api-editor_50_variants-100vu-01",
+      "context": "ab148fb47ba4fa0d",
+      "started_utc": "2026-11-15T05:37:13.108017+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "01",
+        "case": "editor_50_variants",
+        "vus": 100,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:38:35.954704+00:00",
+      "original_result_sha256": "bfdc5b2dea4ebbdaeea6bd80013ff60f2cd0836759263a8882e780b4c8555537"
+    },
+    {
+      "run_id": "api-editor_50_variants-100vu-02",
+      "context": "ab148fb47ba4fa0d",
+      "started_utc": "2026-11-15T05:38:36.327096+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "02",
+        "case": "editor_50_variants",
+        "vus": 100,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:39:59.409916+00:00",
+      "original_result_sha256": "77d799fb0cdbdc7c48d48dd4df1425688309655dae0f7e85bb0e86981363a788"
+    },
+    {
+      "run_id": "api-editor_50_variants-100vu-03",
+      "context": "ab148fb47ba4fa0d",
+      "started_utc": "2026-11-15T05:40:02.285781+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "03",
+        "case": "editor_50_variants",
+        "vus": 100,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:41:25.213560+00:00",
+      "original_result_sha256": "022af5f0a2df193549d010ea9e4dced39a6549d644c181d2695bcb8287e97816"
+    },
+    {
+      "run_id": "api-editor_50_variants-50vu-01",
+      "context": "417da2361ba6d12e",
+      "started_utc": "2026-11-15T05:20:37.231647+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "01",
+        "case": "editor_50_variants",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:21:59.724338+00:00",
+      "original_result_sha256": "90c669b41ec4e99aa570af5e1e8c64a8b4b799fbef9495e4083cbe9dc234feab"
+    },
+    {
+      "run_id": "api-editor_50_variants-50vu-02",
+      "context": "417da2361ba6d12e",
+      "started_utc": "2026-11-15T05:22:00.146020+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "02",
+        "case": "editor_50_variants",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:23:22.655499+00:00",
+      "original_result_sha256": "8c23017fb4186349f390a2e59cdf029b3d1e66fea27699619cc402f2aebb1bc9"
+    },
+    {
+      "run_id": "api-editor_50_variants-50vu-03",
+      "context": "417da2361ba6d12e",
+      "started_utc": "2026-11-15T05:23:23.045893+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-stress",
+        "run": "03",
+        "case": "editor_50_variants",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:24:45.604717+00:00",
+      "original_result_sha256": "2bad4550e0cfa9b02bfa8f19bf2867022fc3384653846677fd7ed585048554e2"
+    },
+    {
+      "run_id": "profile",
+      "context": "bd8927f62eef4b61",
+      "started_utc": "2026-11-15T05:07:26.237025+00:00",
+      "arguments": {
+        "action": "profile",
+        "label": "baseline-stress",
+        "run": "01",
+        "case": "catalogue_page_1",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": false
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-15T05:07:26.258502+00:00",
+      "original_result_sha256": "1f06a10759a67ca215c8fef18643922f9e37610f63697a69f2fd1cae8f00cb8d"
+    }
+  ],
+  "notes": [
+    "contexts pool identical metadata; each run references its exact original context.",
+    "Run arguments, timestamps, exit codes and original result hashes are preserved.",
+    "API rows retain measured metrics; setup/warm-up/native duplicate metrics are intentionally omitted.",
+    "Successful console logs, checkpoints and private Lighthouse dumps are not retained."
+  ]
+}

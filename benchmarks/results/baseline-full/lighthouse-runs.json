@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "runs": [
+    {
+      "run_id": "lighthouse-01",
+      "data": {
+        "schema_version": 1,
+        "lighthouse_version": "13.6.0",
+        "final_url": "http://127.0.0.1:5173/",
+        "profile": "desktop, unthrottled; existing authenticated session; browser cache not reset",
+        "metrics": {
+          "largest-contentful-paint": {
+            "value": 64.467,
+            "unit": "millisecond"
+          },
+          "cumulative-layout-shift": {
+            "value": 0,
+            "unit": "unitless"
+          },
+          "total-blocking-time": {
+            "value": 0,
+            "unit": "millisecond"
+          },
+          "first-contentful-paint": {
+            "value": 64.467,
+            "unit": "millisecond"
+          }
+        },
+        "note": "Supplementary initial-load diagnostics; does not establish catalogue readiness. Raw reports require manual sanitization."
+      }
+    },
+    {
+      "run_id": "lighthouse-02",
+      "data": {
+        "schema_version": 1,
+        "lighthouse_version": "13.6.0",
+        "final_url": "http://127.0.0.1:5173/",
+        "profile": "desktop, unthrottled; existing authenticated session; browser cache not reset",
+        "metrics": {
+          "largest-contentful-paint": {
+            "value": 58.163,
+            "unit": "millisecond"
+          },
+          "cumulative-layout-shift": {
+            "value": 0,
+            "unit": "unitless"
+          },
+          "total-blocking-time": {
+            "value": 0,
+            "unit": "millisecond"
+          },
+          "first-contentful-paint": {
+            "value": 58.163,
+            "unit": "millisecond"
+          }
+        },
+        "note": "Supplementary initial-load diagnostics; does not establish catalogue readiness. Raw reports require manual sanitization."
+      }
+    },
+    {
+      "run_id": "lighthouse-03",
+      "data": {
+        "schema_version": 1,
+        "lighthouse_version": "13.6.0",
+        "final_url": "http://127.0.0.1:5173/",
+        "profile": "desktop, unthrottled; existing authenticated session; browser cache not reset",
+        "metrics": {
+          "largest-contentful-paint": {
+            "value": 74.924,
+            "unit": "millisecond"
+          },
+          "cumulative-layout-shift": {
+            "value": 0,
+            "unit": "unitless"
+          },
+          "total-blocking-time": {
+            "value": 0,
+            "unit": "millisecond"
+          },
+          "first-contentful-paint": {
+            "value": 74.924,
+            "unit": "millisecond"
+          }
+        },
+        "note": "Supplementary initial-load diagnostics; does not establish catalogue readiness. Raw reports require manual sanitization."
+      }
+    }
+  ]
+}

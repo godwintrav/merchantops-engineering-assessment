@@ -1,0 +1,1586 @@
+{
+  "schema_version": 1,
+  "sealed": true,
+  "consolidated_utc": "2026-11-15T06:00:45.001430+00:00",
+  "profile": {
+    "path": "profile.json",
+    "sha256": "1f06a10759a67ca215c8fef18643922f9e37610f63697a69f2fd1cae8f00cb8d"
+  },
+  "environment": {
+    "machdep.cpu.brand_string": "Apple M5 Pro",
+    "hw.memsize": "68719476736",
+    "hw.model": "Mac17,9",
+    "docker_limits": "18 CPUs; 8319213568 bytes RAM; Engine 29.5.3",
+    "serving_mode": "Compose Django runserver DEBUG=True; Vite development server; MySQL 8.4",
+    "notes": "Local baseline. No fixture seed value independently verified. API tests use fixed-user closed workload with 200ms think time; resource stats sample backend/db/frontend, not load-generator CPU."
+  },
+  "matrix": {
+    "started_utc": "2026-11-15T03:28:07.959682+00:00",
+    "status": "complete",
+    "environment": "Compose development baseline: Django runserver DEBUG=True, Vite dev; Docker Engine 29.5.3, 18 CPUs, 8319213568 bytes RAM; k6 Docker 1.0.0; 15s warmup + 6s drain gap + 60s measured; 200ms think time; existing seeded fixtures, original seed not independently verified; unthrottled desktop Chromium; temporary nonstaff member if requested. Docker resource samples collected every 15s during API tests.",
+    "plan": "4 core cases x 4 loads x 3 runs; secondary cases x 1 load x 3 runs; 9 fresh browser workflow samples; 3 Lighthouse runs",
+    "failures": [],
+    "temporary_account_removed": true,
+    "finished_utc": "2026-11-15T05:00:46.440460+00:00",
+    "completed_runs": 72,
+    "reused_runs": 0
+  },
+  "contexts": {
+    "2898c14b2550e414": {
+      "application_commit": "0d1602b25d913cbac66dd8dedeada3920b46c142",
+      "working_tree_status": "?? AGENTS.md\n?? IMPLEMENTATION_PLAN.MD\n?? backend/catalog/management/commands/benchmark_profile.py\n?? benchmarks/",
+      "host": {
+        "system": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+        "architecture": "arm64",
+        "cpu_count": 18
+      },
+      "profile_sha256": "1f06a10759a67ca215c8fef18643922f9e37610f63697a69f2fd1cae8f00cb8d",
+      "harness_sha256": {
+        "backend/catalog/management/commands/benchmark_profile.py": "1721c71aa2f18c4b484668acc259e9f1030c7ddb31d9c93a5a5854f53c8bf44a",
+        "benchmarks/.gitignore": "c658a2d0c75d792a7b18416f0e8f9cb3ceed39e76b3f6338b421029fd356a17d",
+        "benchmarks/README.md": "8c25a3c2a4681e91d2c3e3269556617a0eb875410a1d3b28ba412223e7c4acdd",
+        "benchmarks/browser/common.mjs": "ca74779d43bdc5b6fb9bf984303c56243ea6905652adc99468a040ad247334bc",
+        "benchmarks/browser/lighthouse.mjs": "f9182c122ad769ed8d66e7a203e4cd42fca1fc94455b261d91f79d14077af54d",
+        "benchmarks/browser/workflows.mjs": "2af08234ecf4358aec78807f413d6358894d55abc4ebfb14d5405ee022d3b9cf",
+        "benchmarks/k6/api.js": "e9e001c0877dbc09b36013c8a70495c2d3d9be62529369ab1048323f5310af67",
+        "benchmarks/matrix.py": "562f6d8a576a9c910705370f264044c765897b0e01918a2b0b7fffb2e0522ebd",
+        "benchmarks/package-lock.json": "e89dcaaf43e9244154593862594bd138f264e5c20f78d43e90c437d1df6c0560",
+        "benchmarks/package.json": "25a6793be4d7e9846262aa4a2a855800cbbdc72098ac81178d8ac3d1de8e5932",
+        "benchmarks/profiling/query_plans.py": "ade084d9861908953b797d4f837ed1c809e35a4038778250e73fa9c4a5e81656",
+        "benchmarks/run.py": "e2b1231b540b63128cca111364f3640410e49d9aa6eb0650a8730322ee7cf6fd",
+        "benchmarks/summarize.py": "5520245583f790603699acd29612af357ca046e2cfe222c20d43a8bb7e8facd9"
+      },
+      "base_url": "http://127.0.0.1:8000",
+      "frontend_url": "http://127.0.0.1:5173",
+      "environment_notes": "Compose development baseline: Django runserver DEBUG=True, Vite dev; Docker Engine 29.5.3, 18 CPUs, 8319213568 bytes RAM; k6 Docker 1.0.0; 15s warmup + 6s drain gap + 60s measured; 200ms think time; existing seeded fixtures, original seed not independently verified; unthrottled desktop Chromium; temporary nonstaff member if requested. Docker resource samples collected every 15s during API tests."
+    },
+    "f6aa4aaac95c8084": {
+      "application_commit": "0d1602b25d913cbac66dd8dedeada3920b46c142",
+      "working_tree_status": "?? AGENTS.md\n?? IMPLEMENTATION_PLAN.MD\n?? backend/catalog/management/commands/benchmark_profile.py\n?? benchmarks/",
+      "host": {
+        "system": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+        "architecture": "arm64",
+        "cpu_count": 18
+      },
+      "profile_sha256": "1f06a10759a67ca215c8fef18643922f9e37610f63697a69f2fd1cae8f00cb8d",
+      "harness_sha256": {
+        "backend/catalog/management/commands/benchmark_profile.py": "1721c71aa2f18c4b484668acc259e9f1030c7ddb31d9c93a5a5854f53c8bf44a",
+        "benchmarks/.gitignore": "c658a2d0c75d792a7b18416f0e8f9cb3ceed39e76b3f6338b421029fd356a17d",
+        "benchmarks/README.md": "1cfe2a22845a438bbdf8167ddf23795d0feb3a6b6787efe199414cea12ac70b2",
+        "benchmarks/browser/common.mjs": "ca74779d43bdc5b6fb9bf984303c56243ea6905652adc99468a040ad247334bc",
+        "benchmarks/browser/lighthouse.mjs": "f9182c122ad769ed8d66e7a203e4cd42fca1fc94455b261d91f79d14077af54d",
+        "benchmarks/browser/workflows.mjs": "2af08234ecf4358aec78807f413d6358894d55abc4ebfb14d5405ee022d3b9cf",
+        "benchmarks/k6/api.js": "e9e001c0877dbc09b36013c8a70495c2d3d9be62529369ab1048323f5310af67",
+        "benchmarks/matrix.py": "562f6d8a576a9c910705370f264044c765897b0e01918a2b0b7fffb2e0522ebd",
+        "benchmarks/package-lock.json": "e89dcaaf43e9244154593862594bd138f264e5c20f78d43e90c437d1df6c0560",
+        "benchmarks/package.json": "25a6793be4d7e9846262aa4a2a855800cbbdc72098ac81178d8ac3d1de8e5932",
+        "benchmarks/profiling/query_plans.py": "14ef649ffbec6b17ccc352fd914087307645d387577b1d04f40947d6692084cb",
+        "benchmarks/run.py": "e2b1231b540b63128cca111364f3640410e49d9aa6eb0650a8730322ee7cf6fd",
+        "benchmarks/summarize.py": "acee97f16bc495e921dacd1b18519253ce4afedc2b5659eb6da1a45fd9703448"
+      },
+      "base_url": "http://127.0.0.1:8000",
+      "frontend_url": "http://127.0.0.1:5173",
+      "environment_notes": "Compose development baseline: Django runserver DEBUG=True, Vite dev; Docker Engine 29.5.3, 18 CPUs, 8319213568 bytes RAM; k6 Docker 1.0.0; 15s warmup + 6s drain gap + 60s measured; 200ms think time; existing seeded fixtures, original seed not independently verified; unthrottled desktop Chromium; temporary nonstaff member if requested. Docker resource samples collected every 15s during API tests."
+    },
+    "b121e064abd9019b": {
+      "application_commit": "0d1602b25d913cbac66dd8dedeada3920b46c142",
+      "working_tree_status": "?? AGENTS.md\n?? IMPLEMENTATION_PLAN.MD\n?? backend/catalog/management/commands/benchmark_profile.py\n?? benchmarks/",
+      "host": {
+        "system": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+        "architecture": "arm64",
+        "cpu_count": 18
+      },
+      "profile_sha256": "1f06a10759a67ca215c8fef18643922f9e37610f63697a69f2fd1cae8f00cb8d",
+      "harness_sha256": {
+        "backend/catalog/management/commands/benchmark_profile.py": "1721c71aa2f18c4b484668acc259e9f1030c7ddb31d9c93a5a5854f53c8bf44a",
+        "benchmarks/.gitignore": "c658a2d0c75d792a7b18416f0e8f9cb3ceed39e76b3f6338b421029fd356a17d",
+        "benchmarks/README.md": "8c25a3c2a4681e91d2c3e3269556617a0eb875410a1d3b28ba412223e7c4acdd",
+        "benchmarks/browser/common.mjs": "ca74779d43bdc5b6fb9bf984303c56243ea6905652adc99468a040ad247334bc",
+        "benchmarks/browser/lighthouse.mjs": "f9182c122ad769ed8d66e7a203e4cd42fca1fc94455b261d91f79d14077af54d",
+        "benchmarks/browser/workflows.mjs": "2af08234ecf4358aec78807f413d6358894d55abc4ebfb14d5405ee022d3b9cf",
+        "benchmarks/k6/api.js": "e9e001c0877dbc09b36013c8a70495c2d3d9be62529369ab1048323f5310af67",
+        "benchmarks/matrix.py": "562f6d8a576a9c910705370f264044c765897b0e01918a2b0b7fffb2e0522ebd",
+        "benchmarks/package-lock.json": "e89dcaaf43e9244154593862594bd138f264e5c20f78d43e90c437d1df6c0560",
+        "benchmarks/package.json": "25a6793be4d7e9846262aa4a2a855800cbbdc72098ac81178d8ac3d1de8e5932",
+        "benchmarks/run.py": "e2b1231b540b63128cca111364f3640410e49d9aa6eb0650a8730322ee7cf6fd",
+        "benchmarks/summarize.py": "5520245583f790603699acd29612af357ca046e2cfe222c20d43a8bb7e8facd9"
+      },
+      "base_url": "http://127.0.0.1:8000",
+      "frontend_url": "http://127.0.0.1:5173",
+      "environment_notes": "Compose development baseline: Django runserver DEBUG=True, Vite dev; Docker Engine 29.5.3, 18 CPUs, 8319213568 bytes RAM; k6 Docker 1.0.0; 15s warmup + 6s drain gap + 60s measured; 200ms think time; existing seeded fixtures, original seed not independently verified; unthrottled desktop Chromium; temporary nonstaff member if requested. Docker resource samples collected every 15s during API tests."
+    },
+    "a99ffb5896daf6dc": {
+      "application_commit": "0d1602b25d913cbac66dd8dedeada3920b46c142",
+      "working_tree_status": "?? AGENTS.md\n?? IMPLEMENTATION_PLAN.MD\n?? backend/catalog/management/commands/benchmark_profile.py\n?? benchmarks/",
+      "host": {
+        "system": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+        "architecture": "arm64",
+        "cpu_count": 18
+      },
+      "profile_sha256": "1f06a10759a67ca215c8fef18643922f9e37610f63697a69f2fd1cae8f00cb8d",
+      "harness_sha256": {
+        "backend/catalog/management/commands/benchmark_profile.py": "1721c71aa2f18c4b484668acc259e9f1030c7ddb31d9c93a5a5854f53c8bf44a",
+        "benchmarks/.gitignore": "c658a2d0c75d792a7b18416f0e8f9cb3ceed39e76b3f6338b421029fd356a17d",
+        "benchmarks/README.md": "8c25a3c2a4681e91d2c3e3269556617a0eb875410a1d3b28ba412223e7c4acdd",
+        "benchmarks/browser/common.mjs": "ca74779d43bdc5b6fb9bf984303c56243ea6905652adc99468a040ad247334bc",
+        "benchmarks/browser/lighthouse.mjs": "f9182c122ad769ed8d66e7a203e4cd42fca1fc94455b261d91f79d14077af54d",
+        "benchmarks/browser/workflows.mjs": "2af08234ecf4358aec78807f413d6358894d55abc4ebfb14d5405ee022d3b9cf",
+        "benchmarks/k6/api.js": "e9e001c0877dbc09b36013c8a70495c2d3d9be62529369ab1048323f5310af67",
+        "benchmarks/matrix.py": "562f6d8a576a9c910705370f264044c765897b0e01918a2b0b7fffb2e0522ebd",
+        "benchmarks/package-lock.json": "e89dcaaf43e9244154593862594bd138f264e5c20f78d43e90c437d1df6c0560",
+        "benchmarks/package.json": "25a6793be4d7e9846262aa4a2a855800cbbdc72098ac81178d8ac3d1de8e5932",
+        "benchmarks/run.py": "e2b1231b540b63128cca111364f3640410e49d9aa6eb0650a8730322ee7cf6fd"
+      },
+      "base_url": "http://127.0.0.1:8000",
+      "frontend_url": "http://127.0.0.1:5173",
+      "environment_notes": "Compose development baseline: Django runserver DEBUG=True, Vite dev; Docker Engine 29.5.3, 18 CPUs, 8319213568 bytes RAM; k6 Docker 1.0.0; 15s warmup + 6s drain gap + 60s measured; 200ms think time; existing seeded fixtures, original seed not independently verified; unthrottled desktop Chromium; temporary nonstaff member if requested. Docker resource samples collected every 15s during API tests."
+    },
+    "ed718890b1583ad4": {
+      "application_commit": "0d1602b25d913cbac66dd8dedeada3920b46c142",
+      "working_tree_status": "?? AGENTS.md\n?? IMPLEMENTATION_PLAN.MD\n?? backend/catalog/management/commands/benchmark_profile.py\n?? benchmarks/",
+      "host": {
+        "system": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+        "architecture": "arm64",
+        "cpu_count": 18
+      },
+      "profile_sha256": "1f06a10759a67ca215c8fef18643922f9e37610f63697a69f2fd1cae8f00cb8d",
+      "harness_sha256": {
+        "backend/catalog/management/commands/benchmark_profile.py": "1721c71aa2f18c4b484668acc259e9f1030c7ddb31d9c93a5a5854f53c8bf44a",
+        "benchmarks/.gitignore": "c658a2d0c75d792a7b18416f0e8f9cb3ceed39e76b3f6338b421029fd356a17d",
+        "benchmarks/README.md": "8c25a3c2a4681e91d2c3e3269556617a0eb875410a1d3b28ba412223e7c4acdd",
+        "benchmarks/browser/common.mjs": "ca74779d43bdc5b6fb9bf984303c56243ea6905652adc99468a040ad247334bc",
+        "benchmarks/browser/lighthouse.mjs": "f9182c122ad769ed8d66e7a203e4cd42fca1fc94455b261d91f79d14077af54d",
+        "benchmarks/browser/workflows.mjs": "2af08234ecf4358aec78807f413d6358894d55abc4ebfb14d5405ee022d3b9cf",
+        "benchmarks/k6/api.js": "e9e001c0877dbc09b36013c8a70495c2d3d9be62529369ab1048323f5310af67",
+        "benchmarks/matrix.py": "562f6d8a576a9c910705370f264044c765897b0e01918a2b0b7fffb2e0522ebd",
+        "benchmarks/package-lock.json": "e89dcaaf43e9244154593862594bd138f264e5c20f78d43e90c437d1df6c0560",
+        "benchmarks/package.json": "25a6793be4d7e9846262aa4a2a855800cbbdc72098ac81178d8ac3d1de8e5932",
+        "benchmarks/run.py": "e2b1231b540b63128cca111364f3640410e49d9aa6eb0650a8730322ee7cf6fd"
+      },
+      "base_url": "http://127.0.0.1:8002",
+      "frontend_url": "http://127.0.0.1:5173",
+      "environment_notes": "Compose development baseline: Django runserver DEBUG=True, Vite dev; Docker Engine 29.5.3, 18 CPUs, 8319213568 bytes RAM; k6 Docker 1.0.0; 15s warmup + 6s drain gap + 60s measured; 200ms think time; existing seeded fixtures, original seed not independently verified; unthrottled desktop Chromium; temporary nonstaff member if requested. Docker resource samples collected every 15s during API tests."
+    },
+    "cd5da6a7e1a4671d": {
+      "application_commit": "0d1602b25d913cbac66dd8dedeada3920b46c142",
+      "working_tree_status": "?? AGENTS.md\n?? IMPLEMENTATION_PLAN.MD\n?? backend/catalog/management/commands/benchmark_profile.py\n?? benchmarks/",
+      "host": {
+        "system": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+        "architecture": "arm64",
+        "cpu_count": 18
+      },
+      "profile_sha256": "1f06a10759a67ca215c8fef18643922f9e37610f63697a69f2fd1cae8f00cb8d",
+      "harness_sha256": {
+        "backend/catalog/management/commands/benchmark_profile.py": "1721c71aa2f18c4b484668acc259e9f1030c7ddb31d9c93a5a5854f53c8bf44a",
+        "benchmarks/.gitignore": "c658a2d0c75d792a7b18416f0e8f9cb3ceed39e76b3f6338b421029fd356a17d",
+        "benchmarks/README.md": "8c25a3c2a4681e91d2c3e3269556617a0eb875410a1d3b28ba412223e7c4acdd",
+        "benchmarks/browser/common.mjs": "ca74779d43bdc5b6fb9bf984303c56243ea6905652adc99468a040ad247334bc",
+        "benchmarks/browser/lighthouse.mjs": "f9182c122ad769ed8d66e7a203e4cd42fca1fc94455b261d91f79d14077af54d",
+        "benchmarks/browser/workflows.mjs": "2af08234ecf4358aec78807f413d6358894d55abc4ebfb14d5405ee022d3b9cf",
+        "benchmarks/k6/api.js": "e9e001c0877dbc09b36013c8a70495c2d3d9be62529369ab1048323f5310af67",
+        "benchmarks/matrix.py": "562f6d8a576a9c910705370f264044c765897b0e01918a2b0b7fffb2e0522ebd",
+        "benchmarks/package-lock.json": "e89dcaaf43e9244154593862594bd138f264e5c20f78d43e90c437d1df6c0560",
+        "benchmarks/package.json": "25a6793be4d7e9846262aa4a2a855800cbbdc72098ac81178d8ac3d1de8e5932",
+        "benchmarks/run.py": "e2b1231b540b63128cca111364f3640410e49d9aa6eb0650a8730322ee7cf6fd"
+      },
+      "base_url": "http://127.0.0.1:8002",
+      "frontend_url": "http://127.0.0.1:5173",
+      "environment_notes": "UNRECORDED: document Docker limits, serving mode, hardware, fixture seed"
+    }
+  },
+  "runs": [
+    {
+      "run_id": "api-activity_page_1-1vu-01",
+      "context": "2898c14b2550e414",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:56:37.998955+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "activity_page_1",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:58:00.020611+00:00",
+      "original_result_sha256": "e37db91e29fb02500ca2097082537aa9e1abca3df138457c91b719352127f159"
+    },
+    {
+      "run_id": "api-activity_page_1-1vu-02",
+      "context": "2898c14b2550e414",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:58:00.932390+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "activity_page_1",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:59:22.968997+00:00",
+      "original_result_sha256": "4cc9a324586f223f4b79688595f9d781fceeaa5a64131ec72e5b1dfd88854c82"
+    },
+    {
+      "run_id": "api-activity_page_1-1vu-03",
+      "context": "f6aa4aaac95c8084",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:59:23.867537+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "activity_page_1",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T05:00:45.830063+00:00",
+      "original_result_sha256": "a9c1f478fe5081616685a1b8178561bb88975f4f19b40121d522057c201195a3"
+    },
+    {
+      "run_id": "api-catalogue_page_1-10vu-01",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:02:40.566579+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "catalogue_page_1",
+        "vus": 10,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:04:02.897394+00:00",
+      "original_result_sha256": "121d32ac20227447c062c6d62d8e2579992d2dee932328ab8767a9e3599a1094"
+    },
+    {
+      "run_id": "api-catalogue_page_1-10vu-02",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:04:03.461142+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "catalogue_page_1",
+        "vus": 10,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:05:25.557259+00:00",
+      "original_result_sha256": "1f5aeecc4d24ee32968033ed795dfe2fdfda694ec937450f9dba3f2c28333b5e"
+    },
+    {
+      "run_id": "api-catalogue_page_1-10vu-03",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:05:26.638694+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "catalogue_page_1",
+        "vus": 10,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:06:48.574416+00:00",
+      "original_result_sha256": "4c976305896a73d48d32e95f3822fd0d1a5db3d27c3f076292345bdd6293a77d"
+    },
+    {
+      "run_id": "api-catalogue_page_1-1vu-01",
+      "context": "a99ffb5896daf6dc",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:29:23.966259+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "catalogue_page_1",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:30:46.038456+00:00",
+      "original_result_sha256": "a23ed8649731dd569b51f66666a6a3f181e7e6d00f05f424d991201751a2c0b7"
+    },
+    {
+      "run_id": "api-catalogue_page_1-1vu-02",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:30:48.425427+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "catalogue_page_1",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:32:10.451755+00:00",
+      "original_result_sha256": "deeddcda3283e5e440719b0d27dd3e0a458b2ef37a437fdc8635e97b3997b6e7"
+    },
+    {
+      "run_id": "api-catalogue_page_1-1vu-03",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:32:11.605023+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "catalogue_page_1",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:33:34.031045+00:00",
+      "original_result_sha256": "dc307dec2aeb0efdac44c37129d54320d203d6470a5ca2319e2515d4e6b5b9a3"
+    },
+    {
+      "run_id": "api-catalogue_page_1-25vu-01",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:19:14.519461+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "catalogue_page_1",
+        "vus": 25,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:20:36.750315+00:00",
+      "original_result_sha256": "07116f5a68d7025b24d15f213537c9b136ff63272ef183845cf38497018c3eb4"
+    },
+    {
+      "run_id": "api-catalogue_page_1-25vu-02",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:20:37.671379+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "catalogue_page_1",
+        "vus": 25,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:21:59.751659+00:00",
+      "original_result_sha256": "5fb9385a570ce571bdaf82bfa6f44c972a7612e73737604c905c3cec1ab5ec34"
+    },
+    {
+      "run_id": "api-catalogue_page_1-25vu-03",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:22:00.613057+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "catalogue_page_1",
+        "vus": 25,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:23:22.692411+00:00",
+      "original_result_sha256": "66d012677f70e4e92be4be28b54c4e758570816da7070c272781b3195963ac28"
+    },
+    {
+      "run_id": "api-catalogue_page_1-5vu-01",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:46:01.593593+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "catalogue_page_1",
+        "vus": 5,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:47:23.702137+00:00",
+      "original_result_sha256": "6340a045c35954a751df60264d27333017616775deb7f67030b1392d318db66b"
+    },
+    {
+      "run_id": "api-catalogue_page_1-5vu-02",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:47:24.498887+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "catalogue_page_1",
+        "vus": 5,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:48:46.575201+00:00",
+      "original_result_sha256": "1329afca242fde91661b5433ee111dd0ec1e2a9b1c777d3a3997b9a8a20ac54b"
+    },
+    {
+      "run_id": "api-catalogue_page_1-5vu-03",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:48:49.462087+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "catalogue_page_1",
+        "vus": 5,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:50:11.470183+00:00",
+      "original_result_sha256": "775176c76415e60474898fc7428cfe435a6cfaa9b1553fd42b7b75a024eca0c5"
+    },
+    {
+      "run_id": "api-catalogue_page_100-1vu-01",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:39:58.867293+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "catalogue_page_100",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:41:20.851499+00:00",
+      "original_result_sha256": "dca0d737b7f6da169b70de7be5cd37f85aa5cee7042230c955ef9124c0b25917"
+    },
+    {
+      "run_id": "api-catalogue_page_100-1vu-02",
+      "context": "2898c14b2550e414",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:41:21.766649+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "catalogue_page_100",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:42:43.896833+00:00",
+      "original_result_sha256": "7fefdf4cb41c3d708906e68e16b1e220ecdd06057a644c20e32da3617b577a7b"
+    },
+    {
+      "run_id": "api-catalogue_page_100-1vu-03",
+      "context": "2898c14b2550e414",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:42:46.714496+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "catalogue_page_100",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:44:08.819893+00:00",
+      "original_result_sha256": "2fca315896b264ec03754031beacbfdb034ec46fb42503477a793dcdaf94871c"
+    },
+    {
+      "run_id": "api-catalogue_page_50-1vu-01",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:35:50.687688+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "catalogue_page_50",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:37:12.765612+00:00",
+      "original_result_sha256": "97d82d28da819e4a2f1a0b0bba178baa0326f6d79dc7968cd63fb7eedb1809a8"
+    },
+    {
+      "run_id": "api-catalogue_page_50-1vu-02",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:37:13.644179+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "catalogue_page_50",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:38:35.516644+00:00",
+      "original_result_sha256": "3270fda07237d16936e98997800bc04c4e45a8757f31c12fe82a02da6278a590"
+    },
+    {
+      "run_id": "api-catalogue_page_50-1vu-03",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:38:35.834129+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "catalogue_page_50",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:39:58.030101+00:00",
+      "original_result_sha256": "1ff75425f47d803cca5309230c7035e397d7b11d1e9e151935705d3ed0b988fe"
+    },
+    {
+      "run_id": "api-editor_25_variants-10vu-01",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:10:57.692559+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "editor_25_variants",
+        "vus": 10,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:12:19.738186+00:00",
+      "original_result_sha256": "02f076e674d41f21a59bfd47ef52f1e54004412f78c0bee3b9120276cfc2e50d"
+    },
+    {
+      "run_id": "api-editor_25_variants-10vu-02",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:12:20.596527+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "editor_25_variants",
+        "vus": 10,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:13:42.667482+00:00",
+      "original_result_sha256": "704a38bfc54e3385b914ef71d58d87090592346f3ce61848318b49bee1643b96"
+    },
+    {
+      "run_id": "api-editor_25_variants-10vu-03",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:13:43.501083+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "editor_25_variants",
+        "vus": 10,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:15:05.479822+00:00",
+      "original_result_sha256": "2a142b82ab70e6b9ddb8d62bc6ee439632cf3c32f91ba8b9af7b47a5072229a2"
+    },
+    {
+      "run_id": "api-editor_25_variants-1vu-01",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:37:42.510910+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "editor_25_variants",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:39:04.365398+00:00",
+      "original_result_sha256": "550b2b4003a298468396ebc6ef279dee0ee62133d37bedee1957a5381ada125a"
+    },
+    {
+      "run_id": "api-editor_25_variants-1vu-02",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:39:04.847365+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "editor_25_variants",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:40:26.769390+00:00",
+      "original_result_sha256": "3fc70ce6685c530a7561504d4d2ec979b277e8c59d1588c1007033c7710fe685"
+    },
+    {
+      "run_id": "api-editor_25_variants-1vu-03",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:40:27.726495+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "editor_25_variants",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:41:49.795012+00:00",
+      "original_result_sha256": "321526f2c0d5ca5b7205c93c47e0ebf48bfb9d3a574bfb41ec018d680f27c986"
+    },
+    {
+      "run_id": "api-editor_25_variants-25vu-01",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:27:32.591355+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "editor_25_variants",
+        "vus": 25,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:28:54.678321+00:00",
+      "original_result_sha256": "75b0e5858928e83e1259b0bea4bd953f4f967382b2558f34d3db6e632c2d0ef6"
+    },
+    {
+      "run_id": "api-editor_25_variants-25vu-02",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:28:55.817083+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "editor_25_variants",
+        "vus": 25,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:30:17.926439+00:00",
+      "original_result_sha256": "c222986fe66205c8c813016690fe734d215d532d2fb20f7a19412a5295fdefd3"
+    },
+    {
+      "run_id": "api-editor_25_variants-25vu-03",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:30:18.735728+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "editor_25_variants",
+        "vus": 25,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:31:40.803345+00:00",
+      "original_result_sha256": "883c7a2296e639534f45aac4841290ae333b455929b3915553b52727a72b6860"
+    },
+    {
+      "run_id": "api-editor_25_variants-5vu-01",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:54:20.630200+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "editor_25_variants",
+        "vus": 5,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:55:42.659807+00:00",
+      "original_result_sha256": "2557966c238b0402fbbcda3e66511971e0b41baa0cfc3e0e7f94b0029be63908"
+    },
+    {
+      "run_id": "api-editor_25_variants-5vu-02",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:55:43.514995+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "editor_25_variants",
+        "vus": 5,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:57:05.649399+00:00",
+      "original_result_sha256": "ed4b14056adb6bfbe1a4e4b546a3333a8465fcca31054bb7232a506b7dea4c9f"
+    },
+    {
+      "run_id": "api-editor_25_variants-5vu-03",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:57:06.700839+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "editor_25_variants",
+        "vus": 5,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:58:28.736503+00:00",
+      "original_result_sha256": "7846a0f1b048dfa3eda86faabfbdcc53be42659bedae6934fa64e5a93b8bcea3"
+    },
+    {
+      "run_id": "api-editor_2_variants-10vu-01",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:06:49.613413+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "editor_2_variants",
+        "vus": 10,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:08:11.618288+00:00",
+      "original_result_sha256": "6b0986bb34e30fe9e12047262688e4a37f28e1496ebca63095e7d4410db26b16"
+    },
+    {
+      "run_id": "api-editor_2_variants-10vu-02",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:08:12.517566+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "editor_2_variants",
+        "vus": 10,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:09:34.594405+00:00",
+      "original_result_sha256": "b24bc5ed0439ced7b526d5790bbfcef22068bf64bd1fe35cb4acdf210724721d"
+    },
+    {
+      "run_id": "api-editor_2_variants-10vu-03",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:09:34.791658+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "editor_2_variants",
+        "vus": 10,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:10:56.812851+00:00",
+      "original_result_sha256": "dca63076c16da7844d0336f439953915548b58b280ff11695c72ba39c20ebcd5"
+    },
+    {
+      "run_id": "api-editor_2_variants-1vu-01",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:33:34.503619+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "editor_2_variants",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:34:56.373375+00:00",
+      "original_result_sha256": "278ddd7c606ee00fd63cb210c0383be0e215a88152b05c87c0d5aa7a7cc07692"
+    },
+    {
+      "run_id": "api-editor_2_variants-1vu-02",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:34:56.705035+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "editor_2_variants",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:36:18.692024+00:00",
+      "original_result_sha256": "04ef49f3856c6f385e86ec5b3c32af7604853a41bfda732689b9951a206e2ac9"
+    },
+    {
+      "run_id": "api-editor_2_variants-1vu-03",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:36:19.615784+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "editor_2_variants",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:37:41.630715+00:00",
+      "original_result_sha256": "ee542488229f27cc811fafbff3752ba5be57d9af89a19cf27f89f59cc1fde217"
+    },
+    {
+      "run_id": "api-editor_2_variants-25vu-01",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:23:23.550968+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "editor_2_variants",
+        "vus": 25,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:24:45.549599+00:00",
+      "original_result_sha256": "bd3dce567fddc060173006bdb68b9e7cfb71186e127a72c1ea3ca4d888436fcf"
+    },
+    {
+      "run_id": "api-editor_2_variants-25vu-02",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:24:46.718985+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "editor_2_variants",
+        "vus": 25,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:26:08.783045+00:00",
+      "original_result_sha256": "f48019f2b4db08eb37a3e215af518863bd0192fe5fe0205131ac98847a69b8be"
+    },
+    {
+      "run_id": "api-editor_2_variants-25vu-03",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:26:09.625651+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "editor_2_variants",
+        "vus": 25,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:27:31.654242+00:00",
+      "original_result_sha256": "d1fe5561096db15f168d5e4a71db7bdd89c47b632eea27c9266134dd5684ec40"
+    },
+    {
+      "run_id": "api-editor_2_variants-5vu-01",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:50:12.497746+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "editor_2_variants",
+        "vus": 5,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:51:34.553043+00:00",
+      "original_result_sha256": "b2c99955917afcf1b2e0393260b32b0e235137691dadf95f6e2f98754c500453"
+    },
+    {
+      "run_id": "api-editor_2_variants-5vu-02",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:51:34.804804+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "editor_2_variants",
+        "vus": 5,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:52:56.846038+00:00",
+      "original_result_sha256": "b9a37b2b01b867da82a8cddfe2c70c22914caa0cd1709ed48c83bbdcfac768d0"
+    },
+    {
+      "run_id": "api-editor_2_variants-5vu-03",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:52:57.730554+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "editor_2_variants",
+        "vus": 5,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:54:19.775902+00:00",
+      "original_result_sha256": "b9bc41afa5391360a9b2b9825efa7fc47a03469d22d632cc3c394b300d842a1f"
+    },
+    {
+      "run_id": "api-editor_50_variants-10vu-01",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:15:05.882868+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "editor_50_variants",
+        "vus": 10,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:16:27.948579+00:00",
+      "original_result_sha256": "a3467d8bea9317d25216c87520cca45b84fdf62a2eb00f6cba169fc1a7f885e8"
+    },
+    {
+      "run_id": "api-editor_50_variants-10vu-02",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:16:28.713275+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "editor_50_variants",
+        "vus": 10,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:17:50.932383+00:00",
+      "original_result_sha256": "7ce40f080d357bd2322d16f011bcc0dca4e2652f11a5328e6590088f51aed728"
+    },
+    {
+      "run_id": "api-editor_50_variants-10vu-03",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:17:51.573625+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "editor_50_variants",
+        "vus": 10,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:19:13.802801+00:00",
+      "original_result_sha256": "9dfda5bd2e6a03b2565cbdb9996e7558cae194f7d2fa21cd73cd064bc68d526f"
+    },
+    {
+      "run_id": "api-editor_50_variants-1vu-01",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:41:52.686851+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "editor_50_variants",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:43:14.667344+00:00",
+      "original_result_sha256": "2c077a438658a54eaf5bbf785d3fb6014be58b5e9d43ce058ae155519fd8b920"
+    },
+    {
+      "run_id": "api-editor_50_variants-1vu-02",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:43:15.802731+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "editor_50_variants",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:44:37.723830+00:00",
+      "original_result_sha256": "b34037b00afd9c9daf268547d9641e93baf1b2b5c7dcef62bdf80cb94e8e1d53"
+    },
+    {
+      "run_id": "api-editor_50_variants-1vu-03",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:44:38.678138+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "editor_50_variants",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:46:00.863756+00:00",
+      "original_result_sha256": "a4877e403fba7616f63ea5de7d5e92df6166ce1231b550c3cda14951653dbe5c"
+    },
+    {
+      "run_id": "api-editor_50_variants-25vu-01",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:31:41.677221+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "editor_50_variants",
+        "vus": 25,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:33:03.944187+00:00",
+      "original_result_sha256": "2a227034f34dd2e8a6765d6de847f7f0fbfe9be62f87d7ab4cc221060547c53c"
+    },
+    {
+      "run_id": "api-editor_50_variants-25vu-02",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:33:04.611439+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "editor_50_variants",
+        "vus": 25,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:34:26.873084+00:00",
+      "original_result_sha256": "cf3d373cd52a1c736d28faa2b3027bf21e2600fbcccd4af41eb05172569a3f84"
+    },
+    {
+      "run_id": "api-editor_50_variants-25vu-03",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:34:27.766066+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "editor_50_variants",
+        "vus": 25,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:35:50.232335+00:00",
+      "original_result_sha256": "7a9bcd831bdb7bd5b4b0ff454e1fc4225fa959312fd0016b37c85023262a5ca3"
+    },
+    {
+      "run_id": "api-editor_50_variants-5vu-01",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:58:29.534805+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "editor_50_variants",
+        "vus": 5,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T03:59:51.554292+00:00",
+      "original_result_sha256": "9bdb68782ce0e42409aa12cd579546f125235d992f7142326113d7891a6965ff"
+    },
+    {
+      "run_id": "api-editor_50_variants-5vu-02",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:59:51.960573+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "editor_50_variants",
+        "vus": 5,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:01:14.358104+00:00",
+      "original_result_sha256": "ee9df32460ea440ed68611e3755467ce59f6e0fdebcc69b2a81d4dad9c3ab41b"
+    },
+    {
+      "run_id": "api-editor_50_variants-5vu-03",
+      "context": "b121e064abd9019b",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:01:17.505796+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "editor_50_variants",
+        "vus": 5,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:02:39.540902+00:00",
+      "original_result_sha256": "218e619cc12dc130f6e4fe275a10a107558ef3021325ba10fbdb597d68b0bab5"
+    },
+    {
+      "run_id": "api-search_common-1vu-01",
+      "context": "2898c14b2550e414",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:44:09.773901+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "search_common",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:45:31.674227+00:00",
+      "original_result_sha256": "8794768b9e7c699ee7a801fd8ab97270e357a5b47899e92d78abd1716a0e8124"
+    },
+    {
+      "run_id": "api-search_common-1vu-02",
+      "context": "2898c14b2550e414",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:45:32.689573+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "search_common",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:46:54.736150+00:00",
+      "original_result_sha256": "b0d724064983cf12162fee88e54dd73e4f78a57090418c5f2b9819acac814410"
+    },
+    {
+      "run_id": "api-search_common-1vu-03",
+      "context": "2898c14b2550e414",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:46:57.867242+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "search_common",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:48:19.761334+00:00",
+      "original_result_sha256": "8132172a013de7f5ca59550149b724ae84b901a2b3f75865aba92b5f0749ad5d"
+    },
+    {
+      "run_id": "api-search_none-1vu-01",
+      "context": "2898c14b2550e414",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:52:28.989864+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "search_none",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:53:50.944535+00:00",
+      "original_result_sha256": "850471a35ca1bafd432b669585f1599d16a799458408808c3ca2fb13fa93c078"
+    },
+    {
+      "run_id": "api-search_none-1vu-02",
+      "context": "2898c14b2550e414",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:53:51.914611+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "search_none",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:55:13.947685+00:00",
+      "original_result_sha256": "ea01131f54ebcfaf85cbf7a2977f1946ea3c91a763b521eb0b88fe901dec0707"
+    },
+    {
+      "run_id": "api-search_none-1vu-03",
+      "context": "2898c14b2550e414",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:55:14.837959+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "search_none",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:56:36.903010+00:00",
+      "original_result_sha256": "17af1e14c1b6f100bfe506d202bf34fb0d01f6c4dac9702eac3cb4b624089429"
+    },
+    {
+      "run_id": "api-search_selective-1vu-01",
+      "context": "2898c14b2550e414",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:48:20.906147+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "search_selective",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:49:42.889870+00:00",
+      "original_result_sha256": "f183cf84ccd5ebda8b77e6b071adb85d0318c386f2664e669aef508a71c16638"
+    },
+    {
+      "run_id": "api-search_selective-1vu-02",
+      "context": "2898c14b2550e414",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:49:43.803083+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "search_selective",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:51:05.761016+00:00",
+      "original_result_sha256": "d416797acd1adf4f16346b25abc79c6d3744c5a8d2406b5fafe1d46067a7bd98"
+    },
+    {
+      "run_id": "api-search_selective-1vu-03",
+      "context": "2898c14b2550e414",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T04:51:05.989380+00:00",
+      "arguments": {
+        "action": "api",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "search_selective",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "finished_utc": "2026-11-15T04:52:28.359761+00:00",
+      "original_result_sha256": "c352f4a424c86331f03db90b694890986f25dc3fa2a3a498d4fc064cd8f0215d"
+    },
+    {
+      "run_id": "browser-02",
+      "context": "ed718890b1583ad4",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:28:08.603201+00:00",
+      "arguments": {
+        "action": "browser",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "catalogue_page_1",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": false
+      },
+      "finished_utc": "2026-11-15T03:28:13.663377+00:00",
+      "original_result_sha256": "38b920f3a88bd27fe5a97843d40cc1e9ce58a8b9004de31a9cd78af84b499de3"
+    },
+    {
+      "run_id": "browser-03",
+      "context": "ed718890b1583ad4",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:28:14.654421+00:00",
+      "arguments": {
+        "action": "browser",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "catalogue_page_1",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": false
+      },
+      "finished_utc": "2026-11-15T03:28:19.834358+00:00",
+      "original_result_sha256": "f2f71174bd17df0e5166e2a16b66fbe95a21b17ab2edd9eb6bce562ab607ddb6"
+    },
+    {
+      "run_id": "browser-04",
+      "context": "ed718890b1583ad4",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:28:20.690514+00:00",
+      "arguments": {
+        "action": "browser",
+        "label": "baseline-full",
+        "run": "04",
+        "case": "catalogue_page_1",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": false
+      },
+      "finished_utc": "2026-11-15T03:28:25.855761+00:00",
+      "original_result_sha256": "0dde0acc34da030bc922bb21c0e314ebbb1d01aee7209707708faa672479d17d"
+    },
+    {
+      "run_id": "lighthouse-01",
+      "context": "ed718890b1583ad4",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:28:26.691569+00:00",
+      "arguments": {
+        "action": "lighthouse",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "catalogue_page_1",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": false
+      },
+      "finished_utc": "2026-11-15T03:28:45.002837+00:00",
+      "original_result_sha256": "369117dfdf424c73452591924b79dae5da66d9f9f5bb24e2a1ff89dc44aba3fe"
+    },
+    {
+      "run_id": "lighthouse-02",
+      "context": "ed718890b1583ad4",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:28:45.771382+00:00",
+      "arguments": {
+        "action": "lighthouse",
+        "label": "baseline-full",
+        "run": "02",
+        "case": "catalogue_page_1",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": false
+      },
+      "finished_utc": "2026-11-15T03:29:04.053677+00:00",
+      "original_result_sha256": "d35e09e597a5ea2677b9a8a7e631a36dd9bd4b6c221e6c48ad788d9214019673"
+    },
+    {
+      "run_id": "lighthouse-03",
+      "context": "ed718890b1583ad4",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:29:04.848701+00:00",
+      "arguments": {
+        "action": "lighthouse",
+        "label": "baseline-full",
+        "run": "03",
+        "case": "catalogue_page_1",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": false
+      },
+      "finished_utc": "2026-11-15T03:29:23.129425+00:00",
+      "original_result_sha256": "5779b93fdbaa7a2c0158ec2d5b5e632d385389168067314ecdad4a66561e14e6"
+    },
+    {
+      "run_id": "profile",
+      "context": "cd5da6a7e1a4671d",
+      "exit_code": 0,
+      "started_utc": "2026-11-15T03:27:59.460329+00:00",
+      "arguments": {
+        "action": "profile",
+        "label": "baseline-full",
+        "run": "01",
+        "case": "catalogue_page_1",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": false
+      },
+      "finished_utc": "2026-11-15T03:27:59.478756+00:00",
+      "original_result_sha256": "1f06a10759a67ca215c8fef18643922f9e37610f63697a69f2fd1cae8f00cb8d"
+    }
+  ],
+  "notes": [
+    "contexts pool identical metadata; each run references its exact original context.",
+    "Run arguments, timestamps, exit codes and original result hashes are preserved.",
+    "API rows retain measured metrics; setup/warm-up/native duplicate metrics are intentionally omitted.",
+    "Successful console logs, checkpoints and private Lighthouse dumps are not retained."
+  ]
+}

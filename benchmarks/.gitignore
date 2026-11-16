@@ -1,0 +1,6 @@
+# Session-bearing diagnostics must be reviewed and sanitized before sharing.
+*.private/
+playwright-report/
+test-results/
+*.har
+*.zip
