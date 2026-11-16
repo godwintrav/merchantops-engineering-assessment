@@ -32,14 +32,21 @@ def main():
     parser.add_argument("--temporary-user", action="store_true")
     parser.add_argument("--loads", type=int, nargs="+", default=[1, 5, 10, 25])
     parser.add_argument(
-        "--api-only", action="store_true", help="Only the four core API cases"
+        "--api-only",
+        action="store_true",
+        help="Skip browser/Lighthouse; run core cases or the explicit --cases selection",
     )
     parser.add_argument(
         "--allow-threshold-failures",
         action="store_true",
         help="Record k6 threshold failures and continue stress diagnostics",
     )
+    parser.add_argument(
+        "--cases", nargs="+", help="Selected API scenarios; requires --api-only"
+    )
     args = parser.parse_args()
+    if args.cases and not args.api_only:
+        parser.error("--cases requires --api-only")
     if any(load < 1 for load in args.loads) or len(set(args.loads)) != len(args.loads):
         parser.error("Loads must be distinct positive integers")
     if not args.label.replace("-", "").replace("_", "").isalnum():
@@ -50,6 +57,19 @@ def main():
             "Consolidated evidence is sealed; choose a new label for measurements"
         )
     profile = json.loads((folder / "profile.json").read_text())
+    core = [
+        "catalogue_page_1",
+        "editor_2_variants",
+        "editor_25_variants",
+        "editor_50_variants",
+    ]
+    selected_cases = args.cases or core
+    known_cases = {scenario["name"] for scenario in profile["scenarios"]}
+    if (
+        len(set(selected_cases)) != len(selected_cases)
+        or not set(selected_cases) <= known_cases
+    ):
+        parser.error("Cases must be distinct scenario names from profile.json")
     logs = folder / "logs"
     logs.mkdir(exist_ok=True)
     stamp = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
@@ -74,7 +94,8 @@ def main():
         "environment": env["BENCH_ENVIRONMENT_NOTES"],
         "temporary_username": None,
         "plan": {
-            "core_cases": 4,
+            "core_cases": len(selected_cases),
+            "cases": selected_cases,
             "loads": args.loads,
             "repetitions": 3,
             "api_only": args.api_only,
@@ -257,14 +278,8 @@ merchant.members.add(user)
                 execute("browser", f"{number:02d}")
             for number in (1, 2, 3):
                 execute("lighthouse", f"{number:02d}")
-        core = [
-            "catalogue_page_1",
-            "editor_2_variants",
-            "editor_25_variants",
-            "editor_50_variants",
-        ]
         for vus in args.loads:
-            for case in core:
+            for case in selected_cases:
                 for number in (1, 2, 3):
                     execute("api", f"{number:02d}", case, vus)
         if not args.api_only:

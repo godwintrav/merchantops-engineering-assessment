@@ -17,7 +17,7 @@ Removing redundant requests and batching relationship access took priority over 
 
 **Method:** three repetitions per API scenario/load; core cases at 1/5/10/25/50/100 virtual users, secondary search/pagination/activity cases at one user. Each run used 15s warm-up, a 6s drain gap, 60s measurement and 200ms think time. Authentication/preflight and SQL profiling were outside measured endpoint metrics. Validations checked response content, not only HTTP status.
 
-Each revision retains 90 selected API runs: **349,602 baseline requests and 528,199 optimized requests**, with zero measured HTTP/content failures in the selected evidence. Fixture counts/IDs match: 2,500 merchant products, 5,071 variants and one activity record. Manifests retain exact timestamps, execution contexts, script hashes and source snapshots, including the optimized application's uncommitted patch. The baseline reference is `0d1602b`; the measured optimized source is `6fb8ac4` plus its recorded patch. Read timings were captured before the inventory UI/reliability extension; they are not new load measurements of that extension.
+The original read-optimization comparison retains 90 selected API runs per revision: **349,602 baseline requests and 528,199 optimized requests**, with zero measured HTTP/content failures in the selected evidence. Fixture counts/IDs match: 2,500 merchant products, 5,071 variants and one activity record. Manifests retain exact timestamps, execution contexts, script hashes and source snapshots, including the optimized application's uncommitted patch. The baseline reference is `0d1602b`; the measured optimized source is `6fb8ac4` plus its recorded patch. Read timings were captured before the inventory UI/reliability extension; they are not new load measurements of that extension.
 
 The retained environment uses Django runserver (`DEBUG=True`), Vite dev and MySQL 8.4.13 on an Apple M5 Pro host, with Docker allocated 18 CPUs/~7.75 GiB. Recorded backend versions and primary workload fingerprints match. Exact baseline frontend Node patch was not recorded; prior host/socket/cache state was not fully controlled. Stress manifests identify the source executions of the retained 50/100-user observations.
 
@@ -44,6 +44,20 @@ Playwright timing captured nine observations per workflow, measuring action-to-v
 Search includes its 300ms debounce. The ordinary-editor browser median increased 15.17%. Three warm, unthrottled Lighthouse audits also showed LCP/FCP increasing from 64.47 to 77.67 ms, with CLS/TBT remaining zero. These initial-paint diagnostics can precede catalogue readiness and are not field Core Web Vitals.
 
 Reproduce workloads using [benchmark instructions](benchmarks/README.md). Review [all comparisons](benchmarks/results/comparison.md), [high-load tables](benchmarks/results/stress-comparison.md), and manifests for [baseline full](benchmarks/results/baseline-full/manifest.json), [baseline stress](benchmarks/results/baseline-stress/manifest.json), [optimized full](benchmarks/results/optimized-full/manifest.json) and [optimized stress](benchmarks/results/optimized-stress/manifest.json). Consolidation verified metrics, resources, browser payloads and reconstructed provenance against the working files before pruning duplicate artifacts. Baseline evidence remains unchanged.
+
+### Focused Index Study: 50 VUs Only
+
+Experimental indexes on Product `(merchant_id, id)` and AuditLog `(product_id, created_at DESC, id DESC)` were added temporarily for evaluation and then removed from the final implementation. A separate focused study repeated catalogue first/deep pages and activity three times before and after, at **50 VUs only**: 18 runs, 127,326 before/127,189 after requests, with zero HTTP/content failures or interrupted iterations. Fixtures/query budgets were unchanged and temporary accounts were removed.
+
+| API | Before p95 range (ms) | After p95 range (ms) | Median req/s before → after |
+| --- | ---: | ---: | ---: |
+| Catalogue first page | 13.00–19.18 | 14.23–20.85 | 240.49 → 240.90 |
+| Catalogue deep page | 36.58–38.31 | 36.50–39.54 | 226.23 → 225.65 |
+| Activity | 11.86–16.30 | 12.82–19.84 | 240.38 → 240.61 |
+
+**No clear end-to-end speedup was demonstrated at this dataset size.** During the experimental after-phase, MySQL selected the product index for the separately inspected pagination COUNT, but retained the previous catalogue data-query paths, including deep-page sorting. Activity selected the new index yet still sorted after the actor join. A pre-index COUNT plan was not captured, so no COUNT speedup is claimed. Activity has only six records; large-history benefits and write-maintenance costs remain unquantified. The indexes were left out because the before/after comparison did not demonstrate a clear query-time improvement, while index storage and write-maintenance costs would remain. They should be reconsidered only with larger representative datasets and repeatable measured benefits.
+
+[Full index evidence](benchmarks/results/index-comparison.md) retains per-run measurements, actual schema/index definitions, query plans and resources independently of the original results. Expanded/consolidated summaries were identical before pruning. All 87 backend and 14 browser regressions passed with the experimental indexes; activity pagination additionally verifies descending-ID ordering across equal timestamps. After removal, all 87 backend tests, Django checks, migration-drift checks and formatting checks passed again. Only the experimental indexes were rolled back; application data and required constraints were preserved.
 
 ## Implementation
 
@@ -96,7 +110,7 @@ Fresh setup passed in an isolated Compose project with alternate ports and new v
 ## Trade-offs and Remaining Work
 
 - Local development-server timings and closed-user hot-fixture workloads do not establish production capacity. Production workers/connection lifecycle, realistic arrival rates and multi-user session workloads need separate measurements. The earlier intermittent connection-establishment issue was not established as fixed by a successful selected execution.
-- One activity record is smoke coverage. Larger isolated histories, deep pagination and substring-search query plans should precede index changes. Redis remains conditional and must preserve merchant scoping, freshness and authoritative MySQL adjustment validation.
+- The original activity baseline had one record and the focused index study had six. The experimental indexes were removed; larger histories and read/write measurements are needed before reconsidering them; further substring-search changes need separate evidence. Redis remains conditional and must preserve merchant scoping, freshness and authoritative MySQL adjustment validation.
 - API idempotency keys are optional for compatibility; callers omitting them have no duplicate protection. The UI always supplies one. Recovery needs the same key; closing the tab/losing storage requires checking history. Different keys cannot identify the same real-world intent automatically.
 - Server keys have no automatic expiry and consume storage. They survive product/operator deletion through stored scalar identity; merchant deletion cascades them. Audit actor deletion nulls its FK, while product deletion cascades activity. This is not a tamper-proof or deletion-proof ledger.
 - Request authorization does not instantly revoke an already-running authorized transaction. Lock timeouts bound database lock waits, not every network/request failure. Read batching bounds round trips, while payload size and serialization still grow with related data.
@@ -104,6 +118,7 @@ Fresh setup passed in an isolated Compose project with alternate ports and new v
 
 ### Improvements I Would Add Next
 
-Redis caching is proposed, not implemented or included in the measured gains above:
+The following improvements are deferred and are not included in the measured gains above:
 
+- **Indexes justified by larger datasets:** the catalogue and activity index candidates were benchmarked at 50 VUs before and after installation. Their timing ranges overlapped and throughput was essentially unchanged, so they were removed and left out of the final schema. Reconsider selected indexes only when larger representative datasets, query plans and repeated benchmarks show a meaningful query-time benefit that justifies storage and write costs. See the [retained index study](benchmarks/results/index-comparison.md).
 - **Redis caching for frequently requested read routes:** I would add cache-aside Redis caching to suitable catalogue/product read responses to reduce repeated database work and load. Select routes using request frequency, query cost and measured cache-hit rates. Authorize requests before serving merchant-scoped entries; include relevant search/page parameters in keys. Invalidate affected entries after successful transaction commit, set bounded TTLs, and fall back to MySQL if Redis is unavailable. Stock adjustment validation, row locking, audit creation and idempotency remain authoritative in MySQL. Benchmark cached versus uncached latency, throughput and database load before reporting benefits.

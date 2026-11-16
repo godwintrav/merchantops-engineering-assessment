@@ -1,0 +1,633 @@
+{
+  "merchant_id": 1,
+  "query_mode": "optimized_joins",
+  "notes": [
+    "Read-only ORM EXPLAIN JSON, captured outside timing runs.",
+    "Optimizer estimates, not measured execution durations or EXPLAIN ANALYZE.",
+    "Base-query shapes only; all round trips are counted by benchmark_profile.",
+    "--eager includes category/inventory joins; price prefetch is a separate query.",
+    "Fixed fixture search terms mirror this benchmark suite."
+  ],
+  "plans": {
+    "catalogue_first_page": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "1197.75"
+        },
+        "ordering_operation": {
+          "using_filesort": false,
+          "nested_loop": [
+            {
+              "table": {
+                "table_name": "catalog_product",
+                "access_type": "index",
+                "possible_keys": [
+                  "unique_merchant_product_sku",
+                  "catalog_product_category_id_35bf920b_fk_catalog_category_id"
+                ],
+                "key": "PRIMARY",
+                "used_key_parts": [
+                  "id"
+                ],
+                "key_length": "8",
+                "rows_examined_per_scan": 46,
+                "rows_produced_per_join": 2500,
+                "filtered": "53.41",
+                "cost_info": {
+                  "read_cost": "72.75",
+                  "eval_cost": "250.00",
+                  "prefix_cost": "322.75",
+                  "data_read_per_join": "5M"
+                },
+                "used_columns": [
+                  "id",
+                  "name",
+                  "sku",
+                  "description",
+                  "status",
+                  "created_at",
+                  "updated_at",
+                  "category_id",
+                  "merchant_id",
+                  "image_url"
+                ],
+                "attached_condition": "(`merchantops`.`catalog_product`.`merchant_id` = 1)"
+              }
+            },
+            {
+              "table": {
+                "table_name": "catalog_category",
+                "access_type": "eq_ref",
+                "possible_keys": [
+                  "PRIMARY"
+                ],
+                "key": "PRIMARY",
+                "used_key_parts": [
+                  "id"
+                ],
+                "key_length": "8",
+                "ref": [
+                  "merchantops.catalog_product.category_id"
+                ],
+                "rows_examined_per_scan": 1,
+                "rows_produced_per_join": 2500,
+                "filtered": "100.00",
+                "cost_info": {
+                  "read_cost": "625.00",
+                  "eval_cost": "250.00",
+                  "prefix_cost": "1197.75",
+                  "data_read_per_join": "1M"
+                },
+                "used_columns": [
+                  "id",
+                  "name",
+                  "merchant_id"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "catalogue_last_page": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "1197.75"
+        },
+        "ordering_operation": {
+          "using_filesort": true,
+          "nested_loop": [
+            {
+              "table": {
+                "table_name": "catalog_product",
+                "access_type": "ref",
+                "possible_keys": [
+                  "unique_merchant_product_sku",
+                  "catalog_product_category_id_35bf920b_fk_catalog_category_id"
+                ],
+                "key": "unique_merchant_product_sku",
+                "used_key_parts": [
+                  "merchant_id"
+                ],
+                "key_length": "8",
+                "ref": [
+                  "const"
+                ],
+                "rows_examined_per_scan": 2500,
+                "rows_produced_per_join": 2500,
+                "filtered": "100.00",
+                "cost_info": {
+                  "read_cost": "72.75",
+                  "eval_cost": "250.00",
+                  "prefix_cost": "322.75",
+                  "data_read_per_join": "5M"
+                },
+                "used_columns": [
+                  "id",
+                  "name",
+                  "sku",
+                  "description",
+                  "status",
+                  "created_at",
+                  "updated_at",
+                  "category_id",
+                  "merchant_id",
+                  "image_url"
+                ]
+              }
+            },
+            {
+              "table": {
+                "table_name": "catalog_category",
+                "access_type": "eq_ref",
+                "possible_keys": [
+                  "PRIMARY"
+                ],
+                "key": "PRIMARY",
+                "used_key_parts": [
+                  "id"
+                ],
+                "key_length": "8",
+                "ref": [
+                  "merchantops.catalog_product.category_id"
+                ],
+                "rows_examined_per_scan": 1,
+                "rows_produced_per_join": 2500,
+                "filtered": "100.00",
+                "cost_info": {
+                  "read_cost": "625.00",
+                  "eval_cost": "250.00",
+                  "prefix_cost": "1197.75",
+                  "data_read_per_join": "1M"
+                },
+                "used_columns": [
+                  "id",
+                  "name",
+                  "merchant_id"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "search_common": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "506.37"
+        },
+        "ordering_operation": {
+          "using_filesort": false,
+          "nested_loop": [
+            {
+              "table": {
+                "table_name": "catalog_product",
+                "access_type": "index",
+                "possible_keys": [
+                  "unique_merchant_product_sku",
+                  "catalog_product_category_id_35bf920b_fk_catalog_category_id"
+                ],
+                "key": "PRIMARY",
+                "used_key_parts": [
+                  "id"
+                ],
+                "key_length": "8",
+                "rows_examined_per_scan": 46,
+                "rows_produced_per_join": 524,
+                "filtered": "11.21",
+                "cost_info": {
+                  "read_cost": "72.75",
+                  "eval_cost": "52.46",
+                  "prefix_cost": "322.75",
+                  "data_read_per_join": "1M"
+                },
+                "used_columns": [
+                  "id",
+                  "name",
+                  "sku",
+                  "description",
+                  "status",
+                  "created_at",
+                  "updated_at",
+                  "category_id",
+                  "merchant_id",
+                  "image_url"
+                ],
+                "attached_condition": "((`merchantops`.`catalog_product`.`merchant_id` = 1) and ((`merchantops`.`catalog_product`.`name` like '%Assessment%') or (`merchantops`.`catalog_product`.`sku` like '%Assessment%')))"
+              }
+            },
+            {
+              "table": {
+                "table_name": "catalog_category",
+                "access_type": "eq_ref",
+                "possible_keys": [
+                  "PRIMARY"
+                ],
+                "key": "PRIMARY",
+                "used_key_parts": [
+                  "id"
+                ],
+                "key_length": "8",
+                "ref": [
+                  "merchantops.catalog_product.category_id"
+                ],
+                "rows_examined_per_scan": 1,
+                "rows_produced_per_join": 524,
+                "filtered": "100.00",
+                "cost_info": {
+                  "read_cost": "131.16",
+                  "eval_cost": "52.46",
+                  "prefix_cost": "506.37",
+                  "data_read_per_join": "258K"
+                },
+                "used_columns": [
+                  "id",
+                  "name",
+                  "merchant_id"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "search_selective": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "506.37"
+        },
+        "ordering_operation": {
+          "using_filesort": false,
+          "nested_loop": [
+            {
+              "table": {
+                "table_name": "catalog_product",
+                "access_type": "index",
+                "possible_keys": [
+                  "unique_merchant_product_sku",
+                  "catalog_product_category_id_35bf920b_fk_catalog_category_id"
+                ],
+                "key": "PRIMARY",
+                "used_key_parts": [
+                  "id"
+                ],
+                "key_length": "8",
+                "rows_examined_per_scan": 46,
+                "rows_produced_per_join": 524,
+                "filtered": "11.21",
+                "cost_info": {
+                  "read_cost": "72.75",
+                  "eval_cost": "52.46",
+                  "prefix_cost": "322.75",
+                  "data_read_per_join": "1M"
+                },
+                "used_columns": [
+                  "id",
+                  "name",
+                  "sku",
+                  "description",
+                  "status",
+                  "created_at",
+                  "updated_at",
+                  "category_id",
+                  "merchant_id",
+                  "image_url"
+                ],
+                "attached_condition": "((`merchantops`.`catalog_product`.`merchant_id` = 1) and ((`merchantops`.`catalog_product`.`name` like '%ASSESS-000005%') or (`merchantops`.`catalog_product`.`sku` like '%ASSESS-000005%')))"
+              }
+            },
+            {
+              "table": {
+                "table_name": "catalog_category",
+                "access_type": "eq_ref",
+                "possible_keys": [
+                  "PRIMARY"
+                ],
+                "key": "PRIMARY",
+                "used_key_parts": [
+                  "id"
+                ],
+                "key_length": "8",
+                "ref": [
+                  "merchantops.catalog_product.category_id"
+                ],
+                "rows_examined_per_scan": 1,
+                "rows_produced_per_join": 524,
+                "filtered": "100.00",
+                "cost_info": {
+                  "read_cost": "131.16",
+                  "eval_cost": "52.46",
+                  "prefix_cost": "506.37",
+                  "data_read_per_join": "258K"
+                },
+                "used_columns": [
+                  "id",
+                  "name",
+                  "merchant_id"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "search_none": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "506.37"
+        },
+        "ordering_operation": {
+          "using_filesort": false,
+          "nested_loop": [
+            {
+              "table": {
+                "table_name": "catalog_product",
+                "access_type": "index",
+                "possible_keys": [
+                  "unique_merchant_product_sku",
+                  "catalog_product_category_id_35bf920b_fk_catalog_category_id"
+                ],
+                "key": "PRIMARY",
+                "used_key_parts": [
+                  "id"
+                ],
+                "key_length": "8",
+                "rows_examined_per_scan": 46,
+                "rows_produced_per_join": 524,
+                "filtered": "11.21",
+                "cost_info": {
+                  "read_cost": "72.75",
+                  "eval_cost": "52.46",
+                  "prefix_cost": "322.75",
+                  "data_read_per_join": "1M"
+                },
+                "used_columns": [
+                  "id",
+                  "name",
+                  "sku",
+                  "description",
+                  "status",
+                  "created_at",
+                  "updated_at",
+                  "category_id",
+                  "merchant_id",
+                  "image_url"
+                ],
+                "attached_condition": "((`merchantops`.`catalog_product`.`merchant_id` = 1) and ((`merchantops`.`catalog_product`.`name` like '%benchmark-no-such-product-938174%') or (`merchantops`.`catalog_product`.`sku` like '%benchmark-no-such-product-938174%')))"
+              }
+            },
+            {
+              "table": {
+                "table_name": "catalog_category",
+                "access_type": "eq_ref",
+                "possible_keys": [
+                  "PRIMARY"
+                ],
+                "key": "PRIMARY",
+                "used_key_parts": [
+                  "id"
+                ],
+                "key_length": "8",
+                "ref": [
+                  "merchantops.catalog_product.category_id"
+                ],
+                "rows_examined_per_scan": 1,
+                "rows_produced_per_join": 524,
+                "filtered": "100.00",
+                "cost_info": {
+                  "read_cost": "131.16",
+                  "eval_cost": "52.46",
+                  "prefix_cost": "506.37",
+                  "data_read_per_join": "258K"
+                },
+                "used_columns": [
+                  "id",
+                  "name",
+                  "merchant_id"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "editor_variants": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "35.00"
+        },
+        "ordering_operation": {
+          "using_filesort": true,
+          "nested_loop": [
+            {
+              "table": {
+                "table_name": "catalog_productvariant",
+                "access_type": "ref",
+                "possible_keys": [
+                  "unique_product_variant_sku"
+                ],
+                "key": "unique_product_variant_sku",
+                "used_key_parts": [
+                  "product_id"
+                ],
+                "key_length": "8",
+                "ref": [
+                  "const"
+                ],
+                "rows_examined_per_scan": 50,
+                "rows_produced_per_join": 50,
+                "filtered": "100.00",
+                "cost_info": {
+                  "read_cost": "12.50",
+                  "eval_cost": "5.00",
+                  "prefix_cost": "17.50",
+                  "data_read_per_join": "37K"
+                },
+                "used_columns": [
+                  "id",
+                  "sku",
+                  "name",
+                  "product_id"
+                ]
+              }
+            },
+            {
+              "table": {
+                "table_name": "catalog_inventory",
+                "access_type": "eq_ref",
+                "possible_keys": [
+                  "variant_id"
+                ],
+                "key": "variant_id",
+                "used_key_parts": [
+                  "variant_id"
+                ],
+                "key_length": "8",
+                "ref": [
+                  "merchantops.catalog_productvariant.id"
+                ],
+                "rows_examined_per_scan": 1,
+                "rows_produced_per_join": 50,
+                "filtered": "100.00",
+                "cost_info": {
+                  "read_cost": "12.50",
+                  "eval_cost": "5.00",
+                  "prefix_cost": "35.00",
+                  "data_read_per_join": "1K"
+                },
+                "used_columns": [
+                  "id",
+                  "quantity",
+                  "reserved",
+                  "variant_id"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "activity": {
+      "query_block": {
+        "select_id": 1,
+        "cost_info": {
+          "query_cost": "1.97"
+        },
+        "ordering_operation": {
+          "using_temporary_table": true,
+          "using_filesort": true,
+          "nested_loop": [
+            {
+              "table": {
+                "table_name": "catalog_auditlog",
+                "access_type": "ref",
+                "possible_keys": [
+                  "catalog_auditlog_product_id_b1fb671f_fk_catalog_product_id"
+                ],
+                "key": "catalog_auditlog_product_id_b1fb671f_fk_catalog_product_id",
+                "used_key_parts": [
+                  "product_id"
+                ],
+                "key_length": "8",
+                "ref": [
+                  "const"
+                ],
+                "rows_examined_per_scan": 6,
+                "rows_produced_per_join": 6,
+                "filtered": "100.00",
+                "cost_info": {
+                  "read_cost": "0.50",
+                  "eval_cost": "0.60",
+                  "prefix_cost": "1.10",
+                  "data_read_per_join": "2K"
+                },
+                "used_columns": [
+                  "id",
+                  "action",
+                  "details",
+                  "created_at",
+                  "actor_id",
+                  "product_id"
+                ]
+              }
+            },
+            {
+              "table": {
+                "table_name": "auth_user",
+                "access_type": "ALL",
+                "possible_keys": [
+                  "PRIMARY"
+                ],
+                "rows_examined_per_scan": 1,
+                "rows_produced_per_join": 6,
+                "filtered": "100.00",
+                "using_join_buffer": "hash join",
+                "cost_info": {
+                  "read_cost": "0.27",
+                  "eval_cost": "0.60",
+                  "prefix_cost": "1.97",
+                  "data_read_per_join": "19K"
+                },
+                "used_columns": [
+                  "id",
+                  "password",
+                  "last_login",
+                  "is_superuser",
+                  "username",
+                  "first_name",
+                  "last_name",
+                  "email",
+                  "is_staff",
+                  "is_active",
+                  "date_joined"
+                ],
+                "attached_condition": "<if>(is_not_null_compl(auth_user), (`merchantops`.`auth_user`.`id` = `merchantops`.`catalog_auditlog`.`actor_id`), true)"
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "schema_indexes": {
+    "catalog_product": [
+      {
+        "name": "PRIMARY",
+        "position": 1,
+        "column": "id",
+        "direction": "A",
+        "unique": true
+      },
+      {
+        "name": "unique_merchant_product_sku",
+        "position": 1,
+        "column": "merchant_id",
+        "direction": "A",
+        "unique": true
+      },
+      {
+        "name": "unique_merchant_product_sku",
+        "position": 2,
+        "column": "sku",
+        "direction": "A",
+        "unique": true
+      },
+      {
+        "name": "catalog_product_category_id_35bf920b_fk_catalog_category_id",
+        "position": 1,
+        "column": "category_id",
+        "direction": "A",
+        "unique": false
+      }
+    ],
+    "catalog_auditlog": [
+      {
+        "name": "PRIMARY",
+        "position": 1,
+        "column": "id",
+        "direction": "A",
+        "unique": true
+      },
+      {
+        "name": "catalog_auditlog_actor_id_a293acfa_fk_auth_user_id",
+        "position": 1,
+        "column": "actor_id",
+        "direction": "A",
+        "unique": false
+      },
+      {
+        "name": "catalog_auditlog_product_id_b1fb671f_fk_catalog_product_id",
+        "position": 1,
+        "column": "product_id",
+        "direction": "A",
+        "unique": false
+      }
+    ]
+  }
+}

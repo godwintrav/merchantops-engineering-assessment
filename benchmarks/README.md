@@ -122,6 +122,23 @@ This takes about 35 minutes (24 runs). The explicit threshold-failure flag prese
 
 During collection, scripts write expanded per-run files under api/, browser/, and logs/, with manifests/resources beside each run and a matrix checkpoint. Existing files are never silently overwritten. These working files remain available for diagnosis until consolidation.
 
+## Focused index comparison (50 VUs only)
+
+The separate [index study](results/index-comparison.md) evaluated temporary catalogue/activity indexes that were subsequently removed because no clear gain was demonstrated. Its after-index evidence describes the experimental schema, not the current schema. It measures catalogue first/deep pages and existing activity history. It preserves the original full/stress results. Run each phase under a fresh label, with application/data/settings frozen during measurement:
+
+```bash
+python3 benchmarks/run.py profile --label indexes-before-50vu
+python3 benchmarks/matrix.py --label indexes-before-50vu --loads 50 --api-only --cases catalogue_page_1 catalogue_page_100 activity_page_1 --temporary-user
+```
+
+For a future experiment, create and apply a candidate index migration between phases (the original experimental migration was removed), capture fresh profiles/query plans, then repeat the same command using `--label indexes-after-50vu`. The `--cases` option requires `--api-only`, selects exactly those cases at each supplied load, and skips browser/Lighthouse and secondary one-VU runs. These phases each contain nine runs with the standard timing/think-time settings. They do not measure index write costs or large activity histories.
+
+After verifying and consolidating both phases, generate their comparison without changing the original reports:
+
+```bash
+python3 benchmarks/compare_indexes.py
+```
+
 ## Finish and consolidate
 
 Capture query plans after timed runs, then inspect the generated report. Use `--eager` for the optimized category/inventory joins; omit it to reproduce original base-query shapes. These plans cover base queries, while the diagnostic profile counts all endpoint round trips:

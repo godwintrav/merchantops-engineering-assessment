@@ -1,0 +1,457 @@
+{
+  "schema_version": 1,
+  "sealed": true,
+  "consolidated_utc": "2026-11-16T17:35:23.638448+00:00",
+  "profile": {
+    "path": "profile.json",
+    "sha256": "332ea23fa75bbbb4ce8a4bf662ea07a10a29b356168c3b93e8199e0881dafb19"
+  },
+  "environment": {
+    "machdep.cpu.brand_string": "Apple M5 Pro",
+    "hw.memsize": "68719476736",
+    "hw.model": "Mac17,9",
+    "docker_limits": "18 CPUs; 8319213568 bytes RAM; Engine 29.5.3",
+    "serving_mode": "Compose Django runserver DEBUG=True; Vite development server; MySQL 8.4",
+    "notes": "Focused pre-index study: 50 VUs only; catalogue first/deep pages and existing product activity; no write/browser/Lighthouse load benchmarks. Same k6 timings and telemetry before/after.",
+    "source_snapshot": {
+      "application_commit": "b21a1f8328527cad09b2f3151dd24200a737d3ec",
+      "sha256": {
+        "backend/catalog/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "backend/catalog/admin.py": "b2e328e31f08dc907100505521d13ee6a9ea67a240655d051120011ce49cfaf8",
+        "backend/catalog/apps.py": "a891a8d75a51044cb80e68603cc8fb4a01296ebc20fa2ab4df1a32623babcd10",
+        "backend/catalog/management/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "backend/catalog/management/commands/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "backend/catalog/management/commands/benchmark_profile.py": "1721c71aa2f18c4b484668acc259e9f1030c7ddb31d9c93a5a5854f53c8bf44a",
+        "backend/catalog/management/commands/provision_demo_user.py": "b545bca4bded2a1a4fd25373e392fa7c8524267af1de1850ea0802f18165ea5b",
+        "backend/catalog/management/commands/seed_catalog.py": "9f38b7165cde031e81b9055416486099a150e4e01405404fa424e6631c804ce4",
+        "backend/catalog/management/commands/seed_complex_products.py": "1c9e8fc39f84bf8f808a2af2595d6706be42851a5eabeb675a5c0f5db7753b2c",
+        "backend/catalog/migrations/0001_initial.py": "9025e2be5de00bb83962e90ccbcd44abc46fd960ec861799edc8bac8eafbf330",
+        "backend/catalog/migrations/0002_merchant_members.py": "ee70a92c49b8f0a5b22b045f4b41d0383ea2512fbb76fea1bf86f12703f4bed8",
+        "backend/catalog/migrations/0003_product_image_url.py": "56e284ae0a68b41945cd0aa780cb4664f962774840763abf8944b4ef242ac539",
+        "backend/catalog/migrations/0004_inventoryoperation.py": "8b3b87987804f1d7ec61cc2ba3bad069ee336e65bb413bb68a3bf5c38f68c060",
+        "backend/catalog/migrations/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "backend/catalog/models.py": "0ba4cd3d231865ec5fbdd41d24c6883dbbb09ca9ae562193bf0df4536fd0ef00",
+        "backend/catalog/serializers.py": "b97ef20c755311cc701718dba3517aacf9402117bac6dbb21ecba9ff2c7a8a38",
+        "backend/catalog/services/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "backend/catalog/services/inventory.py": "ec49ff7ce73229dd0ab88fe6e2649cd74ab43c17aa1661209cda0d7d8d838acf",
+        "backend/catalog/tests/__init__.py": "44fddc67cc3740563e4e20ad02fc6d725ab10ff9bfe2926cd3556276f7f96b81",
+        "backend/catalog/tests/test_activity_api.py": "2b27fb0e942a621b9c0270648178b3778ccfd603e7969840baa9ef536bf8ecfe",
+        "backend/catalog/tests/test_catalogue_api.py": "46e0747b2fb27838e8b39e158f388938e96afa74408530359b9e84b003d37741",
+        "backend/catalog/tests/test_complex_seed.py": "368b952c6008ab8bdd298db198fa6329887edebfb114ae05640ca1c24d0c7f15",
+        "backend/catalog/tests/test_demo_auth.py": "69670dc8dd99cd639c28d306a09b09bf256147959a13a6d7b397410540ee67ad",
+        "backend/catalog/tests/test_editor_api.py": "247301ba44adf84a64fc8c8376f0119957f077b57c7be5592805c58f87467e55",
+        "backend/catalog/tests/test_inventory_adjustment_api.py": "751da41c910598668edd7a06010338702c240766830690634b9b058352083407",
+        "backend/catalog/tests/test_inventory_concurrency.py": "26e5d78aa59f7d817ae8138b810862b073d4ed0e46f8e32da9c17a4a348c0582",
+        "backend/catalog/tests/test_inventory_idempotency_concurrency.py": "15e16a37e3c9654402fe0ec4c3812cf31d0b7be690fa0ab5a6a33802d6e955ba",
+        "backend/catalog/tests/test_inventory_reliability.py": "cccbf0a9a804d86725438b390cb9c3e64c413b540b18abad4f07cd6565540d5e",
+        "backend/catalog/tests/test_membership.py": "f3e3e361e681927ec4ba9a3d8551052d86a1e6fcc9890645655a1faf2bab438c",
+        "backend/catalog/tests/test_model_constraints.py": "44d6c450511c1d3d6f67337ca309a40bee532e67843dd556cd0552f5403f65ec",
+        "backend/catalog/tests/test_product_audit.py": "880c5736b8a7ecba0239bea9d7df8bc77bbbc68a03e734b1baff1315c303b941",
+        "backend/catalog/tests/test_product_update_api.py": "242be5c2d9dbb091116d19788a5e33a023572e518c3cbe567a9904e0ce9804a9",
+        "backend/catalog/urls.py": "f872169194d272142b4c8c9496aa48ca89bcc3fd956367522a586120678cd106",
+        "backend/catalog/views.py": "93ef047f476d051a37cb3c5e432a96148301bc897ab499b7aecfb2412fe4fde6",
+        "backend/config/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "backend/config/asgi.py": "8fee222f0301aad7dcdbd9a7a98b14ce945b0aefd0c6babda7a25632e1974341",
+        "backend/config/settings.py": "67efd99562d497a02631b9ef320676ec914309ce23fb7ec3d0991ef8f8c7551e",
+        "backend/config/urls.py": "8d6ffe0ddecfad074e23b89757160ed1edcd548b10854bee9fdc46b87df45d22",
+        "backend/config/wsgi.py": "0f17579a1bfad708ebac0a56dc8cc383cc2bb05b70a3194e2f5b217008209fb7",
+        "backend/manage.py": "9e055a3ca49f173675232d3f61d1feb89f1350708fb25a002f6d3edefeec6db4",
+        "frontend/src/App.vue": "b125f076a98587472bde46cad0ea7d1aa17d0ae261bdaf4e4678fa1ce03ab89e",
+        "frontend/src/api.js": "f4578ed1931462c682a31b42faaef4130756f2f9b70886de867e618a4a18d11a",
+        "frontend/src/components/InventoryAdjustmentForm.vue": "3012a568d51aec866f004003b438e753577f253fdcd7075e29c9033be5dd0c40",
+        "frontend/src/components/PaginationControls.vue": "1292280626a4054671f32a36404d26689579e21fc14d443fbf68b2325ca109c8",
+        "frontend/src/components/ProductThumbnail.vue": "fdda3893cdbeaa6e8478f1293d7e2796ef200623d1ab8aea0e4377ea72492169",
+        "frontend/src/components/RequestState.vue": "8e9dfa4aac2fb33412069f1a1be8046e85ee6fd9faeee30b29670fe5c2504729",
+        "frontend/src/components/StatusBadge.vue": "c30609b33e0baa399951a3b78ae9f36a918763936a7c9aaee8233d58ea6362a1",
+        "frontend/src/main.js": "9343b235ab2208676d41a923c4c6f2635f80cdbb83b2cf461aa0d7447bf9223e",
+        "frontend/src/router.js": "c725487b2b539b822d1d6418b80a590035f7629379a0249af177254d2af8a3ab",
+        "frontend/src/useResource.js": "25245f302eccf134fd5464a642e819d6101d5e4e7333333e45a92e918e9c3ff7",
+        "frontend/src/views/ActivityView.vue": "1da9e99520fb0eccafacf51d014ea481809a2d471dda5030a91b9e36486f3a4f",
+        "frontend/src/views/CatalogueView.vue": "460649a509e91fb77b7f66ae9b7f5380bfc3564dbbb1849dea0baee80370bf90",
+        "frontend/src/views/EditorView.vue": "760a504c91c94e833e915f94878c3a9c2a4f902781fab1a1039f6912b3bac4b0"
+      },
+      "tracked_patch": ""
+    },
+    "frontend_node_version": "v22.23.5",
+    "comparison_notes": [
+      "Recorded Python/Django/MySQL profile versions, Docker limits and four workload-script fingerprints match the baseline.",
+      "The exact frontend Node patch version was not recorded in the original baseline; current runtime is recorded here.",
+      "Commit plus tracked application patch and source hashes preserve the measured uncommitted optimization state."
+    ]
+  },
+  "matrix": {
+    "started_utc": "2026-11-16T17:07:27.465554+00:00",
+    "status": "complete",
+    "environment": "Compose development baseline: Django runserver DEBUG=True, Vite dev; Docker Engine 29.5.3, 18 CPUs, 8319213568 bytes RAM; k6 Docker 1.0.0; 15s warmup + 6s drain gap + 60s measured; 200ms think time; existing seeded fixtures, original seed not independently verified; unthrottled desktop Chromium; temporary nonstaff member if requested. Docker resource samples collected every 15s during API tests.",
+    "plan": {
+      "core_cases": 3,
+      "cases": [
+        "catalogue_page_1",
+        "catalogue_page_100",
+        "activity_page_1"
+      ],
+      "loads": [
+        50
+      ],
+      "repetitions": 3,
+      "api_only": true,
+      "allow_threshold_failures": true
+    },
+    "failures": [],
+    "temporary_account_removed": true,
+    "finished_utc": "2026-11-16T17:19:55.634609+00:00",
+    "completed_runs": 9,
+    "reused_runs": 0
+  },
+  "contexts": {
+    "1e1ab81b01343dd9": {
+      "application_commit": "b21a1f8328527cad09b2f3151dd24200a737d3ec",
+      "working_tree_status": "M benchmarks/matrix.py\n?? AGENTS.md\n?? IMPLEMENTATION_PLAN.MD\n?? benchmarks/compare_indexes.py\n?? benchmarks/results/indexes-before-50vu/\n?? next_steps.md",
+      "host": {
+        "system": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+        "architecture": "arm64",
+        "cpu_count": 18
+      },
+      "profile_sha256": "332ea23fa75bbbb4ce8a4bf662ea07a10a29b356168c3b93e8199e0881dafb19",
+      "harness_sha256": {
+        "backend/catalog/management/commands/benchmark_profile.py": "1721c71aa2f18c4b484668acc259e9f1030c7ddb31d9c93a5a5854f53c8bf44a",
+        "benchmarks/.gitignore": "c658a2d0c75d792a7b18416f0e8f9cb3ceed39e76b3f6338b421029fd356a17d",
+        "benchmarks/README.md": "62938e13af6a2e75725d834e86c40afab61e07c3e6f70e3d6b835346eb2ac19e",
+        "benchmarks/browser/common.mjs": "ca74779d43bdc5b6fb9bf984303c56243ea6905652adc99468a040ad247334bc",
+        "benchmarks/browser/lighthouse.mjs": "f9182c122ad769ed8d66e7a203e4cd42fca1fc94455b261d91f79d14077af54d",
+        "benchmarks/browser/workflows.mjs": "2af08234ecf4358aec78807f413d6358894d55abc4ebfb14d5405ee022d3b9cf",
+        "benchmarks/compact_results.py": "a809da2063a996897f9063a366b03e2b3145d1c3866eb875f8ed045728137558",
+        "benchmarks/compare_indexes.py": "d03ed3f69e7dadc422732c973e6731355f8e1430e7e5b1e19dee7323986b467f",
+        "benchmarks/compare_results.py": "2b8bee68b005840668c07ab918a9765f4c2bcf10f1e8f392b5d6939ca34a3822",
+        "benchmarks/k6/api.js": "e9e001c0877dbc09b36013c8a70495c2d3d9be62529369ab1048323f5310af67",
+        "benchmarks/matrix.py": "bebff7e60849ec69c600d543c3489b43ea082e85c23ddc6ca9e8c2cd3aeec6ca",
+        "benchmarks/package-lock.json": "e89dcaaf43e9244154593862594bd138f264e5c20f78d43e90c437d1df6c0560",
+        "benchmarks/package.json": "ff9448b4a290536fcb4881d1568ac7276e99851adb7d655e40b79f3fed7c6de7",
+        "benchmarks/playwright.config.mjs": "7e46a8115ca23dc1915a15dd3783c8d02ff59e9370145475b58c9d8ebd185490",
+        "benchmarks/profiling/query_plans.py": "e9cd72f50924d2e0179a81cdf3d738c69944ce870e1edd4f0a459065fa6df985",
+        "benchmarks/results_io.py": "0b5a2ec3dcd65bba92db7af9e69ad73a8decc3a82ce0e3337d16a8855b493c7a",
+        "benchmarks/run.py": "c40e9f4723dde6294519e76539d63ac79e70cbdb27d75692092d303a3dca18b4",
+        "benchmarks/summarize.py": "c01dc321b2577d730063c7fefb7b0b4c00a2bdf59f08d7e65d06692911a1526e",
+        "benchmarks/test-results/.last-run.json": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+        "benchmarks/tests/catalogue.spec.mjs": "c46cc7709c86ddeefe97a01e734065b1bcadb018f9540e74b6937bbc0c406a5d",
+        "benchmarks/tests/editor.spec.mjs": "26e51daed24f4b05816b254e1ebf83c83dd534c14dda8149e57c401448f74f00",
+        "benchmarks/tests/inventory-api.spec.mjs": "02bdd34c1e98ae851ca5d7b6a6f8720d8e21126e799c38335f984b05951dc704",
+        "benchmarks/tests/inventory-workflow.spec.mjs": "860768c7c96cdf67e7744d7f0361f0028c1545d32f16ad31bb8fbd9b65fa094c"
+      },
+      "base_url": "http://127.0.0.1:8000",
+      "frontend_url": "http://127.0.0.1:5173",
+      "environment_notes": "Compose development baseline: Django runserver DEBUG=True, Vite dev; Docker Engine 29.5.3, 18 CPUs, 8319213568 bytes RAM; k6 Docker 1.0.0; 15s warmup + 6s drain gap + 60s measured; 200ms think time; existing seeded fixtures, original seed not independently verified; unthrottled desktop Chromium; temporary nonstaff member if requested. Docker resource samples collected every 15s during API tests."
+    },
+    "4e0deaa5ace1a430": {
+      "application_commit": "b21a1f8328527cad09b2f3151dd24200a737d3ec",
+      "working_tree_status": "M benchmarks/matrix.py\n?? AGENTS.md\n?? IMPLEMENTATION_PLAN.MD\n?? benchmarks/results/indexes-before-50vu/\n?? next_steps.md",
+      "host": {
+        "system": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+        "architecture": "arm64",
+        "cpu_count": 18
+      },
+      "profile_sha256": "332ea23fa75bbbb4ce8a4bf662ea07a10a29b356168c3b93e8199e0881dafb19",
+      "harness_sha256": {
+        "backend/catalog/management/commands/benchmark_profile.py": "1721c71aa2f18c4b484668acc259e9f1030c7ddb31d9c93a5a5854f53c8bf44a",
+        "benchmarks/.gitignore": "c658a2d0c75d792a7b18416f0e8f9cb3ceed39e76b3f6338b421029fd356a17d",
+        "benchmarks/README.md": "62938e13af6a2e75725d834e86c40afab61e07c3e6f70e3d6b835346eb2ac19e",
+        "benchmarks/browser/common.mjs": "ca74779d43bdc5b6fb9bf984303c56243ea6905652adc99468a040ad247334bc",
+        "benchmarks/browser/lighthouse.mjs": "f9182c122ad769ed8d66e7a203e4cd42fca1fc94455b261d91f79d14077af54d",
+        "benchmarks/browser/workflows.mjs": "2af08234ecf4358aec78807f413d6358894d55abc4ebfb14d5405ee022d3b9cf",
+        "benchmarks/compact_results.py": "a809da2063a996897f9063a366b03e2b3145d1c3866eb875f8ed045728137558",
+        "benchmarks/compare_results.py": "2b8bee68b005840668c07ab918a9765f4c2bcf10f1e8f392b5d6939ca34a3822",
+        "benchmarks/k6/api.js": "e9e001c0877dbc09b36013c8a70495c2d3d9be62529369ab1048323f5310af67",
+        "benchmarks/matrix.py": "bebff7e60849ec69c600d543c3489b43ea082e85c23ddc6ca9e8c2cd3aeec6ca",
+        "benchmarks/package-lock.json": "e89dcaaf43e9244154593862594bd138f264e5c20f78d43e90c437d1df6c0560",
+        "benchmarks/package.json": "ff9448b4a290536fcb4881d1568ac7276e99851adb7d655e40b79f3fed7c6de7",
+        "benchmarks/playwright.config.mjs": "7e46a8115ca23dc1915a15dd3783c8d02ff59e9370145475b58c9d8ebd185490",
+        "benchmarks/profiling/query_plans.py": "e9cd72f50924d2e0179a81cdf3d738c69944ce870e1edd4f0a459065fa6df985",
+        "benchmarks/results_io.py": "0b5a2ec3dcd65bba92db7af9e69ad73a8decc3a82ce0e3337d16a8855b493c7a",
+        "benchmarks/run.py": "c40e9f4723dde6294519e76539d63ac79e70cbdb27d75692092d303a3dca18b4",
+        "benchmarks/summarize.py": "c01dc321b2577d730063c7fefb7b0b4c00a2bdf59f08d7e65d06692911a1526e",
+        "benchmarks/test-results/.last-run.json": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+        "benchmarks/tests/catalogue.spec.mjs": "c46cc7709c86ddeefe97a01e734065b1bcadb018f9540e74b6937bbc0c406a5d",
+        "benchmarks/tests/editor.spec.mjs": "26e51daed24f4b05816b254e1ebf83c83dd534c14dda8149e57c401448f74f00",
+        "benchmarks/tests/inventory-api.spec.mjs": "02bdd34c1e98ae851ca5d7b6a6f8720d8e21126e799c38335f984b05951dc704",
+        "benchmarks/tests/inventory-workflow.spec.mjs": "860768c7c96cdf67e7744d7f0361f0028c1545d32f16ad31bb8fbd9b65fa094c"
+      },
+      "base_url": "http://127.0.0.1:8000",
+      "frontend_url": "http://127.0.0.1:5173",
+      "environment_notes": "Compose development baseline: Django runserver DEBUG=True, Vite dev; Docker Engine 29.5.3, 18 CPUs, 8319213568 bytes RAM; k6 Docker 1.0.0; 15s warmup + 6s drain gap + 60s measured; 200ms think time; existing seeded fixtures, original seed not independently verified; unthrottled desktop Chromium; temporary nonstaff member if requested. Docker resource samples collected every 15s during API tests."
+    },
+    "80e3577192064581": {
+      "application_commit": "b21a1f8328527cad09b2f3151dd24200a737d3ec",
+      "working_tree_status": "M benchmarks/matrix.py\n?? AGENTS.md\n?? IMPLEMENTATION_PLAN.MD\n?? benchmarks/compare_indexes.py\n?? benchmarks/results/indexes-before-50vu/\n?? next_steps.md",
+      "host": {
+        "system": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+        "architecture": "arm64",
+        "cpu_count": 18
+      },
+      "profile_sha256": "332ea23fa75bbbb4ce8a4bf662ea07a10a29b356168c3b93e8199e0881dafb19",
+      "harness_sha256": {
+        "backend/catalog/management/commands/benchmark_profile.py": "1721c71aa2f18c4b484668acc259e9f1030c7ddb31d9c93a5a5854f53c8bf44a",
+        "benchmarks/.gitignore": "c658a2d0c75d792a7b18416f0e8f9cb3ceed39e76b3f6338b421029fd356a17d",
+        "benchmarks/README.md": "62938e13af6a2e75725d834e86c40afab61e07c3e6f70e3d6b835346eb2ac19e",
+        "benchmarks/browser/common.mjs": "ca74779d43bdc5b6fb9bf984303c56243ea6905652adc99468a040ad247334bc",
+        "benchmarks/browser/lighthouse.mjs": "f9182c122ad769ed8d66e7a203e4cd42fca1fc94455b261d91f79d14077af54d",
+        "benchmarks/browser/workflows.mjs": "2af08234ecf4358aec78807f413d6358894d55abc4ebfb14d5405ee022d3b9cf",
+        "benchmarks/compact_results.py": "a809da2063a996897f9063a366b03e2b3145d1c3866eb875f8ed045728137558",
+        "benchmarks/compare_indexes.py": "554daafc40e9219b518e6f530667a5c4a0e909e32e34273ba3ba5f39c92c7ec4",
+        "benchmarks/compare_results.py": "2b8bee68b005840668c07ab918a9765f4c2bcf10f1e8f392b5d6939ca34a3822",
+        "benchmarks/k6/api.js": "e9e001c0877dbc09b36013c8a70495c2d3d9be62529369ab1048323f5310af67",
+        "benchmarks/matrix.py": "bebff7e60849ec69c600d543c3489b43ea082e85c23ddc6ca9e8c2cd3aeec6ca",
+        "benchmarks/package-lock.json": "e89dcaaf43e9244154593862594bd138f264e5c20f78d43e90c437d1df6c0560",
+        "benchmarks/package.json": "ff9448b4a290536fcb4881d1568ac7276e99851adb7d655e40b79f3fed7c6de7",
+        "benchmarks/playwright.config.mjs": "7e46a8115ca23dc1915a15dd3783c8d02ff59e9370145475b58c9d8ebd185490",
+        "benchmarks/profiling/query_plans.py": "e9cd72f50924d2e0179a81cdf3d738c69944ce870e1edd4f0a459065fa6df985",
+        "benchmarks/results_io.py": "0b5a2ec3dcd65bba92db7af9e69ad73a8decc3a82ce0e3337d16a8855b493c7a",
+        "benchmarks/run.py": "c40e9f4723dde6294519e76539d63ac79e70cbdb27d75692092d303a3dca18b4",
+        "benchmarks/summarize.py": "c01dc321b2577d730063c7fefb7b0b4c00a2bdf59f08d7e65d06692911a1526e",
+        "benchmarks/test-results/.last-run.json": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+        "benchmarks/tests/catalogue.spec.mjs": "c46cc7709c86ddeefe97a01e734065b1bcadb018f9540e74b6937bbc0c406a5d",
+        "benchmarks/tests/editor.spec.mjs": "26e51daed24f4b05816b254e1ebf83c83dd534c14dda8149e57c401448f74f00",
+        "benchmarks/tests/inventory-api.spec.mjs": "02bdd34c1e98ae851ca5d7b6a6f8720d8e21126e799c38335f984b05951dc704",
+        "benchmarks/tests/inventory-workflow.spec.mjs": "860768c7c96cdf67e7744d7f0361f0028c1545d32f16ad31bb8fbd9b65fa094c"
+      },
+      "base_url": "http://127.0.0.1:8000",
+      "frontend_url": "http://127.0.0.1:5173",
+      "environment_notes": "Compose development baseline: Django runserver DEBUG=True, Vite dev; Docker Engine 29.5.3, 18 CPUs, 8319213568 bytes RAM; k6 Docker 1.0.0; 15s warmup + 6s drain gap + 60s measured; 200ms think time; existing seeded fixtures, original seed not independently verified; unthrottled desktop Chromium; temporary nonstaff member if requested. Docker resource samples collected every 15s during API tests."
+    },
+    "e602d84d948e4ae3": {
+      "application_commit": "b21a1f8328527cad09b2f3151dd24200a737d3ec",
+      "working_tree_status": "M benchmarks/matrix.py\n?? AGENTS.md\n?? IMPLEMENTATION_PLAN.MD\n?? benchmarks/results/indexes-before-50vu/\n?? next_steps.md",
+      "host": {
+        "system": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+        "architecture": "arm64",
+        "cpu_count": 18
+      },
+      "profile_sha256": "332ea23fa75bbbb4ce8a4bf662ea07a10a29b356168c3b93e8199e0881dafb19",
+      "harness_sha256": {
+        "backend/catalog/management/commands/benchmark_profile.py": "1721c71aa2f18c4b484668acc259e9f1030c7ddb31d9c93a5a5854f53c8bf44a",
+        "benchmarks/.gitignore": "c658a2d0c75d792a7b18416f0e8f9cb3ceed39e76b3f6338b421029fd356a17d",
+        "benchmarks/README.md": "62938e13af6a2e75725d834e86c40afab61e07c3e6f70e3d6b835346eb2ac19e",
+        "benchmarks/browser/common.mjs": "ca74779d43bdc5b6fb9bf984303c56243ea6905652adc99468a040ad247334bc",
+        "benchmarks/browser/lighthouse.mjs": "f9182c122ad769ed8d66e7a203e4cd42fca1fc94455b261d91f79d14077af54d",
+        "benchmarks/browser/workflows.mjs": "2af08234ecf4358aec78807f413d6358894d55abc4ebfb14d5405ee022d3b9cf",
+        "benchmarks/compact_results.py": "a809da2063a996897f9063a366b03e2b3145d1c3866eb875f8ed045728137558",
+        "benchmarks/compare_results.py": "2b8bee68b005840668c07ab918a9765f4c2bcf10f1e8f392b5d6939ca34a3822",
+        "benchmarks/k6/api.js": "e9e001c0877dbc09b36013c8a70495c2d3d9be62529369ab1048323f5310af67",
+        "benchmarks/matrix.py": "bebff7e60849ec69c600d543c3489b43ea082e85c23ddc6ca9e8c2cd3aeec6ca",
+        "benchmarks/package-lock.json": "e89dcaaf43e9244154593862594bd138f264e5c20f78d43e90c437d1df6c0560",
+        "benchmarks/package.json": "ff9448b4a290536fcb4881d1568ac7276e99851adb7d655e40b79f3fed7c6de7",
+        "benchmarks/playwright.config.mjs": "7e46a8115ca23dc1915a15dd3783c8d02ff59e9370145475b58c9d8ebd185490",
+        "benchmarks/profiling/query_plans.py": "e9cd72f50924d2e0179a81cdf3d738c69944ce870e1edd4f0a459065fa6df985",
+        "benchmarks/results_io.py": "0b5a2ec3dcd65bba92db7af9e69ad73a8decc3a82ce0e3337d16a8855b493c7a",
+        "benchmarks/run.py": "c40e9f4723dde6294519e76539d63ac79e70cbdb27d75692092d303a3dca18b4",
+        "benchmarks/summarize.py": "c01dc321b2577d730063c7fefb7b0b4c00a2bdf59f08d7e65d06692911a1526e",
+        "benchmarks/test-results/.last-run.json": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+        "benchmarks/tests/catalogue.spec.mjs": "c46cc7709c86ddeefe97a01e734065b1bcadb018f9540e74b6937bbc0c406a5d",
+        "benchmarks/tests/editor.spec.mjs": "26e51daed24f4b05816b254e1ebf83c83dd534c14dda8149e57c401448f74f00",
+        "benchmarks/tests/inventory-api.spec.mjs": "02bdd34c1e98ae851ca5d7b6a6f8720d8e21126e799c38335f984b05951dc704",
+        "benchmarks/tests/inventory-workflow.spec.mjs": "860768c7c96cdf67e7744d7f0361f0028c1545d32f16ad31bb8fbd9b65fa094c"
+      },
+      "base_url": "http://127.0.0.1:8002",
+      "frontend_url": "http://127.0.0.1:5173",
+      "environment_notes": "UNRECORDED: document Docker limits, serving mode, hardware, fixture seed"
+    }
+  },
+  "runs": [
+    {
+      "run_id": "api-activity_page_1-50vu-01",
+      "context": "1e1ab81b01343dd9",
+      "arguments": {
+        "action": "api",
+        "label": "indexes-before-50vu",
+        "run": "01",
+        "case": "activity_page_1",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-16T17:17:08.465771+00:00",
+      "started_utc": "2026-11-16T17:15:46.283770+00:00",
+      "original_result_sha256": "1e9d7f5bdd4cc3683035755d2fdce9b852ba6d1b0d11be748b784e5a6b2d3f0a"
+    },
+    {
+      "run_id": "api-activity_page_1-50vu-02",
+      "context": "1e1ab81b01343dd9",
+      "arguments": {
+        "action": "api",
+        "label": "indexes-before-50vu",
+        "run": "02",
+        "case": "activity_page_1",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-16T17:18:31.260057+00:00",
+      "started_utc": "2026-11-16T17:17:09.103411+00:00",
+      "original_result_sha256": "2b943d7f3503370be03028b54a356b73a9cc94ec1eaeef0beb1c9e554f7e446b"
+    },
+    {
+      "run_id": "api-activity_page_1-50vu-03",
+      "context": "1e1ab81b01343dd9",
+      "arguments": {
+        "action": "api",
+        "label": "indexes-before-50vu",
+        "run": "03",
+        "case": "activity_page_1",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-16T17:19:54.586698+00:00",
+      "started_utc": "2026-11-16T17:18:32.370673+00:00",
+      "original_result_sha256": "401917f707b7738c83c7def660604fa320c7d7eded040a2094f5f50e4d98b079"
+    },
+    {
+      "run_id": "api-catalogue_page_1-50vu-01",
+      "context": "4e0deaa5ace1a430",
+      "arguments": {
+        "action": "api",
+        "label": "indexes-before-50vu",
+        "run": "01",
+        "case": "catalogue_page_1",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-16T17:08:50.558398+00:00",
+      "started_utc": "2026-11-16T17:07:28.409210+00:00",
+      "original_result_sha256": "bc1d7f9ff228e57a662e266ab5c5de4ab691872208b8e9d69b5e3276dd5e9059"
+    },
+    {
+      "run_id": "api-catalogue_page_1-50vu-02",
+      "context": "80e3577192064581",
+      "arguments": {
+        "action": "api",
+        "label": "indexes-before-50vu",
+        "run": "02",
+        "case": "catalogue_page_1",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-16T17:10:13.199331+00:00",
+      "started_utc": "2026-11-16T17:08:51.058768+00:00",
+      "original_result_sha256": "f88ada281c38a38a6b1db1c95402730ecf068dc0b919fce53f7ce95064285b0e"
+    },
+    {
+      "run_id": "api-catalogue_page_1-50vu-03",
+      "context": "80e3577192064581",
+      "arguments": {
+        "action": "api",
+        "label": "indexes-before-50vu",
+        "run": "03",
+        "case": "catalogue_page_1",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-16T17:11:36.550736+00:00",
+      "started_utc": "2026-11-16T17:10:14.310138+00:00",
+      "original_result_sha256": "bfaae47ac76a139fe07c48b9a44ddd18669bf09a2e168c77077d21cd9b5943e3"
+    },
+    {
+      "run_id": "api-catalogue_page_100-50vu-01",
+      "context": "80e3577192064581",
+      "arguments": {
+        "action": "api",
+        "label": "indexes-before-50vu",
+        "run": "01",
+        "case": "catalogue_page_100",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-16T17:12:59.344565+00:00",
+      "started_utc": "2026-11-16T17:11:37.155178+00:00",
+      "original_result_sha256": "9b6112e246082b5ca50c5b9ab5bfcd4fc72ee7a703ad468469d6916c12e88b21"
+    },
+    {
+      "run_id": "api-catalogue_page_100-50vu-02",
+      "context": "80e3577192064581",
+      "arguments": {
+        "action": "api",
+        "label": "indexes-before-50vu",
+        "run": "02",
+        "case": "catalogue_page_100",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-16T17:14:22.237671+00:00",
+      "started_utc": "2026-11-16T17:13:00.084496+00:00",
+      "original_result_sha256": "6c5e9c6c220089737715e704194f7f9fd46885c14f699f476fde414bc4a1b36d"
+    },
+    {
+      "run_id": "api-catalogue_page_100-50vu-03",
+      "context": "80e3577192064581",
+      "arguments": {
+        "action": "api",
+        "label": "indexes-before-50vu",
+        "run": "03",
+        "case": "catalogue_page_100",
+        "vus": 50,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": true
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-16T17:15:45.360081+00:00",
+      "started_utc": "2026-11-16T17:14:23.240069+00:00",
+      "original_result_sha256": "b0e0bde82b7360e5a68912c05bf170729019cff17271e9d1e1e2dd9ba5334cbf"
+    },
+    {
+      "run_id": "profile",
+      "context": "e602d84d948e4ae3",
+      "arguments": {
+        "action": "profile",
+        "label": "indexes-before-50vu",
+        "run": "01",
+        "case": "catalogue_page_1",
+        "vus": 1,
+        "duration": "60s",
+        "warmup_seconds": 15,
+        "repetitions": 3,
+        "k6_docker": false
+      },
+      "exit_code": 0,
+      "finished_utc": "2026-11-16T17:06:51.463496+00:00",
+      "started_utc": "2026-11-16T17:06:51.407000+00:00",
+      "original_result_sha256": "332ea23fa75bbbb4ce8a4bf662ea07a10a29b356168c3b93e8199e0881dafb19"
+    }
+  ],
+  "notes": [
+    "contexts pool identical metadata; each run references its exact original context.",
+    "Run arguments, timestamps, exit codes and original result hashes are preserved.",
+    "API rows retain measured metrics; setup/warm-up/native duplicate metrics are intentionally omitted.",
+    "Successful console logs, checkpoints and private Lighthouse dumps are not retained.",
+    "Exit-99 metrics remain included; their console logs are retained under failure-logs/."
+  ]
+}

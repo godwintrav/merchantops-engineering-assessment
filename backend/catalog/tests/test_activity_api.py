@@ -160,6 +160,14 @@ class ProductActivityAPITests(TestCase):
             ]
         )
 
+        # Equal timestamps must retain a deterministic ID tiebreaker across pages.
+        AuditLog.objects.filter(product=self.product).update(created_at=timezone.now())
+        expected_ids = list(
+            AuditLog.objects.filter(product=self.product)
+            .order_by("-id")
+            .values_list("id", flat=True)
+        )
+
         response = self.client.get(
             self.url(self.product),
             {"merchant_id": self.merchant.pk},
@@ -184,4 +192,10 @@ class ProductActivityAPITests(TestCase):
         self.assertEqual(
             len(second.data["results"]),
             7,
+        )
+
+        self.assertEqual(
+            [record["id"] for record in response.data["results"]]
+            + [record["id"] for record in second.data["results"]],
+            expected_ids,
         )
