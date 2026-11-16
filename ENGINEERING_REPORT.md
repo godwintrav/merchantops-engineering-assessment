@@ -1,69 +1,109 @@
 # Engineering Report
 
-**Status — November 16, 2026:** baseline investigation and catalogue request consolidation are complete. Backend query optimizations, inventory adjustments, and the final optimized benchmark matrices remain pending. This report records verified results as implementation progresses.
+The read optimizations, inventory workflow and reliability improvements are implemented. Local verification passes **87 MySQL backend tests and 14 Playwright tests**. Setup and verification were also exercised in a separate Compose project with fresh volumes; publishing the final commits and submitting the repository URL remain outstanding.
 
 ## Findings and Priorities
 
-Investigation covered catalogue browsing, search, pagination, ordinary/complex product editors, and existing activity history. Source inspection, SQL query capture, browser workflows, and API load tests identified four priorities:
+Four avoidable costs dominated the investigation:
 
-1. **Catalogue request waterfall:** the frontend fetched a list, then sequentially fetched every product's details before rendering. A full page required 26 API requests despite the list already containing all displayed fields.
-2. **Catalogue category N+1:** serialization accessed categories without eager loading, producing 28 diagnostic SQL queries for 25 products.
-3. **Editor query amplification:** inventory and pricing were queried separately for each variant. Query count grew as `4 + 2 × variants`: 8, 54, and 104 queries for 2, 25, and 50 variants.
-4. **Redundant editor request:** the frontend fetched product details alongside editor data to obtain `image_url`.
+1. Catalogue rendering awaited a list and 25 sequential detail requests, although the list already supplied the displayed fields.
+2. Category serialization performed a lookup per product: 28 diagnostic queries for a full page.
+3. Editor inventory/pricing queries grew with variant count: 8/54/104 queries for 2/25/50 variants.
+4. The editor requested product details separately to obtain its image.
 
-The complex editors showed the strongest load-related degradation. The 50-variant editor's throughput stayed near 52–55 requests/sec across 25/50/100 virtual users while p95 latency increased substantially. Direct query/request reductions take priority over introducing caching. Search and pagination were lower priorities at the measured dataset size.
+Removing redundant requests and batching relationship access took priority over caching. The baseline 50-variant editor plateaued near 52–55 requests/sec at 25–100 users while latency rose. Search/index changes and Redis lacked sufficient evidence to justify their complexity before these direct fixes.
 
 ## Performance Evidence
 
-### Method
+**Method:** three repetitions per API scenario/load; core cases at 1/5/10/25/50/100 virtual users, secondary search/pagination/activity cases at one user. Each run used 15s warm-up, a 6s drain gap, 60s measurement and 200ms think time. Authentication/preflight and SQL profiling were outside measured endpoint metrics. Validations checked response content, not only HTTP status.
 
-The baseline contains **90 k6 runs and 349,602 measured requests**, with zero HTTP/content-validation failures: three repetitions per scenario/load combination. Core APIs were tested at 1/5/10/25 VUs, followed by 50/100-VU stress tests. Secondary search, pagination, and activity cases ran at one VU.
+Each revision retains 90 selected API runs: **349,602 baseline requests and 528,199 optimized requests**, with zero measured HTTP/content failures in the selected evidence. Fixture counts/IDs match: 2,500 merchant products, 5,071 variants and one activity record. Manifests retain exact timestamps, execution contexts, script hashes and source snapshots, including the optimized application's uncommitted patch. The baseline reference is `0d1602b`; the measured optimized source is `6fb8ac4` plus its recorded patch. Read timings were captured before the inventory UI/reliability extension; they are not new load measurements of that extension.
 
-Each API run used 15 seconds of warm-up, a 6-second drain gap, 60 seconds of measurement, and 200 ms think time. Authentication/preflight occurred outside measured endpoint metrics. Cases ran sequentially against fixed fixtures: 2,500 merchant products, 5,071 variants, and one activity record. Fixture/query profiles were checked afterward; temporary accounts were removed.
+The retained environment uses Django runserver (`DEBUG=True`), Vite dev and MySQL 8.4.13 on an Apple M5 Pro host, with Docker allocated 18 CPUs/~7.75 GiB. Recorded backend versions and primary workload fingerprints match. Exact baseline frontend Node patch was not recorded; prior host/socket/cache state was not fully controlled. Stress manifests identify the source executions of the retained 50/100-user observations.
 
-Playwright recorded nine samples per workflow using action-to-validated-DOM readiness and API request counts. Three Lighthouse audits supplied warm initial-load diagnostics. SQL capture and ORM-generated EXPLAIN plans were collected separately from timing runs. Percentiles below are ranges of individual-run p95s, not pooled or averaged percentiles.
-
-### Baseline
-
-| API | Diagnostic SQL queries | p95 at 25 VUs | p95 at 100 VUs |
+| API | SQL before → after | 100-VU p95 before → after (ms) | Median req/s before → after |
 | --- | ---: | ---: | ---: |
-| Catalogue, 25 products | 28 | 77.61–88.01 ms | 470.05–474.17 ms |
-| Editor, 2 variants | 8 | 23.92–25.00 ms | 99.90–104.98 ms |
-| Editor, 25 variants | 54 | 101.33–134.47 ms | 1015.04–1026.90 ms |
-| Editor, 50 variants | 104 | 348.76–380.09 ms | 1932.24–1965.33 ms |
+| Catalogue, 25 products | 28 → 3 | 470.05–474.17 → 133.68–180.41 | 173.25 → 334.89 |
+| Editor, 2 variants | 8 → 5 | 99.90–104.98 → 113.51–116.88 | 394.44 → 354.45 |
+| Editor, 25 variants | 54 → 5 | 1015.04–1026.90 → 188.72–192.07 | 95.14 → 278.32 |
+| Editor, 50 variants | 104 → 5 | 1932.24–1965.33 → 282.33–283.05 | 52.34 → 226.04 |
 
-Baseline browser medians were 166.25 ms for catalogue readiness and 204.16 ms for the next page, each requiring 26 API requests. Selective search took 348.28 ms, including the existing 300 ms debounce. Lighthouse median LCP was 64.47 ms, occurring before catalogue readiness; LCP alone would miss the workflow delay.
+p95 entries are ranges of three individual-run percentiles, not averaged/pooled percentiles. Throughput is the median of measured-window rates including think time, not maximum capacity. At 50 VUs, catalogue p95 decreased from 151.76–173.74 to 17.17–21.60 ms; the 50-variant editor decreased from 829.39–837.74 to 21.26–22.13 ms. The ordinary editor at 100 VUs was slower; the results do not support claiming every path improved.
 
-### Verified Change So Far
+Playwright timing captured nine observations per workflow, measuring action-to-validated-DOM readiness including automation overhead:
 
-| Catalogue workflow | Baseline API requests | After hydration removal |
+| Workflow | Median before → after (ms) | API requests before → after |
 | --- | ---: | ---: |
-| Open a full page | 26 | 1 |
-| Load the next page | 26 | 1 |
-| Selective search, one result | 2 | 1 |
+| Catalogue navigation | 166.25 → 66.09 | 26 → 1 |
+| Next page | 204.16 → 81.66 | 26 → 1 |
+| Selective search | 348.28 → 332.23 | 2 → 1 |
+| Editor, 2 variants | 66.36 → 76.43 | 2 → 1 |
+| Editor, 25 variants | 65.06 → 63.59 | 2 → 1 |
+| Editor, 50 variants | 81.93 → 63.46 | 2 → 1 |
 
-The after counts were verified in nine authenticated workflow observations and automated regression checks. These were implementation checks, not the final optimized timing matrix. **Comparable after-change latency/throughput results remain pending**; no timing improvement percentages are claimed yet.
+Search includes its 300ms debounce. The ordinary-editor browser median increased 15.17%. Three warm, unthrottled Lighthouse audits also showed LCP/FCP increasing from 64.47 to 77.67 ms, with CLS/TBT remaining zero. These initial-paint diagnostics can precede catalogue readiness and are not field Core Web Vitals.
 
-Reproduction commands are in [benchmarks/README.md](benchmarks/README.md). See [baseline findings](benchmarks/results/comparison.md), [stress comparisons](benchmarks/results/stress-comparison.md), and consolidated evidence under [baseline-full](benchmarks/results/baseline-full/manifest.json) and [baseline-stress](benchmarks/results/baseline-stress/manifest.json). Manifests preserve environment, commits, exact script contexts, run options, timestamps, and exit codes. Final optimized runs will use separate labels and the same consolidated format, with matching fixtures and measurement conditions.
+Reproduce workloads using [benchmark instructions](benchmarks/README.md). Review [all comparisons](benchmarks/results/comparison.md), [high-load tables](benchmarks/results/stress-comparison.md), and manifests for [baseline full](benchmarks/results/baseline-full/manifest.json), [baseline stress](benchmarks/results/baseline-stress/manifest.json), [optimized full](benchmarks/results/optimized-full/manifest.json) and [optimized stress](benchmarks/results/optimized-stress/manifest.json). Consolidation verified metrics, resources, browser payloads and reconstructed provenance against the working files before pruning duplicate artifacts. Baseline evidence remains unchanged.
 
 ## Implementation
 
-**Completed:** [CatalogueView.vue](frontend/src/views/CatalogueView.vue) now renders `products.list()` directly. The per-product detail loop and intermediate hydration array were removed. The existing request cancellation, loading/error handling, search debounce, and pagination flow remain in place through `useResource()` and the existing route watchers.
+**Reads:** catalogue rendering consumes the list directly; `select_related("category")` eliminates category lookups. Editors join inventory, prefetch ID-ordered price rules, and include `image_url`, removing the extra detail request. Merchant filtering, ordering, decimal formatting, missing-inventory `null`, cancellation and existing editing behavior remain intact. Populated catalogue pages use three diagnostic queries; nonempty editors use five regardless of tested variant count. Empty searches/editors use two/four. Counts consistently exclude session/authentication SQL.
 
-**Next:** eager-load catalogue categories; batch editor inventory/prices; include `image_url` in the editor response and remove its extra request. Add bounded-query/editor request checks, then repeat the comparable benchmark matrices. Inventory-adjustment implementation remains pending.
+**Adjustments:** `POST /api/products/{product_id}/variants/{variant_id}/adjustments/?merchant_id=…` accepts a nonzero JSON integer `delta` and a trimmed 1–500-character `reason`. Strings, floats, booleans and unexpected fields are rejected. Delta/result limits are explicit application bounds of ±2,147,483,647 and 0–2,147,483,647 respectively. The session supplies the actor; merchant/product/variant scoping prevents cross-merchant writes. Missing inventory is not implicitly created.
+
+The [inventory service](backend/catalog/services/inventory.py) locks the inventory row inside `transaction.atomic()`, reads quantity/reservations after locking, checks the new quantity, and commits stock plus one `inventory.adjusted` audit together. Audit JSON records variant/operator snapshots, reason, delta and before/after/reserved quantities; the record supplies its timestamp. Stock locking is scoped to the affected inventory rather than an entire product or merchant.
+
+The inventory-tab modal provides an advisory preview, accessible focus handling and pending/error/success feedback. A separate inventory-state map avoids triggering the editor's general-draft reset. Activity renders both inventory adjustments and existing product changes. Pending requests guard duplicate handlers/navigation; uncertain outcomes retain retry identity rather than automatically resending writes.
+
+**Reliability:** migration `0004_inventoryoperation` persists merchant-scoped UUID keys bound to operator, target and normalized payload. A database uniqueness constraint serializes duplicate claims; the key, stock, audit and outcome commit atomically. Identical authorized replays return 200 with the original adjustment and a fresh inventory snapshot; new operations return 201. Conflicting reuse returns 409. MySQL lock waits are bounded to five seconds on the service connection and restored afterward; recognized timeout/deadlock errors return safe 503 `inventory_busy` responses with `Retry-After: 1`. Other database errors are not disguised as stock conflicts.
+
+The UI stores the key/payload in session storage before sending, restores uncertain operations after same-tab reload, and offers manual same-key retry. Confirmed success clears retry details; a new intended operation receives a new key. Unavailable storage prevents sending, and incomplete success responses retain the key until verified.
 
 ## Correctness
 
-[Catalogue browser tests](benchmarks/tests/catalogue.spec.mjs) verify displayed names, SKUs, categories, statuses, images, links, response ordering, pagination, search, empty/loading states, and error/retry behavior while enforcing request counts. The main regression test failed against the original hydration implementation and passed after removal. Both tests and the frontend production build pass. Authenticated checks against the real backend confirmed one request for all nine observed catalogue workflows; their temporary account was removed.
+| Guarantee | Evidence |
+| --- | --- |
+| Strict amount/reason validation | API tests reject zero, fractions, booleans, numeric strings, missing/unknown fields and invalid reasons. |
+| Reservations and quantity limits | Exact reserved boundary succeeds; underflow/overflow is rejected without stock/audit effects. |
+| Authorization and CSRF | Anonymous/nonmember/mismatched-target requests fail; real session clients require a valid CSRF token; replays reauthorize. |
+| Accurate audit history | Tests compare actor/variant snapshots, reason, delta, timestamp and before/after chains. Activity renders escaped reason text and operator snapshots. |
+| Atomic persistence | Injected failures before/after audit insertion and while saving the operation outcome roll back all writes. Independent connections observe neither write before commit and both afterward. |
+| Concurrent writes | Real MySQL worker connections preserve both increments, reject unsafe competing decrements/overflow, read fresh reservations after waiting, and allow an unrelated variant to proceed. |
+| Safe retries/contention | Concurrent duplicate keys produce one stock/audit/key result; payload/operator conflicts fail. Real lock waits return 503, restore session settings, and allow same-key recovery. |
+| Existing behavior | Catalogue/editor query and request budgets, general editing, merchant isolation, constraints, modal guards, dirty drafts and activity rendering remain covered. |
 
-The existing 46 backend tests and Django checks passed during baseline setup, covering existing constraints, authentication, merchant access, product updates, and activity. They are not evidence that the new adjustment guarantees have been implemented.
+Concurrency tests use `TransactionTestCase`, committed fixtures, distinct MySQL connection IDs, barriers/events and bounded waits; they do not use sleeps as proof of overlap. Mocks inject failures, while stock, locks, transactions and assertions run against MySQL.
 
-**Inventory adjustment verification is pending:** tests must establish strict nonzero integer/reason validation, reservation boundaries, independent-connection MySQL concurrency safety, atomic stock/audit rollback, accurate operator/variant/before-and-after audit details, merchant isolation, CSRF protection, and usable UI feedback. The existing stock constraint is a safeguard, not a substitute for those transaction and concurrency tests.
+All **87 backend tests and 14 browser tests pass**, as do Django checks, migration-drift checks, Python formatting and the frontend production build. Two authenticated isolated-fixture browser checks additionally verified persistence and response-loss recovery: dropping the HTTP response after commit and retrying retained one stock change, one audit and one key. Temporary fixtures were removed.
+
+Run from the repository root with services running:
+
+```bash
+docker compose exec backend python manage.py test catalog --keepdb
+docker compose exec backend python manage.py check
+docker compose exec backend python manage.py makemigrations --check --dry-run
+docker compose exec frontend npm run build
+cd benchmarks
+nvm use 22
+npm ci
+export PLAYWRIGHT_BROWSERS_PATH=/tmp/merchantops-playwright
+npx playwright install chromium
+npx playwright test
+```
+
+Fresh setup passed in an isolated Compose project with alternate ports and new volumes, including all migrations, fixtures, demo provisioning, the backend/browser suites and build. Running setup again preserved fixture/query profiles and the chosen demo password. An authenticated walkthrough verified one-request catalogue/editor loading, a real correction, one audit, same-key replay and preserved unsaved edits. The existing development database was kept separate. [CI](.github/workflows/verify.yml) configures the same MySQL, build and browser gates; its hosted execution awaits pushing the workflow. [README](README.md) contains setup, API/retry and browser prerequisites; [demo steps](docs/DEMO.md) provide a short review path.
 
 ## Trade-offs and Remaining Work
 
-- Measurements use the supplied Django runserver/Vite development environment on one host. They support local before/after comparisons, not production capacity claims. VUs share one authenticated merchant-member session per run and target hot fixtures; closed-user load with think time does not establish fixed-arrival-rate capacity.
-- Browser readiness includes automation overhead and is not exact paint timing. Small browser samples support medians/ranges; local Lighthouse diagnostics are not field Core Web Vitals. Search debounce is included explicitly.
-- One activity record cannot establish history-scale performance. Larger isolated datasets are needed before prioritizing activity, substring-search, or deep-pagination indexes. EXPLAIN estimates are not actual execution measurements.
-- Redis remains conditional on measured need after direct fixes. Any adoption must address merchant scoping, authorization, invalidation, freshness, and outage behavior; adjustment validation must remain authoritative in MySQL.
-- Inventory functionality, failure/concurrency verification, and final comparable optimized measurements are required before submission. The report will be revised around the final implementation and results.
+- Local development-server timings and closed-user hot-fixture workloads do not establish production capacity. Production workers/connection lifecycle, realistic arrival rates and multi-user session workloads need separate measurements. The earlier intermittent connection-establishment issue was not established as fixed by a successful selected execution.
+- One activity record is smoke coverage. Larger isolated histories, deep pagination and substring-search query plans should precede index changes. Redis remains conditional and must preserve merchant scoping, freshness and authoritative MySQL adjustment validation.
+- API idempotency keys are optional for compatibility; callers omitting them have no duplicate protection. The UI always supplies one. Recovery needs the same key; closing the tab/losing storage requires checking history. Different keys cannot identify the same real-world intent automatically.
+- Server keys have no automatic expiry and consume storage. They survive product/operator deletion through stored scalar identity; merchant deletion cascades them. Audit actor deletion nulls its FK, while product deletion cascades activity. This is not a tamper-proof or deletion-proof ledger.
+- Request authorization does not instantly revoke an already-running authorized transaction. Lock timeouts bound database lock waits, not every network/request failure. Read batching bounds round trips, while payload size and serialization still grow with related data.
+- Final commits, public-fork visibility, hosted CI and repository-URL submission must be confirmed before the assessment deadline. No upstream pull request is required.
+
+### Improvements I Would Add Next
+
+Redis caching is proposed, not implemented or included in the measured gains above:
+
+- **Redis caching for frequently requested read routes:** I would add cache-aside Redis caching to suitable catalogue/product read responses to reduce repeated database work and load. Select routes using request frequency, query cost and measured cache-hit rates. Authorize requests before serving merchant-scoped entries; include relevant search/page parameters in keys. Invalidate affected entries after successful transaction commit, set bounded TTLs, and fall back to MySQL if Redis is unavailable. Stock adjustment validation, row locking, audit creation and idempotency remain authoritative in MySQL. Benchmark cached versus uncached latency, throughput and database load before reporting benefits.

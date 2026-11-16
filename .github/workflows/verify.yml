@@ -1,0 +1,67 @@
+name: Verify MerchantOps
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PLAYWRIGHT_BROWSERS_PATH: /tmp/merchantops-playwright
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: benchmarks/package-lock.json
+      - name: Start MySQL and Django
+        run: docker compose up -d --build db backend
+      - name: Verify backend and MySQL concurrency
+        run: |
+          docker compose exec -T backend python -m pip install -r requirements-dev.txt
+          docker compose exec -T backend python -m isort --check-only catalog
+          docker compose exec -T backend python -m black --check catalog
+          docker compose exec -T backend python manage.py migrate --noinput
+          docker compose exec -T backend python manage.py check
+          docker compose exec -T backend python manage.py makemigrations --check --dry-run
+          docker compose exec -T backend python manage.py test catalog --keepdb
+      - name: Build frontend
+        run: docker compose run --rm --no-deps frontend sh -c 'npm ci && npm run build'
+      - name: Start frontend
+        run: |
+          docker compose up -d frontend
+          python3 - <<'PY'
+          import time
+          import urllib.error
+          import urllib.request
+          deadline = time.monotonic() + 90
+          while True:
+              try:
+                  urllib.request.urlopen('http://127.0.0.1:5173/', timeout=2).close()
+                  break
+              except (OSError, urllib.error.URLError):
+                  if time.monotonic() >= deadline:
+                      raise
+                  time.sleep(1)
+          PY
+      - name: Install browser test dependencies
+        working-directory: benchmarks
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+      - name: Run all browser regressions
+        working-directory: benchmarks
+        run: npx playwright test
+      - name: Collect service logs on failure
+        if: failure()
+        run: docker compose logs --no-color --tail=100
+      - name: Clean up CI containers and volumes
+        if: always()
+        run: docker compose down -v

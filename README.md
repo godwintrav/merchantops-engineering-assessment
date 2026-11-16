@@ -50,16 +50,18 @@ The demo operator belongs to the **Northstar Retail** merchant. The setup script
 
 ## What exists in the application
 
-The starter application includes:
+The completed application includes:
 
 - Product catalogue, search, and pagination.
 - Product detail editing.
 - Product variants, pricing, inventory, and reservations.
 - Sales-channel availability.
-- Product activity history.
+- Product activity history with inventory-adjustment audit details.
+- Per-variant stock corrections with reservation checks and atomic auditing.
+- Persisted idempotency keys and manual recovery from uncertain responses.
 - Authenticated, merchant-scoped access controls.
 
-See [ASSESSMENT.md](ASSESSMENT.md) for the feature to add and the performance investigation to complete.
+Read [ENGINEERING_REPORT.md](ENGINEERING_REPORT.md) for findings, before/after evidence, implementation decisions and correctness verification. Follow [docs/DEMO.md](docs/DEMO.md) for a short review walkthrough.
 
 ## Project layout
 
@@ -67,6 +69,10 @@ See [ASSESSMENT.md](ASSESSMENT.md) for the feature to add and the performance in
 .
 ├── ASSESSMENT.md          # Candidate assignment
 ├── README.md              # Setup and development guide
+├── ENGINEERING_REPORT.md  # Findings, measurements, correctness and trade-offs
+├── benchmarks/            # k6, Playwright and retained measurements
+├── docs/DEMO.md           # Review demonstration
+├── .github/workflows/     # MySQL/backend/build/browser CI
 ├── docker-compose.yml     # MySQL, Django, and Vue services
 ├── setup.sh               # Repeatable local provisioning
 ├── backend/
@@ -200,6 +206,10 @@ PLAYWRIGHT_BROWSERS_PATH=/tmp/merchantops-playwright npx playwright test
 ```
 
 Run that command from `benchmarks/`. These tests mock API responses and require no login credentials; MySQL concurrency and atomicity checks run separately in the backend suite. See [benchmarks/README.md](benchmarks/README.md) for individual suites and performance measurements. If a command reports `Unexpected token ?`, check `node --version` and run `nvm use 22` again.
+
+## Continuous integration
+
+[The verification workflow](.github/workflows/verify.yml) runs on pushes and pull requests: Docker Compose/MySQL backend tests (including real concurrency), Django and migration checks, Python formatting, the frontend build and all Playwright tests using Node 22. It uses disposable runner volumes and needs no demo password; browser tests mock API responses. The first hosted result will be available after the workflow is pushed to GitHub.
 
 ## Python formatting
 
