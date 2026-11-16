@@ -33,19 +33,19 @@ function errorMessage(data, fallback) {
   }).join(' ') || fallback
 }
 
-async function request(path, { params, signal, body } = {}) {
+async function request(path, { params, signal, body, method } = {}) {
   const query = new URLSearchParams({ merchant_id: merchant.id, ...params })
   const headers = { Accept: 'application/json' }
-  if (body) {
+  if (body !== undefined) {
     headers['Content-Type'] = 'application/json'
     headers['X-CSRFToken'] = csrfToken()
   }
   const response = await fetch('/api/products/' + path + '?' + query, {
-    method: body ? 'PATCH' : 'GET',
+    method: method || (body !== undefined ? 'PATCH' : 'GET'),
     credentials: 'same-origin',
     signal,
     headers,
-    body: body ? JSON.stringify(body) : undefined,
+    body: body !== undefined ? JSON.stringify(body) : undefined,
   })
   const data = await response.json().catch(() => null)
   if (!response.ok) {
@@ -55,13 +55,20 @@ async function request(path, { params, signal, body } = {}) {
       signIn()
       throw new Error('Sign in to continue.')
     }
-    throw new Error(errorMessage(data, 'Request failed (' + response.status + '). Please try again.'))
+    const failure = new Error(errorMessage(data, 'Request failed (' + response.status + '). Please try again.'))
+    failure.status = response.status
+    failure.code = data?.code
+    failure.fields = data
+    throw failure
   }
   if (data === null) throw new Error('The server returned an invalid response. Please try again.')
   return data
 }
 
 export const products = {
+  adjustInventory(productId, variantId, body) {
+    return request(productId + '/variants/' + variantId + '/adjustments/', { method: 'POST', body })
+  },
   list(search, page, signal) {
     return request('', { params: { search, page }, signal })
   },

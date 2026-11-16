@@ -109,3 +109,32 @@ class ProductActivitySerializer(serializers.ModelSerializer):
             "details",
             "created_at",
         ]
+
+
+class StrictAdjustmentDeltaField(serializers.Field):
+    def to_internal_value(self, value):
+        if type(value) is not int or value == 0:
+            raise serializers.ValidationError("Must be a nonzero JSON integer.")
+        if not -2147483647 <= value <= 2147483647:
+            raise serializers.ValidationError("Amount is outside the supported range.")
+        return value
+
+
+class StrictAdjustmentReasonField(serializers.CharField):
+    def to_internal_value(self, data):
+        if not isinstance(data, str):
+            raise serializers.ValidationError("Must be a string.")
+        return super().to_internal_value(data)
+
+
+class InventoryAdjustmentSerializer(serializers.Serializer):
+    delta = StrictAdjustmentDeltaField()
+    reason = StrictAdjustmentReasonField(max_length=500, trim_whitespace=True)
+
+    def validate(self, attrs):
+        unexpected = set(self.initial_data) - set(self.fields)
+        if unexpected:
+            raise serializers.ValidationError(
+                {field: "This field is not accepted." for field in sorted(unexpected)}
+            )
+        return attrs

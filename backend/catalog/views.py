@@ -17,10 +17,12 @@ from catalog.models import (
     ProductVariant,
 )
 from catalog.serializers import (
+    InventoryAdjustmentSerializer,
     ProductActivitySerializer,
     ProductListSerializer,
     ProductUpdateSerializer,
 )
+from catalog.services.inventory import InventoryConflict, adjust_inventory
 
 
 class ProductPagination(PageNumberPagination):
@@ -283,3 +285,36 @@ class ProductActivityView(generics.ListAPIView):
             .select_related("actor")
             .order_by("-created_at", "-id")
         )
+
+
+class InventoryAdjustmentView(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request, pk, variant_id):
+        merchant_id = request.query_params.get("merchant_id")
+        if merchant_id is None:
+            raise ValidationError({"merchant_id": "This parameter is required."})
+        try:
+            merchant_id = int(merchant_id)
+        except (TypeError, ValueError):
+            raise ValidationError({"merchant_id": "Must be a valid integer."})
+        if merchant_id <= 0:
+            raise ValidationError({"merchant_id": "Must be a positive integer."})
+        get_object_or_404(Merchant.objects.filter(members=request.user), pk=merchant_id)
+        product = get_object_or_404(
+            Product.objects.filter(merchant_id=merchant_id), pk=pk
+        )
+        variant = get_object_or_404(
+            ProductVariant.objects.filter(product_id=product.pk), pk=variant_id
+        )
+        serializer = InventoryAdjustmentSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        try:
+            result = adjust_inventory(
+                variant=variant, actor=request.user, **serializer.validated_data
+            )
+        except InventoryConflict as conflict:
+            return Response(
+                {"code": conflict.code, "detail": conflict.detail}, status=409
+            )
+        return Response(result, status=201)
