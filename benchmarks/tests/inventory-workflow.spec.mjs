@@ -165,3 +165,101 @@ test('preview explains the actual reservation boundary for a large reduction', a
   await expect(form).toContainText('Cannot exceed the maximum quantity of 2,147,483,647 units.')
   expect(requests.filter(request => request.method === 'POST')).toHaveLength(0)
 })
+
+test('lost response survives reload and replays the same operation with current stock', async ({ page }) => {
+  const posts = []
+  await page.route('**/api/products/**', async route => {
+    const req = route.request()
+    if (req.method() === 'POST') {
+      posts.push({ key: req.headers()['idempotency-key'], body: req.postDataJSON() })
+      if (posts.length === 1) return route.abort('failed')
+      return route.fulfill({ status: posts.length === 2 ? 200 : 201, json: {
+        replayed: posts.length === 2,
+        inventory: { id: 70, quantity: posts.length === 2 ? 15 : 16, reserved: 4, available: posts.length === 2 ? 11 : 12 },
+        adjustment: { id: posts.length === 2 ? 100 : 101, variant_id: 7, quantity_before: posts.length === 2 ? 10 : 15, quantity_after: posts.length === 2 ? 13 : 16 },
+      } })
+    }
+    const fixture = product()
+    if (posts.length) fixture.variants[0].inventory.quantity = 15
+    await route.fulfill({ json: fixture })
+  })
+  await page.goto('/products/42')
+  let form = await open(page)
+  await form.getByLabel('Adjustment amount').fill('3')
+  await form.getByLabel('Reason', { exact: true }).fill('Count')
+  await form.getByRole('button', { name: 'Apply adjustment' }).click()
+  await expect(form.getByRole('alert')).toContainText('The outcome could not be confirmed.')
+  await expect(form.getByLabel('Adjustment amount')).toBeDisabled()
+  expect(posts).toHaveLength(1)
+  expect(posts[0].key).toMatch(/^[0-9a-f-]{36}$/)
+  page.once('dialog', dialog => dialog.accept())
+  await page.reload()
+  form = await open(page)
+  await expect(form.getByRole('alert')).toContainText('unconfirmed adjustment was restored')
+  await expect(form.getByLabel('Reason', { exact: true })).toHaveValue('Count')
+  expect(posts).toHaveLength(1)
+  await form.getByRole('button', { name: 'Retry same adjustment' }).click()
+  await expect(form.getByRole('status')).toContainText('Adjustment #100 was already saved: 10 → 13. Current quantity: 15.')
+  expect(posts[1]).toEqual(posts[0])
+  await expect(page.locator('#panel-inventory tbody tr').first().locator('td').nth(1)).toHaveText('15')
+  await form.getByLabel('Adjustment amount').fill('1')
+  await form.getByLabel('Reason', { exact: true }).fill('New operation')
+  await form.getByRole('button', { name: 'Apply adjustment' }).click()
+  await expect(form.getByRole('status')).toContainText('Stock adjusted: 15 → 16.')
+  expect(posts[2].key).not.toBe(posts[0].key)
+  expect(await page.evaluate(() => Object.keys(sessionStorage).filter(key => key.startsWith('merchantops:adjustment:')))).toEqual([])
+})
+
+test('busy responses keep the key and require manual retry', async ({ page }) => {
+  const keys = []
+  await editor(page, async route => {
+    keys.push(route.request().headers()['idempotency-key'])
+    if (keys.length === 1) return route.fulfill({ status: 503, headers: { 'Retry-After': '1' }, json: { code: 'inventory_busy', detail: 'Inventory busy' } })
+    return route.fulfill({ status: 201, json: { inventory: { id: 70, quantity: 13, reserved: 4, available: 9 }, adjustment: { id: 1, variant_id: 7, quantity_before: 10, quantity_after: 13 } } })
+  })
+  const form = await open(page)
+  await form.getByLabel('Adjustment amount').fill('3')
+  await form.getByLabel('Reason', { exact: true }).fill('Count')
+  await form.getByRole('button', { name: 'Apply adjustment' }).click()
+  await expect(form.getByRole('alert')).toContainText('Inventory is busy.')
+  expect(keys).toHaveLength(1)
+  await form.getByRole('button', { name: 'Retry same adjustment' }).click()
+  await expect(form.getByRole('status')).toContainText('Stock adjusted: 10 → 13.')
+  expect(keys).toHaveLength(2)
+  expect(keys[1]).toBe(keys[0])
+})
+
+test('unavailable retry storage prevents sending a stock mutation', async ({ page }) => {
+  await page.addInitScript(() => {
+    const setItem = Storage.prototype.setItem
+    Storage.prototype.setItem = function (key, value) {
+      if (key.startsWith('merchantops:adjustment:')) throw new Error('Storage unavailable')
+      return setItem.call(this, key, value)
+    }
+  })
+  const requests = await editor(page, () => { throw new Error('Must not submit without saving retry identity') })
+  const form = await open(page)
+  await form.getByLabel('Adjustment amount').fill('3')
+  await form.getByLabel('Reason', { exact: true }).fill('Count')
+  await form.getByRole('button', { name: 'Apply adjustment' }).click()
+  await expect(form.getByRole('alert')).toContainText('No adjustment was sent.')
+  expect(requests.filter(request => request.method === 'POST')).toHaveLength(0)
+})
+
+
+test('an incomplete success response retains retry identity', async ({ page }) => {
+  const keys = []
+  await editor(page, async route => {
+    keys.push(route.request().headers()['idempotency-key'])
+    if (keys.length === 1) return route.fulfill({ status: 201, json: {} })
+    return route.fulfill({ status: 200, json: { replayed: true, inventory: { id: 70, quantity: 13, reserved: 4, available: 9 }, adjustment: { id: 1, variant_id: 7, quantity_before: 10, quantity_after: 13 } } })
+  })
+  const form = await open(page)
+  await form.getByLabel('Adjustment amount').fill('3')
+  await form.getByLabel('Reason', { exact: true }).fill('Count')
+  await form.getByRole('button', { name: 'Apply adjustment' }).click()
+  await expect(form.getByRole('alert')).toContainText('The outcome could not be confirmed.')
+  await form.getByRole('button', { name: 'Retry same adjustment' }).click()
+  await expect(form.getByRole('status')).toContainText('was already saved')
+  expect(keys[1]).toBe(keys[0])
+})

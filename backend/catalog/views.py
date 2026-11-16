@@ -1,4 +1,6 @@
-from django.db import transaction
+from uuid import UUID
+
+from django.db import OperationalError, transaction
 from django.db.models import Prefetch, Q
 from django.shortcuts import get_object_or_404
 from rest_framework import generics, permissions
@@ -307,14 +309,34 @@ class InventoryAdjustmentView(APIView):
         variant = get_object_or_404(
             ProductVariant.objects.filter(product_id=product.pk), pk=variant_id
         )
+        operation_key = request.headers.get("Idempotency-Key")
+        if operation_key is not None:
+            try:
+                operation_key = UUID(operation_key)
+            except (ValueError, AttributeError):
+                raise ValidationError({"idempotency_key": "Must be a valid UUID."})
         serializer = InventoryAdjustmentSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         try:
             result = adjust_inventory(
-                variant=variant, actor=request.user, **serializer.validated_data
+                variant=variant,
+                actor=request.user,
+                operation_key=operation_key,
+                **serializer.validated_data,
+            )
+        except OperationalError as error:
+            if not error.args or error.args[0] not in (1205, 1213):
+                raise
+            return Response(
+                {
+                    "code": "inventory_busy",
+                    "detail": "Inventory is busy. Retry the same adjustment with the same operation key.",
+                },
+                status=503,
+                headers={"Retry-After": "1"},
             )
         except InventoryConflict as conflict:
             return Response(
                 {"code": conflict.code, "detail": conflict.detail}, status=409
             )
-        return Response(result, status=201)
+        return Response(result, status=200 if result["replayed"] else 201)

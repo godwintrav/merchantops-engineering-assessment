@@ -163,3 +163,21 @@ class AuditLog(models.Model):
 
     class Meta:
         ordering = ["-created_at"]
+
+
+class InventoryOperation(models.Model):
+    """Retained operation keys; target/operator IDs survive their object deletion."""
+
+    merchant = models.ForeignKey(Merchant, on_delete=models.CASCADE)
+    key = models.UUIDField()
+    actor_id = models.PositiveBigIntegerField()
+    request = models.JSONField()
+    response = models.JSONField(default=dict)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["merchant", "key"], name="unique_merchant_inventory_operation"
+            )
+        ]

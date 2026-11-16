@@ -33,9 +33,9 @@ function errorMessage(data, fallback) {
   }).join(' ') || fallback
 }
 
-async function request(path, { params, signal, body, method } = {}) {
+async function request(path, { params, signal, body, method, headers: requestHeaders } = {}) {
   const query = new URLSearchParams({ merchant_id: merchant.id, ...params })
-  const headers = { Accept: 'application/json' }
+  const headers = { Accept: 'application/json', ...requestHeaders }
   if (body !== undefined) {
     headers['Content-Type'] = 'application/json'
     headers['X-CSRFToken'] = csrfToken()
@@ -66,8 +66,8 @@ async function request(path, { params, signal, body, method } = {}) {
 }
 
 export const products = {
-  adjustInventory(productId, variantId, body) {
-    return request(productId + '/variants/' + variantId + '/adjustments/', { method: 'POST', body })
+  adjustInventory(productId, variantId, body, operationKey) {
+    return request(productId + '/variants/' + variantId + '/adjustments/', { method: 'POST', body, headers: operationKey ? { 'Idempotency-Key': operationKey } : undefined })
   },
   list(search, page, signal) {
     return request('', { params: { search, page }, signal })

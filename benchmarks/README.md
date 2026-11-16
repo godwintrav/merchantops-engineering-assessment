@@ -82,10 +82,10 @@ nvm use 22
 export PLAYWRIGHT_BROWSERS_PATH=/tmp/merchantops-playwright
 npm run test:catalogue
 npm run test:editor
-npx playwright test  # all 10 tests, including inventory API-helper and workflow checks
+npx playwright test  # all 14 tests, including inventory API-helper and workflow checks
 ```
 
-These Playwright tests mock the product API, so they require no credentials or database fixtures. Catalogue checks verify one list request per load/page/search, displayed fields and ordering, loading/empty states, and error/retry behavior. Editor checks cover one GET for ordinary/complex products, populated/blank image paths, tab navigation, and image-only PATCH updates. Inventory checks also cover POST/CSRF, draft preservation, pending/error handling and activity rendering. These are correctness/request-budget checks, separate from the authenticated timing benchmarks below.
+These Playwright tests mock the product API, so they require no credentials or database fixtures. Catalogue checks verify one list request per load/page/search, displayed fields and ordering, loading/empty states, and error/retry behavior. Editor checks cover one GET for ordinary/complex products, populated/blank image paths, tab navigation, and image-only PATCH updates. Inventory checks also cover POST/CSRF, draft preservation, pending/error handling, activity rendering, same-key retries after response loss/reload, busy responses and unavailable retry storage. These are correctness/request-budget checks, separate from the authenticated timing benchmarks below.
 
 ## Individual measurements
 

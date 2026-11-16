@@ -156,6 +156,27 @@ Run a production build:
 docker compose exec frontend npm run build
 ```
 
+## Inventory adjustments and safe retries
+
+Run `docker compose exec backend python manage.py migrate` after pulling changes; setup.sh also applies migrations. In the product editor's inventory tab, choose **Adjust stock**, enter a signed whole-number amount and a reason, then submit. Reservations are checked against current stock under a database row lock; stock and audit history commit together.
+
+API clients use:
+
+```http
+POST /api/products/{product_id}/variants/{variant_id}/adjustments/?merchant_id=1
+Content-Type: application/json
+X-CSRFToken: <current CSRF cookie value>
+Idempotency-Key: 6c09fa0c-a406-4f76-9725-0f8e55e1475a
+```
+
+```json
+{"delta": -3, "reason": "Physical count correction"}
+```
+
+Use an authenticated Django session. Generate a new UUID for each intended operation; retain the same key and payload when retrying that operation. New operations return 201; authorized identical replays return 200 with `replayed: true`, original adjustment details and current inventory. Key/payload or operator mismatches return 409. Lock contention returns 503 `inventory_busy` with `Retry-After: 1`; retry manually with the same key. Existing clients may omit the key, but then repeated requests can apply stock repeatedly.
+
+The UI persists retry details in session storage before sending and restores them after a same-tab reload. Busy/uncertain requests offer **Retry same adjustment**; they are never retried automatically. Confirmed success clears the saved retry details. If session storage is unavailable, the UI does not send a mutation. Server keys are retained without automatic expiry; losing browser retry details requires checking activity/current stock before starting another operation.
+
 ## Browser tests (Playwright)
 
 Keep the frontend running at `http://127.0.0.1:5173`. Browser tests run on the host and require Node 22.19+ and Chromium. With nvm installed, run `nvm install 22` once if Node 22 is missing. Activate it with `nvm use 22` in every new terminal before running npm/npx commands.

@@ -1,9 +1,12 @@
 """Apply a relative stock correction and its audit event as one operation."""
 
-from django.db import transaction
+from contextlib import contextmanager
+
+from django.conf import settings
+from django.db import connection, transaction
 from django.shortcuts import get_object_or_404
 
-from catalog.models import AuditLog, Inventory
+from catalog.models import AuditLog, Inventory, InventoryOperation
 
 MAX_QUANTITY = 2147483647
 
@@ -15,8 +18,55 @@ class InventoryConflict(Exception):
         super().__init__(detail)
 
 
-def adjust_inventory(*, variant, actor, delta, reason):
-    with transaction.atomic():
+@contextmanager
+def inventory_lock_timeout():
+    """Bound MySQL waits on this connection only, restoring its previous policy."""
+    seconds = getattr(settings, "INVENTORY_LOCK_WAIT_SECONDS", 5)
+    with connection.cursor() as cursor:
+        cursor.execute("SELECT @@SESSION.innodb_lock_wait_timeout")
+        previous = cursor.fetchone()[0]
+        cursor.execute("SET SESSION innodb_lock_wait_timeout = %s", [seconds])
+    try:
+        yield
+    finally:
+        with connection.cursor() as cursor:
+            cursor.execute("SET SESSION innodb_lock_wait_timeout = %s", [previous])
+
+
+def adjust_inventory(*, variant, actor, delta, reason, operation_key=None):
+    with inventory_lock_timeout(), transaction.atomic():
+        operation = None
+        if operation_key is not None:
+            payload = {
+                "product_id": variant.product_id,
+                "variant_id": variant.pk,
+                "delta": delta,
+                "reason": reason,
+            }
+            # The unique insert serializes duplicate keys across processes. Django's
+            # savepoint-backed get_or_create reads the winner after it commits.
+            operation, created = InventoryOperation.objects.get_or_create(
+                merchant_id=variant.product.merchant_id,
+                key=operation_key,
+                defaults={"actor_id": actor.pk, "request": payload},
+            )
+            if not created:
+                if operation.actor_id != actor.pk or operation.request != payload:
+                    raise InventoryConflict(
+                        "idempotency_conflict",
+                        "This operation key belongs to a different adjustment.",
+                    )
+                current = get_object_or_404(Inventory, variant_id=variant.pk)
+                return {
+                    **operation.response,
+                    "replayed": True,
+                    "inventory": {
+                        "id": current.pk,
+                        "quantity": current.quantity,
+                        "reserved": current.reserved,
+                        "available": current.quantity - current.reserved,
+                    },
+                }
         inventory = get_object_or_404(
             Inventory.objects.select_for_update(), variant_id=variant.pk
         )
@@ -51,6 +101,7 @@ def adjust_inventory(*, variant, actor, delta, reason):
             },
         )
         result = {
+            "replayed": False,
             "inventory": {
                 "id": inventory.pk,
                 "quantity": after,
@@ -68,4 +119,7 @@ def adjust_inventory(*, variant, actor, delta, reason):
                 "created_at": audit.created_at.isoformat(),
             },
         }
+        if operation is not None:
+            operation.response = result
+            operation.save(update_fields=["response"])
     return result
