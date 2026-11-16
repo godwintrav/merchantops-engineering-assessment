@@ -1,6 +1,6 @@
 # MerchantOps Benchmarks
 
-Read [baseline findings](results/comparison.md) and [50/100-user findings](results/stress-comparison.md) first. The retained evidence preserves all 90 API runs, nine samples per browser workflow, three Lighthouse audits, and every resource sample.
+Read [before/after findings](results/comparison.md) and [50/100-user findings](results/stress-comparison.md) first. Each revision retains 90 API runs, nine samples per browser workflow, three Lighthouse audits, and every resource sample. Optimized datasets use the same layout as their baseline counterparts.
 
 ## Retained results
 
@@ -20,13 +20,15 @@ results/
     manifest.json
     api-runs.json
     resources.json
+  optimized-full/     # same seven-file layout as baseline-full
+  optimized-stress/   # same three-file layout as baseline-stress
 ```
 
 - **manifest.json:** shared environment, matrix completion/cleanup, per-run options/timestamps/exit codes, and original result hashes. Each run references a pooled context containing its exact original commit, working-tree state, and script fingerprints. Distinct contexts are preserved rather than overwritten with the latest version.
 - **api-runs.json:** measured request counts, min/median/p95/p99/max latency, throughput/window, HTTP/content failure rates, checks, and thresholds. Setup/warm-up and duplicate native metrics are omitted. Durations are milliseconds.
 - **browser-runs.json / lighthouse-runs.json:** original measurement payloads grouped by batch ID. Repetition numbers are local to each browser batch; retain the batch ID when comparing samples.
 - **resources.json:** all Docker samples grouped by API run ID, including timestamps and service CPU/memory/I/O data. Samples cover warm-up and measured phases, not continuous maxima or load-generator CPU.
-- **profile.json / query-plans.json:** fixtures, diagnostic query counts, and ORM-generated optimizer estimates. Stress references the identical baseline profile by relative path and SHA-256 in its manifest.
+- **profile.json / query-plans.json:** fixtures, diagnostic query counts, and ORM-generated optimizer estimates. Stress references the identical full-matrix profile by relative path and SHA-256 in its manifest.
 
 Exploratory runs, successful console logs, checkpoints, duplicate summaries/manifests, and private Lighthouse dumps have been removed. Completed datasets are sealed: use a new label for future measurements. Measurements and historical script fingerprints are immutable; reporting/packaging helpers can evolve separately.
 
@@ -36,6 +38,8 @@ Generate detailed tables from either working files or consolidated evidence with
 python3 benchmarks/summarize.py --label baseline-full --output /tmp/merchantops-baseline.md
 python3 benchmarks/summarize.py --label baseline-stress --include-threshold-failures --output /tmp/merchantops-stress.md
 ```
+
+`optimized-stress/` combines the original 50-VU observations with the later complete 100-VU rerun. Its manifest preserves both source executions and the original per-run provenance. The 100-VU rerun supersedes the earlier execution; it is not evidence that an intermittent connection issue was fixed.
 
 ## Prepare a new run
 
@@ -67,16 +71,17 @@ python3 benchmarks/run.py profile --label candidate
 
 This discovers merchant-local IDs and ordinary/25/50-variant products, and captures query counts through a force-authenticated Django API client. Counts exclude session/authentication SQL and are collected separately from latency tests. It does not seed or reset data. Activity tests only cover existing history; a large-history benchmark needs documented fixtures.
 
-## Catalogue regression checks
+## Catalogue and editor regression checks
 
 With the frontend running, use Node 22.19+ and the installed Chromium binary:
 
 ```bash
 cd benchmarks
 npm run test:catalogue
+npm run test:editor
 ```
 
-These Playwright tests mock the product API, so they require no credentials or database fixtures. They verify one list request per catalogue load/page/search, displayed fields and response ordering, loading and empty states, and error/retry behavior. They are correctness/request-budget checks, separate from the authenticated timing benchmarks below.
+These Playwright tests mock the product API, so they require no credentials or database fixtures. Catalogue checks verify one list request per load/page/search, displayed fields and ordering, loading/empty states, and error/retry behavior. Editor checks cover one GET for ordinary/complex products, populated/blank image paths, tab navigation, and image-only PATCH updates. These are correctness/request-budget checks, separate from the authenticated timing benchmarks below.
 
 ## Individual measurements
 
@@ -115,21 +120,31 @@ During collection, scripts write expanded per-run files under api/, browser/, an
 
 ## Finish and consolidate
 
-Capture query plans after timed runs, then inspect the generated report:
+Capture query plans after timed runs, then inspect the generated report. Use `--eager` for the optimized category/inventory joins; omit it to reproduce original base-query shapes. These plans cover base queries, while the diagnostic profile counts all endpoint round trips:
 
 ```bash
-docker compose exec -T backend python - < benchmarks/profiling/query_plans.py > benchmarks/results/candidate/query-plans.json
+docker compose exec -T backend python - --eager < benchmarks/profiling/query_plans.py > benchmarks/results/candidate/query-plans.json
 python3 benchmarks/summarize.py --label candidate --output /tmp/merchantops-candidate.md
 python3 benchmarks/compact_results.py --label candidate
 ```
 
-Consolidation pools exact metadata and verifies retained metrics, browser payloads, resource samples, and reconstructed manifests against their originals. It accepts a completed, cleaned-up, successful matrix. Failed/incomplete attempts remain in working format for diagnosis. Check the compacted report, then prune verified inputs:
+Consolidation pools exact metadata and verifies retained metrics, browser payloads, resource samples, and reconstructed manifests against their originals. By default it accepts only a completed, cleaned-up, successful matrix. For a completed stress matrix with exit-99 threshold failures, explicitly add `--allow-threshold-failures`; those runs remain included and their console logs are retained in `failure-logs/` when pruning. Process errors and incomplete attempts remain in working format for diagnosis. Check the compacted report, then prune verified inputs:
 
 ```bash
 python3 benchmarks/compact_results.py --label candidate --prune
 ```
 
-For an identical stress profile, --profile-ref ../candidate/profile.json deduplicates it; the tool rejects a differing hash. Do not share profiles if optimized query counts or other profile evidence differ. Pruning intentionally removes successful logs, checkpoints, private Lighthouse dumps, and redundant working reports. Archive those outside the repository beforehand if needed.
+For an identical stress profile, --profile-ref ../candidate/profile.json deduplicates it; the tool rejects a differing hash. Do not share profiles if optimized query counts or other profile evidence differ. Pruning intentionally removes successful logs, checkpoints, private Lighthouse dumps, and redundant working reports; threshold-failure logs are preserved. Archive those outside the repository beforehand if needed.
+
+Once both optimized matrices are complete, cleaned up and consolidated, regenerate the shared comparison tables:
+
+```bash
+python3 benchmarks/compare_results.py
+```
+
+This verifies matching fixture/scenario/backend profiles, three API repetitions per case/load, nine browser samples per workflow, and three successful Lighthouse audits before replacing `results/comparison.md` and `results/stress-comparison.md`. Default labels are `baseline-full`, `baseline-stress`, `optimized-full`, and `optimized-stress`; command-line options select other complete datasets. It preserves all workflows, including measured regressions, and reports per-run p95 ranges rather than pooled percentiles.
+
+Optimized manifests also preserve measured application hashes and the uncommitted patch. The original baseline did not record the exact frontend Node patch version; this comparison limitation is explicit in the reports.
 
 ## Fair interpretation
 

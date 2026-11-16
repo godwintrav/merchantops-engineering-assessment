@@ -153,6 +153,7 @@ class ProductEditorView(APIView):
                 "sku": product.sku,
                 "description": product.description,
                 "status": product.status,
+                "image_url": product.image_url,
                 "category": {
                     "id": product.category_id,
                     "name": product.category.name,

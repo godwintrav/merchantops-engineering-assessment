@@ -1,0 +1,3309 @@
+{
+  "schema_version": 1,
+  "units": {
+    "duration": "milliseconds",
+    "throughput": "requests/second"
+  },
+  "runs": [
+    {
+      "run_id": "api-activity_page_1-1vu-01",
+      "case": "activity_page_1",
+      "vus": 1,
+      "samples": 280,
+      "min_ms": 3.928958,
+      "median_ms": 9.6608755,
+      "p95_ms": 11.1568875,
+      "p99_ms": 11.99357507,
+      "max_ms": 25.385875,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.67562828755114,
+      "measured_window_seconds": 59.885,
+      "first_request_epoch_ms": 1794832017478,
+      "last_request_epoch_ms": 1794832077363,
+      "checks": {
+        "rate": 1,
+        "passes": 280,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_http_failed{endpoint:activity_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:activity_page_1}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:activity_page_1}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:activity_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-activity_page_1-1vu-02",
+      "case": "activity_page_1",
+      "vus": 1,
+      "samples": 282,
+      "min_ms": 4.332,
+      "median_ms": 9.748875,
+      "p95_ms": 11.2683149,
+      "p99_ms": 12.491367519999999,
+      "max_ms": 13.878334,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.704861690413427,
+      "measured_window_seconds": 59.938,
+      "first_request_epoch_ms": 1794832102357,
+      "last_request_epoch_ms": 1794832162295,
+      "checks": {
+        "rate": 1,
+        "passes": 282,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:activity_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:activity_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:activity_page_1}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:activity_page_1}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-activity_page_1-1vu-03",
+      "case": "activity_page_1",
+      "vus": 1,
+      "samples": 283,
+      "min_ms": 4.016083,
+      "median_ms": 9.641292,
+      "p95_ms": 11.2157119,
+      "p99_ms": 12.11049938,
+      "max_ms": 13.533666,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.724225427350427,
+      "measured_window_seconds": 59.904,
+      "first_request_epoch_ms": 1794832185393,
+      "last_request_epoch_ms": 1794832245297,
+      "checks": {
+        "rate": 1,
+        "passes": 283,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:activity_page_1}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:activity_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:activity_page_1}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:activity_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-catalogue_page_1-10vu-01",
+      "case": "catalogue_page_1",
+      "vus": 10,
+      "samples": 2740,
+      "min_ms": 3.105708,
+      "median_ms": 16.413916999999998,
+      "p95_ms": 30.779314249999995,
+      "p99_ms": 40.49604451,
+      "max_ms": 51.674833,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 45.76353281111687,
+      "measured_window_seconds": 59.873,
+      "first_request_epoch_ms": 1794828781085,
+      "last_request_epoch_ms": 1794828840958,
+      "checks": {
+        "rate": 1,
+        "passes": 2740,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:catalogue_page_1}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:catalogue_page_1}": {
+          "count>0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-catalogue_page_1-10vu-02",
+      "case": "catalogue_page_1",
+      "vus": 10,
+      "samples": 2742,
+      "min_ms": 2.510459,
+      "median_ms": 16.453,
+      "p95_ms": 29.216378549999998,
+      "p99_ms": 38.57109647,
+      "max_ms": 49.717459,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 45.79617196111835,
+      "measured_window_seconds": 59.874,
+      "first_request_epoch_ms": 1794828864156,
+      "last_request_epoch_ms": 1794828924030,
+      "checks": {
+        "rate": 1,
+        "passes": 2742,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_invalid{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:catalogue_page_1}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:catalogue_page_1}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-catalogue_page_1-10vu-03",
+      "case": "catalogue_page_1",
+      "vus": 10,
+      "samples": 2741,
+      "min_ms": 3.426417,
+      "median_ms": 16.91825,
+      "p95_ms": 30.390791,
+      "p99_ms": 37.6853748,
+      "max_ms": 50.894166,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 45.696280612840305,
+      "measured_window_seconds": 59.983,
+      "first_request_epoch_ms": 1794828947110,
+      "last_request_epoch_ms": 1794829007093,
+      "checks": {
+        "fails": 0,
+        "rate": 1,
+        "passes": 2741
+      },
+      "thresholds": {
+        "endpoint_http_failed{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:catalogue_page_1}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:catalogue_page_1}": {
+          "count>0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-catalogue_page_1-1vu-01",
+      "case": "catalogue_page_1",
+      "vus": 1,
+      "samples": 284,
+      "min_ms": 3.795666,
+      "median_ms": 8.594771,
+      "p95_ms": 11.058662499999999,
+      "p99_ms": 12.63453375,
+      "max_ms": 14.807458,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.740364874563936,
+      "measured_window_seconds": 59.911,
+      "first_request_epoch_ms": 1794826783930,
+      "last_request_epoch_ms": 1794826843841,
+      "checks": {
+        "rate": 1,
+        "passes": 284,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_http_failed{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:catalogue_page_1}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:catalogue_page_1}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-catalogue_page_1-1vu-02",
+      "case": "catalogue_page_1",
+      "vus": 1,
+      "samples": 285,
+      "min_ms": 3.631083,
+      "median_ms": 8.121959,
+      "p95_ms": 9.9648756,
+      "p99_ms": 10.81675884,
+      "max_ms": 12.186958,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.760393525864805,
+      "measured_window_seconds": 59.869,
+      "first_request_epoch_ms": 1794826866664,
+      "last_request_epoch_ms": 1794826926533,
+      "checks": {
+        "rate": 1,
+        "passes": 285,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_requests{endpoint:catalogue_page_1}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:catalogue_page_1}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-catalogue_page_1-1vu-03",
+      "case": "catalogue_page_1",
+      "vus": 1,
+      "samples": 284,
+      "min_ms": 3.792,
+      "median_ms": 8.589229,
+      "p95_ms": 10.99190625,
+      "p99_ms": 11.81804447,
+      "max_ms": 12.372375,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.740443999332332,
+      "measured_window_seconds": 59.91,
+      "first_request_epoch_ms": 1794826949499,
+      "last_request_epoch_ms": 1794827009409,
+      "checks": {
+        "rate": 1,
+        "passes": 284,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_requests{endpoint:catalogue_page_1}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:catalogue_page_1}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-catalogue_page_1-25vu-01",
+      "case": "catalogue_page_1",
+      "vus": 25,
+      "samples": 7100,
+      "min_ms": 2.485792,
+      "median_ms": 8.5517705,
+      "p95_ms": 24.134455949999992,
+      "p99_ms": 36.32139716999999,
+      "max_ms": 69.593084,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 118.40437595890869,
+      "measured_window_seconds": 59.964,
+      "first_request_epoch_ms": 1794829775039,
+      "last_request_epoch_ms": 1794829835003,
+      "checks": {
+        "rate": 1,
+        "passes": 7100,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:catalogue_page_1}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:catalogue_page_1}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-catalogue_page_1-25vu-02",
+      "case": "catalogue_page_1",
+      "vus": 25,
+      "samples": 7125,
+      "min_ms": 2.355834,
+      "median_ms": 8.21025,
+      "p95_ms": 22.538666399999986,
+      "p99_ms": 35.76064883999999,
+      "max_ms": 71.621041,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 118.81336712913553,
+      "measured_window_seconds": 59.968,
+      "first_request_epoch_ms": 1794829858020,
+      "last_request_epoch_ms": 1794829917988,
+      "checks": {
+        "fails": 0,
+        "rate": 1,
+        "passes": 7125
+      },
+      "thresholds": {
+        "endpoint_http_failed{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:catalogue_page_1}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:catalogue_page_1}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-catalogue_page_1-25vu-03",
+      "case": "catalogue_page_1",
+      "vus": 25,
+      "samples": 7143,
+      "min_ms": 2.461333,
+      "median_ms": 7.764334,
+      "p95_ms": 21.1356291,
+      "p99_ms": 37.570724359999964,
+      "max_ms": 70.735542,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 119.03809619038095,
+      "measured_window_seconds": 60.006,
+      "first_request_epoch_ms": 1794829940219,
+      "last_request_epoch_ms": 1794830000225,
+      "checks": {
+        "fails": 0,
+        "rate": 1,
+        "passes": 7143
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:catalogue_page_1}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:catalogue_page_1}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-catalogue_page_1-5vu-01",
+      "case": "catalogue_page_1",
+      "vus": 5,
+      "samples": 1390,
+      "min_ms": 3.060708,
+      "median_ms": 14.806458,
+      "p95_ms": 21.387665249999998,
+      "p99_ms": 27.810353369999984,
+      "max_ms": 41.332833,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 23.16126237211317,
+      "measured_window_seconds": 60.014,
+      "first_request_epoch_ms": 1794827777620,
+      "last_request_epoch_ms": 1794827837634,
+      "checks": {
+        "rate": 1,
+        "passes": 1390,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:catalogue_page_1}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:catalogue_page_1}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-catalogue_page_1-5vu-02",
+      "case": "catalogue_page_1",
+      "vus": 5,
+      "samples": 1385,
+      "min_ms": 4.154958,
+      "median_ms": 15.153,
+      "p95_ms": 21.2550334,
+      "p99_ms": 27.003215279999992,
+      "max_ms": 40.703875,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 23.12959251837007,
+      "measured_window_seconds": 59.88,
+      "first_request_epoch_ms": 1794827860964,
+      "last_request_epoch_ms": 1794827920844,
+      "checks": {
+        "rate": 1,
+        "passes": 1385,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:catalogue_page_1}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:catalogue_page_1}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-catalogue_page_1-5vu-03",
+      "case": "catalogue_page_1",
+      "vus": 5,
+      "samples": 1370,
+      "min_ms": 2.945125,
+      "median_ms": 16.808500000000002,
+      "p95_ms": 22.38131845,
+      "p99_ms": 34.34429351999999,
+      "max_ms": 41.424042,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 22.901273778877336,
+      "measured_window_seconds": 59.822,
+      "first_request_epoch_ms": 1794827943865,
+      "last_request_epoch_ms": 1794828003687,
+      "checks": {
+        "rate": 1,
+        "passes": 1370,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:catalogue_page_1}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:catalogue_page_1}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:catalogue_page_1}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-catalogue_page_100-1vu-01",
+      "case": "catalogue_page_100",
+      "vus": 1,
+      "samples": 273,
+      "min_ms": 7.585791,
+      "median_ms": 15.084458,
+      "p95_ms": 16.7311414,
+      "p99_ms": 17.55054828,
+      "max_ms": 18.578,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.564301477964288,
+      "measured_window_seconds": 59.812,
+      "first_request_epoch_ms": 1794831021237,
+      "last_request_epoch_ms": 1794831081049,
+      "checks": {
+        "rate": 1,
+        "passes": 273,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:catalogue_page_100}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:catalogue_page_100}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:catalogue_page_100}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:catalogue_page_100}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-catalogue_page_100-1vu-02",
+      "case": "catalogue_page_100",
+      "vus": 1,
+      "samples": 273,
+      "min_ms": 7.822458,
+      "median_ms": 15.157375,
+      "p95_ms": 16.8643412,
+      "p99_ms": 17.88858824,
+      "max_ms": 18.484,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.559803577692038,
+      "measured_window_seconds": 59.871,
+      "first_request_epoch_ms": 1794831103413,
+      "last_request_epoch_ms": 1794831163284,
+      "checks": {
+        "rate": 1,
+        "passes": 273,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:catalogue_page_100}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:catalogue_page_100}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:catalogue_page_100}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:catalogue_page_100}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-catalogue_page_100-1vu-03",
+      "case": "catalogue_page_100",
+      "vus": 1,
+      "samples": 273,
+      "min_ms": 6.562666,
+      "median_ms": 15.245833,
+      "p95_ms": 17.0928666,
+      "p99_ms": 18.41923548,
+      "max_ms": 32.58075,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.562394505072112,
+      "measured_window_seconds": 59.837,
+      "first_request_epoch_ms": 1794831186378,
+      "last_request_epoch_ms": 1794831246215,
+      "checks": {
+        "rate": 1,
+        "passes": 273,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:catalogue_page_100}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:catalogue_page_100}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:catalogue_page_100}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:catalogue_page_100}": {
+          "count>0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-catalogue_page_50-1vu-01",
+      "case": "catalogue_page_50",
+      "vus": 1,
+      "samples": 275,
+      "min_ms": 5.997917,
+      "median_ms": 14.109917,
+      "p95_ms": 15.8708707,
+      "p99_ms": 17.621810579999995,
+      "max_ms": 27.804084,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.585549682346468,
+      "measured_window_seconds": 59.971,
+      "first_request_epoch_ms": 1794830770489,
+      "last_request_epoch_ms": 1794830830460,
+      "checks": {
+        "rate": 1,
+        "passes": 275,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:catalogue_page_50}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:catalogue_page_50}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:catalogue_page_50}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:catalogue_page_50}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-catalogue_page_50-1vu-02",
+      "case": "catalogue_page_50",
+      "vus": 1,
+      "samples": 275,
+      "min_ms": 7.585333,
+      "median_ms": 13.884875,
+      "p95_ms": 15.4375912,
+      "p99_ms": 16.32587034,
+      "max_ms": 17.762875,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.585014505318616,
+      "measured_window_seconds": 59.978,
+      "first_request_epoch_ms": 1794830853391,
+      "last_request_epoch_ms": 1794830913369,
+      "checks": {
+        "rate": 1,
+        "passes": 275,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_requests{endpoint:catalogue_page_50}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:catalogue_page_50}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:catalogue_page_50}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:catalogue_page_50}": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-catalogue_page_50-1vu-03",
+      "case": "catalogue_page_50",
+      "vus": 1,
+      "samples": 275,
+      "min_ms": 6.444084,
+      "median_ms": 13.927667,
+      "p95_ms": 15.6015168,
+      "p99_ms": 16.87129642,
+      "max_ms": 18.251792,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.587691640391705,
+      "measured_window_seconds": 59.943,
+      "first_request_epoch_ms": 1794830936233,
+      "last_request_epoch_ms": 1794830996176,
+      "checks": {
+        "rate": 1,
+        "passes": 275,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:catalogue_page_50}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:catalogue_page_50}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:catalogue_page_50}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:catalogue_page_50}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_25_variants-10vu-01",
+      "case": "editor_25_variants",
+      "vus": 10,
+      "samples": 2710,
+      "min_ms": 4.096375,
+      "median_ms": 19.377561999999998,
+      "p95_ms": 33.8601125,
+      "p99_ms": 43.48583056,
+      "max_ms": 54.267042,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 45.2284789211923,
+      "measured_window_seconds": 59.918,
+      "first_request_epoch_ms": 1794829277994,
+      "last_request_epoch_ms": 1794829337912,
+      "checks": {
+        "rate": 1,
+        "passes": 2710,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:editor_25_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_25_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_25_variants-10vu-02",
+      "case": "editor_25_variants",
+      "vus": 10,
+      "samples": 2702,
+      "min_ms": 4.571958,
+      "median_ms": 18.9938545,
+      "p95_ms": 36.900231899999994,
+      "p99_ms": 44.05583274,
+      "max_ms": 59.711208,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 45.15449790270559,
+      "measured_window_seconds": 59.839,
+      "first_request_epoch_ms": 1794829360477,
+      "last_request_epoch_ms": 1794829420316,
+      "checks": {
+        "rate": 1,
+        "passes": 2702,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:editor_25_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_25_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_25_variants-10vu-03",
+      "case": "editor_25_variants",
+      "vus": 10,
+      "samples": 2750,
+      "min_ms": 3.3075,
+      "median_ms": 16.735687499999997,
+      "p95_ms": 29.913385449999993,
+      "p99_ms": 36.972304,
+      "max_ms": 56.137042,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 45.821114369501466,
+      "measured_window_seconds": 60.016,
+      "first_request_epoch_ms": 1794829443317,
+      "last_request_epoch_ms": 1794829503333,
+      "checks": {
+        "rate": 1,
+        "passes": 2750,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_requests{endpoint:editor_25_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_25_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_25_variants-1vu-01",
+      "case": "editor_25_variants",
+      "vus": 1,
+      "samples": 281,
+      "min_ms": 4.550875,
+      "median_ms": 10.862708,
+      "p95_ms": 12.790417,
+      "p99_ms": 13.976583999999999,
+      "max_ms": 32.799542,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.699075235371829,
+      "measured_window_seconds": 59.799,
+      "first_request_epoch_ms": 1794827281010,
+      "last_request_epoch_ms": 1794827340809,
+      "checks": {
+        "rate": 1,
+        "passes": 281,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:editor_25_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_25_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_25_variants-1vu-02",
+      "case": "editor_25_variants",
+      "vus": 1,
+      "samples": 282,
+      "min_ms": 4.877292,
+      "median_ms": 10.081771,
+      "p95_ms": 12.461437199999999,
+      "p99_ms": 14.12549848,
+      "max_ms": 21.8545,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.709025632462219,
+      "measured_window_seconds": 59.885,
+      "first_request_epoch_ms": 1794827363752,
+      "last_request_epoch_ms": 1794827423637,
+      "checks": {
+        "passes": 282,
+        "fails": 0,
+        "rate": 1
+      },
+      "thresholds": {
+        "endpoint_invalid{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_25_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_25_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_25_variants-1vu-03",
+      "case": "editor_25_variants",
+      "vus": 1,
+      "samples": 282,
+      "min_ms": 4.850333,
+      "median_ms": 10.5602085,
+      "p95_ms": 12.8757694,
+      "p99_ms": 14.532777439999998,
+      "max_ms": 25.90125,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.70384147053427,
+      "measured_window_seconds": 59.951,
+      "first_request_epoch_ms": 1794827446666,
+      "last_request_epoch_ms": 1794827506617,
+      "checks": {
+        "rate": 1,
+        "passes": 282,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_http_failed{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_25_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_25_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_25_variants-25vu-01",
+      "case": "editor_25_variants",
+      "vus": 25,
+      "samples": 7140,
+      "min_ms": 2.800667,
+      "median_ms": 7.1606045,
+      "p95_ms": 21.084193749999997,
+      "p99_ms": 36.17882014,
+      "max_ms": 87.185125,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 118.9920671955203,
+      "measured_window_seconds": 60.004,
+      "first_request_epoch_ms": 1794830273158,
+      "last_request_epoch_ms": 1794830333162,
+      "checks": {
+        "fails": 0,
+        "rate": 1,
+        "passes": 7140
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:editor_25_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_25_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_25_variants-25vu-02",
+      "case": "editor_25_variants",
+      "vus": 25,
+      "samples": 7125,
+      "min_ms": 2.744833,
+      "median_ms": 7.872417,
+      "p95_ms": 21.203241199999994,
+      "p99_ms": 34.20559176,
+      "max_ms": 70.276625,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 118.9482470784641,
+      "measured_window_seconds": 59.9,
+      "first_request_epoch_ms": 1794830356101,
+      "last_request_epoch_ms": 1794830416001,
+      "checks": {
+        "passes": 7125,
+        "fails": 0,
+        "rate": 1
+      },
+      "thresholds": {
+        "endpoint_http_failed{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_25_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_25_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_25_variants-25vu-03",
+      "case": "editor_25_variants",
+      "vus": 25,
+      "samples": 7095,
+      "min_ms": 2.797083,
+      "median_ms": 8.491292,
+      "p95_ms": 24.66326239999999,
+      "p99_ms": 40.65380701999999,
+      "max_ms": 80.763541,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 118.25985498791566,
+      "measured_window_seconds": 59.995,
+      "first_request_epoch_ms": 1794830439014,
+      "last_request_epoch_ms": 1794830499009,
+      "checks": {
+        "rate": 1,
+        "passes": 7095,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:editor_25_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_25_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_25_variants-5vu-01",
+      "case": "editor_25_variants",
+      "vus": 5,
+      "samples": 1340,
+      "min_ms": 5.786583,
+      "median_ms": 21.3202085,
+      "p95_ms": 26.52643125,
+      "p99_ms": 39.99605262,
+      "max_ms": 43.54975,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 22.399411597546095,
+      "measured_window_seconds": 59.823,
+      "first_request_epoch_ms": 1794828279983,
+      "last_request_epoch_ms": 1794828339806,
+      "checks": {
+        "rate": 1,
+        "passes": 1340,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:editor_25_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_25_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_25_variants-5vu-02",
+      "case": "editor_25_variants",
+      "vus": 5,
+      "samples": 1345,
+      "min_ms": 4.107416,
+      "median_ms": 21.380042,
+      "p95_ms": 26.900856199999996,
+      "p99_ms": 40.652050519999996,
+      "max_ms": 44.054792,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 22.425636921435242,
+      "measured_window_seconds": 59.976,
+      "first_request_epoch_ms": 1794828363022,
+      "last_request_epoch_ms": 1794828422998,
+      "checks": {
+        "rate": 1,
+        "passes": 1345,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:editor_25_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_25_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_25_variants-5vu-03",
+      "case": "editor_25_variants",
+      "vus": 5,
+      "samples": 1335,
+      "min_ms": 5.824375,
+      "median_ms": 22.313708,
+      "p95_ms": 26.7831206,
+      "p99_ms": 39.4847075,
+      "max_ms": 44.598083,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 22.26855713094245,
+      "measured_window_seconds": 59.95,
+      "first_request_epoch_ms": 1794828447996,
+      "last_request_epoch_ms": 1794828507946,
+      "checks": {
+        "fails": 0,
+        "rate": 1,
+        "passes": 1335
+      },
+      "thresholds": {
+        "endpoint_http_failed{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_25_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_25_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_25_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_2_variants-10vu-01",
+      "case": "editor_2_variants",
+      "vus": 10,
+      "samples": 2711,
+      "min_ms": 3.286625,
+      "median_ms": 19.290792,
+      "p95_ms": 34.049708,
+      "p99_ms": 36.796854399999994,
+      "max_ms": 38.672542,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 45.189358581144155,
+      "measured_window_seconds": 59.992,
+      "first_request_epoch_ms": 1794829029930,
+      "last_request_epoch_ms": 1794829089922,
+      "checks": {
+        "rate": 1,
+        "passes": 2711,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_http_failed{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_2_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_2_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_2_variants-10vu-02",
+      "case": "editor_2_variants",
+      "vus": 10,
+      "samples": 2688,
+      "min_ms": 3.27025,
+      "median_ms": 21.618229499999998,
+      "p95_ms": 34.0618476,
+      "p99_ms": 37.25532157999999,
+      "max_ms": 48.225416,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 44.91978609625668,
+      "measured_window_seconds": 59.84,
+      "first_request_epoch_ms": 1794829112205,
+      "last_request_epoch_ms": 1794829172045,
+      "checks": {
+        "rate": 1,
+        "passes": 2688,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:editor_2_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_2_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_2_variants-10vu-03",
+      "case": "editor_2_variants",
+      "vus": 10,
+      "samples": 2695,
+      "min_ms": 2.520916,
+      "median_ms": 21.113125,
+      "p95_ms": 34.4432876,
+      "p99_ms": 37.5652775,
+      "max_ms": 46.765041,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 45.02246946992098,
+      "measured_window_seconds": 59.859,
+      "first_request_epoch_ms": 1794829195053,
+      "last_request_epoch_ms": 1794829254912,
+      "checks": {
+        "rate": 1,
+        "passes": 2695,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_invalid{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_2_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_2_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_2_variants-1vu-01",
+      "case": "editor_2_variants",
+      "vus": 1,
+      "samples": 283,
+      "min_ms": 4.250541,
+      "median_ms": 9.872292,
+      "p95_ms": 11.609450299999999,
+      "p99_ms": 12.545975559999999,
+      "max_ms": 14.421666,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.71839674547334,
+      "measured_window_seconds": 59.978,
+      "first_request_epoch_ms": 1794827032726,
+      "last_request_epoch_ms": 1794827092704,
+      "checks": {
+        "rate": 1,
+        "passes": 283,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:editor_2_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_2_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_2_variants-1vu-02",
+      "case": "editor_2_variants",
+      "vus": 1,
+      "samples": 283,
+      "min_ms": 3.57325,
+      "median_ms": 9.658375,
+      "p95_ms": 11.332933299999999,
+      "p99_ms": 12.006019,
+      "max_ms": 27.719833,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.727776942481498,
+      "measured_window_seconds": 59.859,
+      "first_request_epoch_ms": 1794827115682,
+      "last_request_epoch_ms": 1794827175541,
+      "checks": {
+        "rate": 1,
+        "passes": 283,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_invalid{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_2_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_2_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_2_variants-1vu-03",
+      "case": "editor_2_variants",
+      "vus": 1,
+      "samples": 283,
+      "min_ms": 4.980292,
+      "median_ms": 9.670708,
+      "p95_ms": 11.7031958,
+      "p99_ms": 12.55712494,
+      "max_ms": 13.568167,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.727066212333801,
+      "measured_window_seconds": 59.868,
+      "first_request_epoch_ms": 1794827198522,
+      "last_request_epoch_ms": 1794827258390,
+      "checks": {
+        "passes": 283,
+        "fails": 0,
+        "rate": 1
+      },
+      "thresholds": {
+        "endpoint_invalid{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_2_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_2_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_2_variants-25vu-01",
+      "case": "editor_2_variants",
+      "vus": 25,
+      "samples": 7135,
+      "min_ms": 2.215667,
+      "median_ms": 8.313375,
+      "p95_ms": 20.946629499999997,
+      "p99_ms": 36.516740719999994,
+      "max_ms": 69.841209,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 118.90477618904777,
+      "measured_window_seconds": 60.006,
+      "first_request_epoch_ms": 1794830024953,
+      "last_request_epoch_ms": 1794830084959,
+      "checks": {
+        "fails": 0,
+        "rate": 1,
+        "passes": 7135
+      },
+      "thresholds": {
+        "endpoint_http_failed{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_2_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_2_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_2_variants-25vu-02",
+      "case": "editor_2_variants",
+      "vus": 25,
+      "samples": 7101,
+      "min_ms": 2.165042,
+      "median_ms": 8.262292,
+      "p95_ms": 25.274333,
+      "p99_ms": 43.954333,
+      "max_ms": 70.420458,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 118.38354200356768,
+      "measured_window_seconds": 59.983,
+      "first_request_epoch_ms": 1794830108021,
+      "last_request_epoch_ms": 1794830168004,
+      "checks": {
+        "rate": 1,
+        "passes": 7101,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_2_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_2_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_2_variants-25vu-03",
+      "case": "editor_2_variants",
+      "vus": 25,
+      "samples": 7125,
+      "min_ms": 2.27825,
+      "median_ms": 7.991042,
+      "p95_ms": 22.186875,
+      "p99_ms": 37.000239839999985,
+      "max_ms": 74.268959,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 118.79157705196819,
+      "measured_window_seconds": 59.979,
+      "first_request_epoch_ms": 1794830190386,
+      "last_request_epoch_ms": 1794830250365,
+      "checks": {
+        "passes": 7125,
+        "fails": 0,
+        "rate": 1
+      },
+      "thresholds": {
+        "endpoint_requests{endpoint:editor_2_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_2_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_2_variants-5vu-01",
+      "case": "editor_2_variants",
+      "vus": 5,
+      "samples": 1350,
+      "min_ms": 6.493,
+      "median_ms": 19.6145415,
+      "p95_ms": 22.6600833,
+      "p99_ms": 24.009752499999998,
+      "max_ms": 32.1025,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 22.52252252252252,
+      "measured_window_seconds": 59.94,
+      "first_request_epoch_ms": 1794828026866,
+      "last_request_epoch_ms": 1794828086806,
+      "checks": {
+        "rate": 1,
+        "passes": 1350,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:editor_2_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_2_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_2_variants-5vu-02",
+      "case": "editor_2_variants",
+      "vus": 5,
+      "samples": 1350,
+      "min_ms": 6.865334,
+      "median_ms": 19.608896,
+      "p95_ms": 22.680458549999997,
+      "p99_ms": 30.19456307999998,
+      "max_ms": 36.847584,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 22.53643390147405,
+      "measured_window_seconds": 59.903,
+      "first_request_epoch_ms": 1794828111748,
+      "last_request_epoch_ms": 1794828171651,
+      "checks": {
+        "rate": 1,
+        "passes": 1350,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_invalid{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_2_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_2_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_2_variants-5vu-03",
+      "case": "editor_2_variants",
+      "vus": 5,
+      "samples": 1350,
+      "min_ms": 7.695292,
+      "median_ms": 19.669104,
+      "p95_ms": 22.88256875,
+      "p99_ms": 24.20288683,
+      "max_ms": 37.411834,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 22.547349433811004,
+      "measured_window_seconds": 59.874,
+      "first_request_epoch_ms": 1794828194868,
+      "last_request_epoch_ms": 1794828254742,
+      "checks": {
+        "rate": 1,
+        "passes": 1350,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_http_failed{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_2_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_2_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_2_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_50_variants-10vu-01",
+      "case": "editor_50_variants",
+      "vus": 10,
+      "samples": 2751,
+      "min_ms": 3.971542,
+      "median_ms": 15.47675,
+      "p95_ms": 32.38095899999998,
+      "p99_ms": 41.5226665,
+      "max_ms": 56.953083,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 45.96414429165762,
+      "measured_window_seconds": 59.851,
+      "first_request_epoch_ms": 1794829526094,
+      "last_request_epoch_ms": 1794829585945,
+      "checks": {
+        "fails": 0,
+        "rate": 1,
+        "passes": 2751
+      },
+      "thresholds": {
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_50_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_50_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_50_variants-10vu-02",
+      "case": "editor_50_variants",
+      "vus": 10,
+      "samples": 2750,
+      "min_ms": 4.20225,
+      "median_ms": 15.806375,
+      "p95_ms": 33.03973749999998,
+      "p99_ms": 45.07896832,
+      "max_ms": 60.645042,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 45.90371903585498,
+      "measured_window_seconds": 59.908,
+      "first_request_epoch_ms": 1794829609050,
+      "last_request_epoch_ms": 1794829668958,
+      "checks": {
+        "passes": 2750,
+        "fails": 0,
+        "rate": 1
+      },
+      "thresholds": {
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_50_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_50_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_50_variants-10vu-03",
+      "case": "editor_50_variants",
+      "vus": 10,
+      "samples": 2750,
+      "min_ms": 4.057041,
+      "median_ms": 15.728542000000001,
+      "p95_ms": 31.330010299999994,
+      "p99_ms": 43.41759534,
+      "max_ms": 56.827209,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 45.93669088783095,
+      "measured_window_seconds": 59.865,
+      "first_request_epoch_ms": 1794829692109,
+      "last_request_epoch_ms": 1794829751974,
+      "checks": {
+        "rate": 1,
+        "passes": 2750,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:editor_50_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_50_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_50_variants-1vu-01",
+      "case": "editor_50_variants",
+      "vus": 1,
+      "samples": 279,
+      "min_ms": 5.562958,
+      "median_ms": 12.103125,
+      "p95_ms": 14.264654199999999,
+      "p99_ms": 15.456975759999997,
+      "max_ms": 28.489833,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.660174714793967,
+      "measured_window_seconds": 59.869,
+      "first_request_epoch_ms": 1794827529582,
+      "last_request_epoch_ms": 1794827589451,
+      "checks": {
+        "rate": 1,
+        "passes": 279,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_50_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_50_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_50_variants-1vu-02",
+      "case": "editor_50_variants",
+      "vus": 1,
+      "samples": 279,
+      "min_ms": 6.36375,
+      "median_ms": 12.417042,
+      "p95_ms": 14.695546499999999,
+      "p99_ms": 15.712035259999999,
+      "max_ms": 32.298042,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.658385093167702,
+      "measured_window_seconds": 59.892,
+      "first_request_epoch_ms": 1794827611734,
+      "last_request_epoch_ms": 1794827671626,
+      "checks": {
+        "fails": 0,
+        "rate": 1,
+        "passes": 279
+      },
+      "thresholds": {
+        "endpoint_requests{endpoint:editor_50_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_50_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_50_variants-1vu-03",
+      "case": "editor_50_variants",
+      "vus": 1,
+      "samples": 279,
+      "min_ms": 5.102375,
+      "median_ms": 12.132042,
+      "p95_ms": 14.567366599999998,
+      "p99_ms": 16.25998852,
+      "max_ms": 34.126834,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.656674566879193,
+      "measured_window_seconds": 59.914,
+      "first_request_epoch_ms": 1794827694666,
+      "last_request_epoch_ms": 1794827754580,
+      "checks": {
+        "rate": 1,
+        "passes": 279,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_http_failed{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_50_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_50_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_50_variants-25vu-01",
+      "case": "editor_50_variants",
+      "vus": 25,
+      "samples": 7050,
+      "min_ms": 3.086375,
+      "median_ms": 9.6963545,
+      "p95_ms": 25.82818535,
+      "p99_ms": 41.73946475999998,
+      "max_ms": 90.228333,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 117.65491230119657,
+      "measured_window_seconds": 59.921,
+      "first_request_epoch_ms": 1794830522256,
+      "last_request_epoch_ms": 1794830582177,
+      "checks": {
+        "rate": 1,
+        "passes": 7050,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:editor_50_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_50_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_50_variants-25vu-02",
+      "case": "editor_50_variants",
+      "vus": 25,
+      "samples": 7025,
+      "min_ms": 3.1,
+      "median_ms": 9.933834,
+      "p95_ms": 27.383066599999992,
+      "p99_ms": 40.737970000000004,
+      "max_ms": 102.280667,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 117.27684011953055,
+      "measured_window_seconds": 59.901,
+      "first_request_epoch_ms": 1794830605178,
+      "last_request_epoch_ms": 1794830665079,
+      "checks": {
+        "rate": 1,
+        "passes": 7025,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_http_failed{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_50_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_50_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_50_variants-25vu-03",
+      "case": "editor_50_variants",
+      "vus": 25,
+      "samples": 7025,
+      "min_ms": 3.179292,
+      "median_ms": 9.729917,
+      "p95_ms": 27.825574799999995,
+      "p99_ms": 40.39510183999997,
+      "max_ms": 84.693208,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 117.31992852252041,
+      "measured_window_seconds": 59.879,
+      "first_request_epoch_ms": 1794830688035,
+      "last_request_epoch_ms": 1794830747914,
+      "checks": {
+        "rate": 1,
+        "passes": 7025,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_invalid{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_50_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_50_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_50_variants-5vu-01",
+      "case": "editor_50_variants",
+      "vus": 5,
+      "samples": 1345,
+      "min_ms": 5.825375,
+      "median_ms": 21.14875,
+      "p95_ms": 32.01700039999997,
+      "p99_ms": 45.047596479999996,
+      "max_ms": 50.025084,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 22.41853487790649,
+      "measured_window_seconds": 59.995,
+      "first_request_epoch_ms": 1794828532867,
+      "last_request_epoch_ms": 1794828592862,
+      "checks": {
+        "rate": 1,
+        "passes": 1345,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_http_failed{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_50_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_50_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_50_variants-5vu-02",
+      "case": "editor_50_variants",
+      "vus": 5,
+      "samples": 1345,
+      "min_ms": 4.015334,
+      "median_ms": 20.520417,
+      "p95_ms": 32.4584499999999,
+      "p99_ms": 43.04015195999999,
+      "max_ms": 47.575583,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 22.471722386513626,
+      "measured_window_seconds": 59.853,
+      "first_request_epoch_ms": 1794828615967,
+      "last_request_epoch_ms": 1794828675820,
+      "checks": {
+        "passes": 1345,
+        "fails": 0,
+        "rate": 1
+      },
+      "thresholds": {
+        "endpoint_http_failed{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_50_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:editor_50_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-editor_50_variants-5vu-03",
+      "case": "editor_50_variants",
+      "vus": 5,
+      "samples": 1335,
+      "min_ms": 5.778875,
+      "median_ms": 22.493125,
+      "p95_ms": 31.862621399999995,
+      "p99_ms": 45.286978839999996,
+      "max_ms": 47.985667,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 22.285285034638175,
+      "measured_window_seconds": 59.905,
+      "first_request_epoch_ms": 1794828698855,
+      "last_request_epoch_ms": 1794828758760,
+      "checks": {
+        "rate": 1,
+        "passes": 1335,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:editor_50_variants}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:editor_50_variants}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:editor_50_variants}": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-search_common-1vu-01",
+      "case": "search_common",
+      "vus": 1,
+      "samples": 277,
+      "min_ms": 5.559667,
+      "median_ms": 12.084166,
+      "p95_ms": 13.9128996,
+      "p99_ms": 15.056816759999998,
+      "max_ms": 17.100875,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.62962962962963,
+      "measured_window_seconds": 59.832,
+      "first_request_epoch_ms": 1794831269182,
+      "last_request_epoch_ms": 1794831329014,
+      "checks": {
+        "rate": 1,
+        "passes": 277,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_invalid{endpoint:search_common}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:search_common}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:search_common}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:search_common}": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-search_common-1vu-02",
+      "case": "search_common",
+      "vus": 1,
+      "samples": 277,
+      "min_ms": 5.4785,
+      "median_ms": 11.979833,
+      "p95_ms": 13.6765,
+      "p99_ms": 14.877762079999998,
+      "max_ms": 30.83,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.625841251816102,
+      "measured_window_seconds": 59.881,
+      "first_request_epoch_ms": 1794831351507,
+      "last_request_epoch_ms": 1794831411388,
+      "checks": {
+        "rate": 1,
+        "passes": 277,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:search_common}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:search_common}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:search_common}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:search_common}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-search_common-1vu-03",
+      "case": "search_common",
+      "vus": 1,
+      "samples": 278,
+      "min_ms": 5.494083,
+      "median_ms": 12.061104499999999,
+      "p95_ms": 13.73303925,
+      "p99_ms": 14.69907916,
+      "max_ms": 17.383583,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.642541039728796,
+      "measured_window_seconds": 59.881,
+      "first_request_epoch_ms": 1794831436174,
+      "last_request_epoch_ms": 1794831496055,
+      "checks": {
+        "rate": 1,
+        "passes": 278,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:search_common}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:search_common}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:search_common}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:search_common}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-search_none-1vu-01",
+      "case": "search_none",
+      "vus": 1,
+      "samples": 279,
+      "min_ms": 4.829625,
+      "median_ms": 11.0185,
+      "p95_ms": 12.533541699999999,
+      "p99_ms": 12.85293128,
+      "max_ms": 14.834292,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.658462874221502,
+      "measured_window_seconds": 59.891,
+      "first_request_epoch_ms": 1794831769207,
+      "last_request_epoch_ms": 1794831829098,
+      "checks": {
+        "rate": 1,
+        "passes": 279,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_requests{endpoint:search_none}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:search_none}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:search_none}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:search_none}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-search_none-1vu-02",
+      "case": "search_none",
+      "vus": 1,
+      "samples": 279,
+      "min_ms": 5.513667,
+      "median_ms": 10.965833,
+      "p95_ms": 12.2612087,
+      "p99_ms": 12.73596572,
+      "max_ms": 13.15375,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.651938307628178,
+      "measured_window_seconds": 59.975,
+      "first_request_epoch_ms": 1794831851552,
+      "last_request_epoch_ms": 1794831911527,
+      "checks": {
+        "rate": 1,
+        "passes": 279,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_http_failed{endpoint:search_none}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:search_none}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:search_none}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:search_none}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-search_none-1vu-03",
+      "case": "search_none",
+      "vus": 1,
+      "samples": 280,
+      "min_ms": 4.937666,
+      "median_ms": 10.953667,
+      "p95_ms": 12.32411075,
+      "p99_ms": 13.02315054,
+      "max_ms": 21.0015,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.674535468037863,
+      "measured_window_seconds": 59.899,
+      "first_request_epoch_ms": 1794831934554,
+      "last_request_epoch_ms": 1794831994453,
+      "checks": {
+        "fails": 0,
+        "rate": 1,
+        "passes": 280
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:search_none}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:search_none}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:search_none}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:search_none}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-search_selective-1vu-01",
+      "case": "search_selective",
+      "vus": 1,
+      "samples": 278,
+      "min_ms": 3.52132,
+      "median_ms": 11.644042,
+      "p95_ms": 13.1435589,
+      "p99_ms": 14.461367860000001,
+      "max_ms": 14.6055,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.647042107550607,
+      "measured_window_seconds": 59.823,
+      "first_request_epoch_ms": 1794831519248,
+      "last_request_epoch_ms": 1794831579071,
+      "checks": {
+        "rate": 1,
+        "passes": 278,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:search_selective}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:search_selective}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:search_selective}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:search_selective}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-search_selective-1vu-02",
+      "case": "search_selective",
+      "vus": 1,
+      "samples": 278,
+      "min_ms": 5.102792,
+      "median_ms": 11.648187499999999,
+      "p95_ms": 13.22039995,
+      "p99_ms": 13.828886409999999,
+      "max_ms": 15.087792,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.644247314522461,
+      "measured_window_seconds": 59.859,
+      "first_request_epoch_ms": 1794831603956,
+      "last_request_epoch_ms": 1794831663815,
+      "checks": {
+        "rate": 1,
+        "passes": 278,
+        "fails": 0
+      },
+      "thresholds": {
+        "endpoint_invalid{endpoint:search_selective}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:search_selective}": {
+          "count>0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:search_selective}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_duration{endpoint:search_selective}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    },
+    {
+      "run_id": "api-search_selective-1vu-03",
+      "case": "search_selective",
+      "vus": 1,
+      "samples": 278,
+      "min_ms": 4.979375,
+      "median_ms": 11.7579165,
+      "p95_ms": 13.093012499999999,
+      "p99_ms": 13.61039075,
+      "max_ms": 14.180542,
+      "invalid_rate": 0,
+      "http_failure_rate": 0,
+      "requests_per_second": 4.645411402981084,
+      "measured_window_seconds": 59.844,
+      "first_request_epoch_ms": 1794831686345,
+      "last_request_epoch_ms": 1794831746189,
+      "checks": {
+        "passes": 278,
+        "fails": 0,
+        "rate": 1
+      },
+      "thresholds": {
+        "endpoint_duration{endpoint:search_selective}": {
+          "p(95)>=0": {
+            "ok": true
+          }
+        },
+        "endpoint_http_failed{endpoint:search_selective}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid{endpoint:search_selective}": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_invalid": {
+          "rate==0": {
+            "ok": true
+          }
+        },
+        "endpoint_requests{endpoint:search_selective}": {
+          "count>0": {
+            "ok": true
+          }
+        }
+      },
+      "exit_code": 0
+    }
+  ]
+}

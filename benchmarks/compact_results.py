@@ -93,6 +93,15 @@ def verify_originals(folder):
 
 
 def prune(folder):
+    # Preserve threshold-failure console evidence before removing working inputs.
+    manifest = read(folder / "manifest.json")
+    for run in manifest["runs"]:
+        if run["exit_code"] == 99:
+            source = folder / "logs" / (run["run_id"] + ".json.log")
+            require(source.exists(), "Missing failed-run console evidence")
+            target = folder / "failure-logs" / source.name
+            target.parent.mkdir(exist_ok=True)
+            shutil.copyfile(source, target)
     # Called only after originals have been compared with consolidated evidence.
     for name in ("api", "browser", "logs"):
         shutil.rmtree(folder / name, ignore_errors=True)
@@ -109,7 +118,7 @@ def prune(folder):
         (folder / "profile.json").unlink()
 
 
-def compact(folder, profile_ref, remove):
+def compact(folder, profile_ref, remove, allow_threshold_failures=False):
     if (folder / "manifest.json").exists():
         if (folder / "api").exists():
             verify_originals(folder)
@@ -122,7 +131,13 @@ def compact(folder, profile_ref, remove):
     require(len(states) == 1, "Only a single completed matrix can be consolidated")
     state = read(states[0])
     require(
-        state["status"] == "complete" and state["temporary_account_removed"],
+        state["status"]
+        in (
+            ("complete", "complete_with_threshold_failures")
+            if allow_threshold_failures
+            else ("complete",)
+        )
+        and state["temporary_account_removed"],
         "Matrix is not complete/cleaned up",
     )
     paths = sorted(folder.rglob("*.manifest.json"))
@@ -131,7 +146,7 @@ def compact(folder, profile_ref, remove):
     for path in paths:
         original = read(path)
         require(
-            original["exit_code"] == 0,
+            original["exit_code"] in ((0, 99) if allow_threshold_failures else (0,)),
             "Keep failed attempts in working format for diagnosis",
         )
         context = {key: value for key, value in original.items() if key not in VARIABLE}
@@ -181,6 +196,7 @@ def compact(folder, profile_ref, remove):
             "Run arguments, timestamps, exit codes and original result hashes are preserved.",
             "API rows retain measured metrics; setup/warm-up/native duplicate metrics are intentionally omitted.",
             "Successful console logs, checkpoints and private Lighthouse dumps are not retained.",
+            "Exit-99 metrics remain included; their console logs are retained under failure-logs/.",
         ],
     }
     outputs = {
@@ -218,12 +234,17 @@ def main():
     parser.add_argument(
         "--prune", action="store_true", help="Remove verified working-run inputs"
     )
+    parser.add_argument(
+        "--allow-threshold-failures",
+        action="store_true",
+        help="Include completed exit-99 runs and retain failure console logs",
+    )
     args = parser.parse_args()
     require(
         args.label.replace("-", "").replace("_", "").isalnum(), "Use a simple label"
     )
     folder = RESULTS / args.label
-    compact(folder, args.profile_ref, args.prune)
+    compact(folder, args.profile_ref, args.prune, args.allow_threshold_failures)
     print(f"Verified consolidated evidence: {folder}")
 
 

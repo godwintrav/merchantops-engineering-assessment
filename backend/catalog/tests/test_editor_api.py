@@ -49,6 +49,7 @@ class ProductEditorAPITests(TestCase):
             name="Workstation",
             sku="WORK-001",
             description="Development workstation",
+            image_url="/product-images/laptop.webp",
         )
 
         cls.other_product = Product.objects.create(
@@ -100,6 +101,7 @@ class ProductEditorAPITests(TestCase):
 
         self.assertEqual(data["id"], self.product.pk)
         self.assertEqual(data["name"], "Workstation")
+        self.assertEqual(data["image_url"], "/product-images/laptop.webp")
         self.assertEqual(
             data["description"],
             "Development workstation",
@@ -242,6 +244,7 @@ class ProductEditorAPITests(TestCase):
                         "name": product.name,
                         "sku": product.sku,
                         "description": product.description,
+                        "image_url": product.image_url,
                         "status": product.status,
                         "category": {"id": category.pk, "name": category.name},
                         "variants": expected_variants,

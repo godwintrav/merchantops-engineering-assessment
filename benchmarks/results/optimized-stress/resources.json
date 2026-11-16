@@ -1,0 +1,3908 @@
+{
+  "schema_version": 1,
+  "runs": [
+    {
+      "run_id": "api-catalogue_page_1-100vu-01",
+      "samples": [
+        {
+          "utc": "2026-11-16T14:02:51.326270+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "0.58%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.19%",
+              "MemUsage": "332.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "6.99GB / 3.07GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 670MB",
+              "CPUPerc": "18.81%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.64%",
+              "MemUsage": "606.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.26GB / 15.5GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.65MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:03:08.406778+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "123.13%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.21%",
+              "MemUsage": "333.7MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.03GB / 3.08GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 670MB",
+              "CPUPerc": "28.26%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.28GB / 15.5GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.65MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:03:24.604105+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "139.08%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.23%",
+              "MemUsage": "335.3MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.09GB / 3.1GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 670MB",
+              "CPUPerc": "28.24%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.29GB / 15.6GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.65MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:03:41.679804+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "122.58%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.25%",
+              "MemUsage": "336.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.15GB / 3.12GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 670MB",
+              "CPUPerc": "27.04%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "610.8MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.31GB / 15.7GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.65MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:03:58.792735+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "1.16%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.14%",
+              "MemUsage": "328.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.19GB / 3.13GB",
+              "PIDs": "3"
+            },
+            {
+              "BlockIO": "67.4MB / 670MB",
+              "CPUPerc": "0.39%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.63%",
+              "MemUsage": "605.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.33GB / 15.7GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.02%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.65MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-catalogue_page_1-100vu-02",
+      "samples": [
+        {
+          "utc": "2026-11-16T14:04:16.893064+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "1.08%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.24%",
+              "MemUsage": "336.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.24GB / 3.15GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 670MB",
+              "CPUPerc": "19.21%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.64%",
+              "MemUsage": "606.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.34GB / 15.8GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.65MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:04:33.613035+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "123.46%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.24%",
+              "MemUsage": "336.3MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.28GB / 3.16GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 671MB",
+              "CPUPerc": "30.08%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "610.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.35GB / 15.8GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.65MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:04:50.696405+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "123.05%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.24%",
+              "MemUsage": "336.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.33GB / 3.17GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 671MB",
+              "CPUPerc": "29.61%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611.1MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.37GB / 15.8GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.65MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:05:07.766867+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "123.81%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.25%",
+              "MemUsage": "337MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.38GB / 3.19GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 671MB",
+              "CPUPerc": "28.96%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.71%",
+              "MemUsage": "611.3MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.39GB / 15.9GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.65MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-catalogue_page_1-100vu-03",
+      "samples": [
+        {
+          "utc": "2026-11-16T14:05:39.913897+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "1.14%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.23%",
+              "MemUsage": "336MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.48GB / 3.22GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 671MB",
+              "CPUPerc": "0.38%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.63%",
+              "MemUsage": "605.6MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.42GB / 16GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:05:56.998628+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "125.79%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.24%",
+              "MemUsage": "336.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.51GB / 3.23GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 671MB",
+              "CPUPerc": "26.82%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "610.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.43GB / 16GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:06:13.623897+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "124.04%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.25%",
+              "MemUsage": "336.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.57GB / 3.25GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 671MB",
+              "CPUPerc": "28.04%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.45GB / 16.1GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:06:30.714839+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "142.68%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.25%",
+              "MemUsage": "337.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.63GB / 3.27GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 671MB",
+              "CPUPerc": "28.66%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "610.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.46GB / 16.1GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-catalogue_page_1-50vu-01",
+      "samples": [
+        {
+          "utc": "2026-11-16T12:31:27.164461+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "23.69%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.42%",
+              "MemUsage": "112.3MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "1.68GB / 730MB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 654MB",
+              "CPUPerc": "2.43%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "5.93GB / 10.2GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:31:43.676419+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "48.44%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.43%",
+              "MemUsage": "113.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "1.71GB / 739MB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 654MB",
+              "CPUPerc": "13.38%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.8MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "5.94GB / 10.2GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:32:00.759683+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "54.00%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.44%",
+              "MemUsage": "114.1MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "1.75GB / 752MB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 654MB",
+              "CPUPerc": "13.91%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.54%",
+              "MemUsage": "598.1MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "5.95GB / 10.3GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:32:17.831941+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "53.24%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.45%",
+              "MemUsage": "115MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "1.79GB / 765MB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 654MB",
+              "CPUPerc": "13.13%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.6MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "5.96GB / 10.3GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-catalogue_page_1-50vu-02",
+      "samples": [
+        {
+          "utc": "2026-11-16T12:32:49.994783+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "0.99%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.45%",
+              "MemUsage": "115.1MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "1.86GB / 787MB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 655MB",
+              "CPUPerc": "0.39%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "5.98GB / 10.4GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:33:07.074685+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "54.84%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "116MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "1.89GB / 795MB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 655MB",
+              "CPUPerc": "13.47%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.54%",
+              "MemUsage": "598.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "5.99GB / 10.4GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:33:23.667582+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "49.40%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "115.8MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "1.93GB / 809MB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 655MB",
+              "CPUPerc": "13.36%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.54%",
+              "MemUsage": "597.8MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6GB / 10.4GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:33:40.752353+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "50.69%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "116.1MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "1.97GB / 822MB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 655MB",
+              "CPUPerc": "13.41%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.54%",
+              "MemUsage": "598.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.02GB / 10.5GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-catalogue_page_1-50vu-03",
+      "samples": [
+        {
+          "utc": "2026-11-16T12:34:12.691979+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "1.02%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "116.1MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.04GB / 843MB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 655MB",
+              "CPUPerc": "0.39%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.54%",
+              "MemUsage": "597.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.04GB / 10.5GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:34:29.778019+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "53.37%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "116.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.07GB / 852MB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 655MB",
+              "CPUPerc": "13.51%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.54%",
+              "MemUsage": "597.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.05GB / 10.6GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:34:46.836569+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "59.70%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "115.7MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.11GB / 865MB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 655MB",
+              "CPUPerc": "13.33%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.54%",
+              "MemUsage": "598.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.06GB / 10.6GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:35:03.649819+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "54.53%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "116.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.15GB / 878MB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 655MB",
+              "CPUPerc": "15.04%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.54%",
+              "MemUsage": "598.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.07GB / 10.7GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-editor_25_variants-100vu-01",
+      "samples": [
+        {
+          "utc": "2026-11-16T14:11:11.880847+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "85.89%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.24%",
+              "MemUsage": "336.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.2GB / 3.63GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 673MB",
+              "CPUPerc": "2.45%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.64%",
+              "MemUsage": "605.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.83GB / 16.7GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:11:29.007307+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "121.18%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.24%",
+              "MemUsage": "336.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.24GB / 3.65GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 673MB",
+              "CPUPerc": "24.07%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.84GB / 16.7GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:11:46.124548+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "121.93%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.24%",
+              "MemUsage": "336.3MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.28GB / 3.67GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 673MB",
+              "CPUPerc": "23.99%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.71%",
+              "MemUsage": "611.8MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.86GB / 16.8GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:12:02.602421+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "136.61%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.24%",
+              "MemUsage": "336.3MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.32GB / 3.69GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 673MB",
+              "CPUPerc": "26.11%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.88GB / 16.8GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-editor_25_variants-100vu-02",
+      "samples": [
+        {
+          "utc": "2026-11-16T14:12:34.629358+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "1.07%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.23%",
+              "MemUsage": "335.6MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.39GB / 3.72GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 674MB",
+              "CPUPerc": "0.34%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.64%",
+              "MemUsage": "606.1MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.92GB / 16.9GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:12:51.754796+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "121.35%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.24%",
+              "MemUsage": "336MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.42GB / 3.74GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 674MB",
+              "CPUPerc": "24.09%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.93GB / 16.9GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:13:08.882999+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "136.24%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.23%",
+              "MemUsage": "335.7MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.46GB / 3.76GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 674MB",
+              "CPUPerc": "24.58%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "610.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.95GB / 17GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:13:26.006732+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "131.64%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.23%",
+              "MemUsage": "335.6MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.51GB / 3.78GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 674MB",
+              "CPUPerc": "24.07%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.71%",
+              "MemUsage": "611.3MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.98GB / 17GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-editor_25_variants-100vu-03",
+      "samples": [
+        {
+          "utc": "2026-11-16T14:13:58.227236+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "85.35%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.23%",
+              "MemUsage": "335.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.58GB / 3.81GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 674MB",
+              "CPUPerc": "2.41%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.64%",
+              "MemUsage": "606.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "9.01GB / 17.1GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:14:14.626465+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "122.17%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.23%",
+              "MemUsage": "335.8MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.6GB / 3.83GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 674MB",
+              "CPUPerc": "23.50%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "9.03GB / 17.1GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:14:31.770251+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "127.58%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.23%",
+              "MemUsage": "335.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.65GB / 3.85GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 674MB",
+              "CPUPerc": "24.95%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "9.05GB / 17.2GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:14:48.894944+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "122.35%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.24%",
+              "MemUsage": "336.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.69GB / 3.87GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 674MB",
+              "CPUPerc": "25.45%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.71%",
+              "MemUsage": "611.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "9.07GB / 17.2GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-editor_25_variants-50vu-01",
+      "samples": [
+        {
+          "utc": "2026-11-16T12:39:43.703896+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "1.04%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "115.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.54GB / 1.12GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 657MB",
+              "CPUPerc": "0.37%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.32GB / 11GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:40:00.850141+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "65.84%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "116MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.57GB / 1.13GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 657MB",
+              "CPUPerc": "14.67%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.33GB / 11.1GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:40:17.976073+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "59.00%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.47%",
+              "MemUsage": "116.6MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.6GB / 1.15GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 658MB",
+              "CPUPerc": "13.67%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.35GB / 11.1GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:40:35.086863+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "62.40%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "116.1MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.64GB / 1.17GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 658MB",
+              "CPUPerc": "13.83%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.36GB / 11.1GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-editor_25_variants-50vu-02",
+      "samples": [
+        {
+          "utc": "2026-11-16T12:41:06.346570+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "1.04%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "115.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.7GB / 1.2GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 658MB",
+              "CPUPerc": "0.38%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.39GB / 11.2GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:41:22.697608+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "60.17%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "115.6MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.72GB / 1.21GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 658MB",
+              "CPUPerc": "13.52%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.6MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.4GB / 11.2GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:41:39.825070+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "63.87%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "115.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.76GB / 1.23GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 658MB",
+              "CPUPerc": "14.60%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.42GB / 11.3GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:41:56.956613+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "68.34%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "115.6MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.79GB / 1.24GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 658MB",
+              "CPUPerc": "14.90%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.44GB / 11.3GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-editor_25_variants-50vu-03",
+      "samples": [
+        {
+          "utc": "2026-11-16T12:42:29.226263+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "1.10%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "115.8MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.85GB / 1.27GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 659MB",
+              "CPUPerc": "0.36%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.47GB / 11.4GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:42:46.349564+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "62.01%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.47%",
+              "MemUsage": "116.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.88GB / 1.29GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 659MB",
+              "CPUPerc": "13.56%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.48GB / 11.4GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:43:02.708923+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "63.05%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.47%",
+              "MemUsage": "116.7MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.92GB / 1.3GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 659MB",
+              "CPUPerc": "14.99%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.5GB / 11.4GB",
+              "PIDs": "53"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:43:19.826012+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "64.53%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "116MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.95GB / 1.32GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 659MB",
+              "CPUPerc": "14.76%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.52GB / 11.5GB",
+              "PIDs": "52"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-editor_2_variants-100vu-01",
+      "samples": [
+        {
+          "utc": "2026-11-16T14:07:02.636061+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "1.07%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.24%",
+              "MemUsage": "336.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.71GB / 3.3GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 671MB",
+              "CPUPerc": "0.37%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.64%",
+              "MemUsage": "606.3MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.5GB / 16.2GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:07:19.707140+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "127.80%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.25%",
+              "MemUsage": "336.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.74GB / 3.32GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 671MB",
+              "CPUPerc": "25.11%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611.3MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.52GB / 16.2GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:07:36.782480+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "148.37%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.25%",
+              "MemUsage": "337MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.77GB / 3.35GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 672MB",
+              "CPUPerc": "27.07%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611.3MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.54GB / 16.3GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:07:53.629844+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "147.33%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.25%",
+              "MemUsage": "337.1MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.81GB / 3.37GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 672MB",
+              "CPUPerc": "26.36%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.57GB / 16.3GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-editor_2_variants-100vu-02",
+      "samples": [
+        {
+          "utc": "2026-11-16T14:08:25.783537+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "1.16%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.24%",
+              "MemUsage": "336.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.87GB / 3.41GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 672MB",
+              "CPUPerc": "2.50%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.64%",
+              "MemUsage": "606.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.61GB / 16.4GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:08:42.632288+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "141.51%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.24%",
+              "MemUsage": "336.6MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.9GB / 3.43GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 672MB",
+              "CPUPerc": "26.63%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611.1MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.63GB / 16.4GB",
+              "PIDs": "142"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:08:59.710521+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "147.08%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.25%",
+              "MemUsage": "336.8MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.93GB / 3.46GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 672MB",
+              "CPUPerc": "25.68%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.65GB / 16.4GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:09:16.789826+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "131.52%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.25%",
+              "MemUsage": "337.1MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "7.97GB / 3.48GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 672MB",
+              "CPUPerc": "27.73%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.68GB / 16.5GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-editor_2_variants-100vu-03",
+      "samples": [
+        {
+          "utc": "2026-11-16T14:09:48.941157+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "1.12%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.24%",
+              "MemUsage": "336.6MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.03GB / 3.52GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 673MB",
+              "CPUPerc": "0.37%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.64%",
+              "MemUsage": "605.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.72GB / 16.5GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:10:06.028585+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "147.63%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.25%",
+              "MemUsage": "337.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.06GB / 3.54GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 673MB",
+              "CPUPerc": "27.36%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.71%",
+              "MemUsage": "611.3MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.74GB / 16.6GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:10:22.637597+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "127.86%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.25%",
+              "MemUsage": "336.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.1GB / 3.57GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 673MB",
+              "CPUPerc": "26.24%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.76GB / 16.6GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:10:39.708495+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "129.08%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.25%",
+              "MemUsage": "337.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.14GB / 3.59GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 673MB",
+              "CPUPerc": "25.67%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.71%",
+              "MemUsage": "611.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "8.79GB / 16.6GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-editor_2_variants-50vu-01",
+      "samples": [
+        {
+          "utc": "2026-11-16T12:35:35.907468+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "1.05%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "115.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.2GB / 902MB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 656MB",
+              "CPUPerc": "0.36%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.1GB / 10.7GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:35:52.653674+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "55.58%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "115.7MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.22GB / 914MB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 656MB",
+              "CPUPerc": "13.49%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.11GB / 10.7GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:36:09.796973+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "59.25%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "115.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.25GB / 931MB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 656MB",
+              "CPUPerc": "14.42%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.13GB / 10.8GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:36:26.925430+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "52.05%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.47%",
+              "MemUsage": "116.7MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.27GB / 947MB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 656MB",
+              "CPUPerc": "11.90%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.14GB / 10.8GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-editor_2_variants-50vu-02",
+      "samples": [
+        {
+          "utc": "2026-11-16T12:36:58.171803+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "23.00%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "115.8MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.31GB / 974MB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 656MB",
+              "CPUPerc": "0.38%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.17GB / 10.8GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:37:15.321654+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "55.10%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "115.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.33GB / 985MB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 656MB",
+              "CPUPerc": "13.71%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.18GB / 10.8GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:37:31.671387+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "61.27%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.45%",
+              "MemUsage": "115MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.35GB / 1GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 657MB",
+              "CPUPerc": "13.39%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.2GB / 10.9GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:37:48.813773+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "55.44%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.45%",
+              "MemUsage": "115.3MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.38GB / 1.02GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 657MB",
+              "CPUPerc": "12.52%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.7MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.21GB / 10.9GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-editor_2_variants-50vu-03",
+      "samples": [
+        {
+          "utc": "2026-11-16T12:38:21.064458+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "0.58%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.45%",
+              "MemUsage": "115.3MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.42GB / 1.05GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 657MB",
+              "CPUPerc": "0.36%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.7MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.24GB / 10.9GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:38:38.159907+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "57.32%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.46%",
+              "MemUsage": "115.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.44GB / 1.06GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 657MB",
+              "CPUPerc": "12.95%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.6MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.25GB / 10.9GB",
+              "PIDs": "55"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:38:55.274176+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "60.60%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.45%",
+              "MemUsage": "115.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.46GB / 1.07GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 657MB",
+              "CPUPerc": "12.07%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.7MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.27GB / 11GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:39:11.681619+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "52.43%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.45%",
+              "MemUsage": "115.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "2.49GB / 1.09GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 657MB",
+              "CPUPerc": "12.55%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.29GB / 11GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.52MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-editor_50_variants-100vu-01",
+      "samples": [
+        {
+          "utc": "2026-11-16T14:15:21.170343+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "1.03%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.22%",
+              "MemUsage": "335.1MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.77GB / 3.9GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 675MB",
+              "CPUPerc": "0.36%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.63%",
+              "MemUsage": "605.6MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "9.1GB / 17.3GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.66MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:15:38.307624+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "117.32%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.23%",
+              "MemUsage": "335.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.8GB / 3.92GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 675MB",
+              "CPUPerc": "22.40%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "9.11GB / 17.3GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.67MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:15:54.638900+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "118.47%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.22%",
+              "MemUsage": "335MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.84GB / 3.93GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 675MB",
+              "CPUPerc": "24.30%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.71%",
+              "MemUsage": "611.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "9.13GB / 17.4GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.67MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:16:11.764441+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "117.22%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.22%",
+              "MemUsage": "335MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.89GB / 3.95GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 675MB",
+              "CPUPerc": "23.08%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "9.15GB / 17.4GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.67MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-editor_50_variants-100vu-02",
+      "samples": [
+        {
+          "utc": "2026-11-16T14:16:43.652375+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "19.52%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.22%",
+              "MemUsage": "334.6MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "8.97GB / 3.98GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 676MB",
+              "CPUPerc": "4.30%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.65%",
+              "MemUsage": "607.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "9.18GB / 17.5GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.67MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:17:00.792696+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "117.77%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.23%",
+              "MemUsage": "335.6MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "9GB / 3.99GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 676MB",
+              "CPUPerc": "22.64%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "610.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "9.19GB / 17.5GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.67MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:17:17.918099+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "117.99%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.22%",
+              "MemUsage": "335.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "9.05GB / 4.01GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 676MB",
+              "CPUPerc": "22.73%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "9.21GB / 17.6GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.67MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:17:34.651425+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "116.61%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.23%",
+              "MemUsage": "335.3MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "9.09GB / 4.03GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 676MB",
+              "CPUPerc": "22.19%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "610.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "9.23GB / 17.6GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.67MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-editor_50_variants-100vu-03",
+      "samples": [
+        {
+          "utc": "2026-11-16T14:18:06.903305+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "92.59%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.22%",
+              "MemUsage": "334.6MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "9.17GB / 4.06GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 676MB",
+              "CPUPerc": "0.35%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.64%",
+              "MemUsage": "606.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "9.26GB / 17.7GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.67MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:18:23.661547+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "118.02%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.23%",
+              "MemUsage": "335.7MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "9.2GB / 4.07GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 676MB",
+              "CPUPerc": "22.62%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "610.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "9.27GB / 17.7GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.67MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:18:40.796947+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "118.65%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.23%",
+              "MemUsage": "335.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "9.25GB / 4.09GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 677MB",
+              "CPUPerc": "24.34%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.70%",
+              "MemUsage": "611.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "9.29GB / 17.8GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.67MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T14:18:57.910586+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "116.61%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "4.23%",
+              "MemUsage": "335.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "9.3GB / 4.11GB",
+              "PIDs": "104"
+            },
+            {
+              "BlockIO": "67.4MB / 677MB",
+              "CPUPerc": "22.73%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.71%",
+              "MemUsage": "611.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "9.31GB / 17.8GB",
+              "PIDs": "143"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.67MB / 62MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-editor_50_variants-50vu-01",
+      "samples": [
+        {
+          "utc": "2026-11-16T12:43:51.736858+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "1.12%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.47%",
+              "MemUsage": "116.8MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "3.02GB / 1.35GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 660MB",
+              "CPUPerc": "0.36%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.7MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.55GB / 11.5GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:44:08.874128+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "69.33%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.54%",
+              "MemUsage": "122.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "3.06GB / 1.36GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 660MB",
+              "CPUPerc": "16.18%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.54%",
+              "MemUsage": "598.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.56GB / 11.6GB",
+              "PIDs": "57"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:44:26.003739+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "66.10%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.50%",
+              "MemUsage": "118.7MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "3.11GB / 1.38GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 660MB",
+              "CPUPerc": "15.04%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.58GB / 11.6GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:44:42.720281+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "70.15%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.50%",
+              "MemUsage": "118.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "3.15GB / 1.4GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 660MB",
+              "CPUPerc": "16.00%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.7MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.6GB / 11.7GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-editor_50_variants-50vu-02",
+      "samples": [
+        {
+          "utc": "2026-11-16T12:45:14.964929+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "1.07%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.50%",
+              "MemUsage": "119.1MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "3.23GB / 1.43GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 660MB",
+              "CPUPerc": "0.41%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.54%",
+              "MemUsage": "598.1MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.63GB / 11.7GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:45:31.722388+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "69.10%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.49%",
+              "MemUsage": "118.5MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "3.27GB / 1.45GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 660MB",
+              "CPUPerc": "15.27%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.64GB / 11.8GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:45:48.853726+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "67.49%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.50%",
+              "MemUsage": "118.8MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "3.32GB / 1.46GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 660MB",
+              "CPUPerc": "16.72%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.54%",
+              "MemUsage": "598MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.66GB / 11.8GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:46:05.980977+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "70.36%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.51%",
+              "MemUsage": "119.7MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "3.36GB / 1.48GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 660MB",
+              "CPUPerc": "15.50%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.68GB / 11.9GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "api-editor_50_variants-50vu-03",
+      "samples": [
+        {
+          "utc": "2026-11-16T12:46:38.236312+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "35.27%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.51%",
+              "MemUsage": "119.7MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "3.44GB / 1.51GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 661MB",
+              "CPUPerc": "0.34%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.71GB / 12GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:46:55.368490+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "75.46%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.51%",
+              "MemUsage": "119.7MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "3.48GB / 1.53GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 661MB",
+              "CPUPerc": "16.36%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.54%",
+              "MemUsage": "597.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.72GB / 12GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:47:11.742100+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "64.73%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.50%",
+              "MemUsage": "119.2MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "3.53GB / 1.54GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 661MB",
+              "CPUPerc": "15.11%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.7MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.74GB / 12GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        },
+        {
+          "utc": "2026-11-16T12:47:28.879199+00:00",
+          "exit_code": 0,
+          "containers": [
+            {
+              "BlockIO": "0B / 5.61MB",
+              "CPUPerc": "68.02%",
+              "Container": "3d85b987c6df534b80288550e77fdc77a7699b902a4f753ba23656188b21ea37",
+              "ID": "3d85b987c6df",
+              "MemPerc": "1.51%",
+              "MemUsage": "120MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-backend-1",
+              "NetIO": "3.57GB / 1.56GB",
+              "PIDs": "54"
+            },
+            {
+              "BlockIO": "67.4MB / 661MB",
+              "CPUPerc": "15.52%",
+              "Container": "08cd088b55b7feccbf017a1e3ce64bbb50a255be3c9ba86b0215d2ddc0892da6",
+              "ID": "08cd088b55b7",
+              "MemPerc": "7.53%",
+              "MemUsage": "597.4MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-db-1",
+              "NetIO": "6.76GB / 12.1GB",
+              "PIDs": "51"
+            },
+            {
+              "BlockIO": "0B / 5.12MB",
+              "CPUPerc": "0.00%",
+              "Container": "a93bb439ce4c954eedc63fbe811241c1238cb58cbced7a7e6ee3bb2700912883",
+              "ID": "a93bb439ce4c",
+              "MemPerc": "1.59%",
+              "MemUsage": "125.9MiB / 7.748GiB",
+              "Name": "merchantops-engineering-assessment-frontend-1",
+              "NetIO": "3.53MB / 61.9MB",
+              "PIDs": "67"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

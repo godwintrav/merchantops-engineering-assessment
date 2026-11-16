@@ -1,0 +1,548 @@
+{
+  "schema_version": 1,
+  "runs": [
+    {
+      "run_id": "browser-02",
+      "data": {
+        "schema_version": 2,
+        "readiness_polling": "requestAnimationFrame; excludes assertion retry backoff",
+        "browser": "159.0.8154.6",
+        "base_url": "http://127.0.0.1:5173",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "repetitions": 3,
+        "timing": "Node monotonic action-to-DOM-ready; includes automation overhead, not paint timing",
+        "profile": "desktop, unthrottled; fresh context per repetition, then warm navigation",
+        "bytes": "Resource Timing transferSize (headers + encoded body; cached may be zero), excluding document; API encodedBodySize separately",
+        "results": [
+          {
+            "name": "catalogue_hard_navigation",
+            "repetition": 1,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 70.51316700000001,
+            "resource_transfer_bytes": 2083317,
+            "api_encoded_body_bytes": 3939
+          },
+          {
+            "name": "catalogue_next_page",
+            "repetition": 1,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 80.12475,
+            "resource_transfer_bytes": 4298,
+            "api_encoded_body_bytes": 3998
+          },
+          {
+            "name": "catalogue_search",
+            "repetition": 1,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 332.23408399999994,
+            "resource_transfer_bytes": 501,
+            "api_encoded_body_bytes": 201
+          },
+          {
+            "name": "editor_2_variants",
+            "repetition": 1,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 77.96058299999993,
+            "resource_transfer_bytes": 1088,
+            "api_encoded_body_bytes": 788
+          },
+          {
+            "name": "editor_25_variants",
+            "repetition": 1,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 62.73899999999992,
+            "resource_transfer_bytes": 6105,
+            "api_encoded_body_bytes": 5805
+          },
+          {
+            "name": "editor_50_variants",
+            "repetition": 1,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 64.655125,
+            "resource_transfer_bytes": 11574,
+            "api_encoded_body_bytes": 11274
+          },
+          {
+            "name": "catalogue_hard_navigation",
+            "repetition": 2,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 69.47070800000006,
+            "resource_transfer_bytes": 2083317,
+            "api_encoded_body_bytes": 3939
+          },
+          {
+            "name": "catalogue_next_page",
+            "repetition": 2,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 75.84750000000008,
+            "resource_transfer_bytes": 4298,
+            "api_encoded_body_bytes": 3998
+          },
+          {
+            "name": "catalogue_search",
+            "repetition": 2,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 332.22683299999994,
+            "resource_transfer_bytes": 501,
+            "api_encoded_body_bytes": 201
+          },
+          {
+            "name": "editor_2_variants",
+            "repetition": 2,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 76.42845899999998,
+            "resource_transfer_bytes": 1088,
+            "api_encoded_body_bytes": 788
+          },
+          {
+            "name": "editor_25_variants",
+            "repetition": 2,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 62.12187500000027,
+            "resource_transfer_bytes": 6105,
+            "api_encoded_body_bytes": 5805
+          },
+          {
+            "name": "editor_50_variants",
+            "repetition": 2,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 61.02787499999977,
+            "resource_transfer_bytes": 11574,
+            "api_encoded_body_bytes": 11274
+          },
+          {
+            "name": "catalogue_hard_navigation",
+            "repetition": 3,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 66.69466599999987,
+            "resource_transfer_bytes": 2083317,
+            "api_encoded_body_bytes": 3939
+          },
+          {
+            "name": "catalogue_next_page",
+            "repetition": 3,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 82.02308399999993,
+            "resource_transfer_bytes": 4298,
+            "api_encoded_body_bytes": 3998
+          },
+          {
+            "name": "catalogue_search",
+            "repetition": 3,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 332.04337499999974,
+            "resource_transfer_bytes": 501,
+            "api_encoded_body_bytes": 201
+          },
+          {
+            "name": "editor_2_variants",
+            "repetition": 3,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 76.00170799999978,
+            "resource_transfer_bytes": 1088,
+            "api_encoded_body_bytes": 788
+          },
+          {
+            "name": "editor_25_variants",
+            "repetition": 3,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 63.34504199999992,
+            "resource_transfer_bytes": 6105,
+            "api_encoded_body_bytes": 5805
+          },
+          {
+            "name": "editor_50_variants",
+            "repetition": 3,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 62.76999999999998,
+            "resource_transfer_bytes": 11574,
+            "api_encoded_body_bytes": 11274
+          }
+        ]
+      }
+    },
+    {
+      "run_id": "browser-03",
+      "data": {
+        "schema_version": 2,
+        "readiness_polling": "requestAnimationFrame; excludes assertion retry backoff",
+        "browser": "159.0.8154.6",
+        "base_url": "http://127.0.0.1:5173",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "repetitions": 3,
+        "timing": "Node monotonic action-to-DOM-ready; includes automation overhead, not paint timing",
+        "profile": "desktop, unthrottled; fresh context per repetition, then warm navigation",
+        "bytes": "Resource Timing transferSize (headers + encoded body; cached may be zero), excluding document; API encodedBodySize separately",
+        "results": [
+          {
+            "name": "catalogue_hard_navigation",
+            "repetition": 1,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 63.39079099999998,
+            "resource_transfer_bytes": 2083317,
+            "api_encoded_body_bytes": 3939
+          },
+          {
+            "name": "catalogue_next_page",
+            "repetition": 1,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 83.19045800000004,
+            "resource_transfer_bytes": 4298,
+            "api_encoded_body_bytes": 3998
+          },
+          {
+            "name": "catalogue_search",
+            "repetition": 1,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 332.341958,
+            "resource_transfer_bytes": 501,
+            "api_encoded_body_bytes": 201
+          },
+          {
+            "name": "editor_2_variants",
+            "repetition": 1,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 73.18033400000002,
+            "resource_transfer_bytes": 1088,
+            "api_encoded_body_bytes": 788
+          },
+          {
+            "name": "editor_25_variants",
+            "repetition": 1,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 64.01241700000003,
+            "resource_transfer_bytes": 6105,
+            "api_encoded_body_bytes": 5805
+          },
+          {
+            "name": "editor_50_variants",
+            "repetition": 1,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 63.46433400000001,
+            "resource_transfer_bytes": 11574,
+            "api_encoded_body_bytes": 11274
+          },
+          {
+            "name": "catalogue_hard_navigation",
+            "repetition": 2,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 64.29862500000013,
+            "resource_transfer_bytes": 2083317,
+            "api_encoded_body_bytes": 3939
+          },
+          {
+            "name": "catalogue_next_page",
+            "repetition": 2,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 81.72345800000016,
+            "resource_transfer_bytes": 4298,
+            "api_encoded_body_bytes": 3998
+          },
+          {
+            "name": "catalogue_search",
+            "repetition": 2,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 332.4585420000001,
+            "resource_transfer_bytes": 501,
+            "api_encoded_body_bytes": 201
+          },
+          {
+            "name": "editor_2_variants",
+            "repetition": 2,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 78.60016700000006,
+            "resource_transfer_bytes": 1088,
+            "api_encoded_body_bytes": 788
+          },
+          {
+            "name": "editor_25_variants",
+            "repetition": 2,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 63.66570800000022,
+            "resource_transfer_bytes": 6105,
+            "api_encoded_body_bytes": 5805
+          },
+          {
+            "name": "editor_50_variants",
+            "repetition": 2,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 64.02379199999996,
+            "resource_transfer_bytes": 11574,
+            "api_encoded_body_bytes": 11274
+          },
+          {
+            "name": "catalogue_hard_navigation",
+            "repetition": 3,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 66.08566700000029,
+            "resource_transfer_bytes": 2083317,
+            "api_encoded_body_bytes": 3939
+          },
+          {
+            "name": "catalogue_next_page",
+            "repetition": 3,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 81.03854199999978,
+            "resource_transfer_bytes": 4298,
+            "api_encoded_body_bytes": 3998
+          },
+          {
+            "name": "catalogue_search",
+            "repetition": 3,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 331.97904100000005,
+            "resource_transfer_bytes": 501,
+            "api_encoded_body_bytes": 201
+          },
+          {
+            "name": "editor_2_variants",
+            "repetition": 3,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 76.22366699999975,
+            "resource_transfer_bytes": 1088,
+            "api_encoded_body_bytes": 788
+          },
+          {
+            "name": "editor_25_variants",
+            "repetition": 3,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 63.54475000000002,
+            "resource_transfer_bytes": 6105,
+            "api_encoded_body_bytes": 5805
+          },
+          {
+            "name": "editor_50_variants",
+            "repetition": 3,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 63.38412500000004,
+            "resource_transfer_bytes": 11574,
+            "api_encoded_body_bytes": 11274
+          }
+        ]
+      }
+    },
+    {
+      "run_id": "browser-04",
+      "data": {
+        "schema_version": 2,
+        "readiness_polling": "requestAnimationFrame; excludes assertion retry backoff",
+        "browser": "159.0.8154.6",
+        "base_url": "http://127.0.0.1:5173",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "repetitions": 3,
+        "timing": "Node monotonic action-to-DOM-ready; includes automation overhead, not paint timing",
+        "profile": "desktop, unthrottled; fresh context per repetition, then warm navigation",
+        "bytes": "Resource Timing transferSize (headers + encoded body; cached may be zero), excluding document; API encodedBodySize separately",
+        "results": [
+          {
+            "name": "catalogue_hard_navigation",
+            "repetition": 1,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 66.933875,
+            "resource_transfer_bytes": 2083317,
+            "api_encoded_body_bytes": 3939
+          },
+          {
+            "name": "catalogue_next_page",
+            "repetition": 1,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 81.62912500000004,
+            "resource_transfer_bytes": 4298,
+            "api_encoded_body_bytes": 3998
+          },
+          {
+            "name": "catalogue_search",
+            "repetition": 1,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 332.39433299999996,
+            "resource_transfer_bytes": 501,
+            "api_encoded_body_bytes": 201
+          },
+          {
+            "name": "editor_2_variants",
+            "repetition": 1,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 79.28104200000007,
+            "resource_transfer_bytes": 1088,
+            "api_encoded_body_bytes": 788
+          },
+          {
+            "name": "editor_25_variants",
+            "repetition": 1,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 63.59395900000004,
+            "resource_transfer_bytes": 6105,
+            "api_encoded_body_bytes": 5805
+          },
+          {
+            "name": "editor_50_variants",
+            "repetition": 1,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 64.71624999999995,
+            "resource_transfer_bytes": 11574,
+            "api_encoded_body_bytes": 11274
+          },
+          {
+            "name": "catalogue_hard_navigation",
+            "repetition": 2,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 64.76274999999987,
+            "resource_transfer_bytes": 2083317,
+            "api_encoded_body_bytes": 3939
+          },
+          {
+            "name": "catalogue_next_page",
+            "repetition": 2,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 81.65587500000015,
+            "resource_transfer_bytes": 4298,
+            "api_encoded_body_bytes": 3998
+          },
+          {
+            "name": "catalogue_search",
+            "repetition": 2,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 331.67041700000004,
+            "resource_transfer_bytes": 501,
+            "api_encoded_body_bytes": 201
+          },
+          {
+            "name": "editor_2_variants",
+            "repetition": 2,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 75.95462500000008,
+            "resource_transfer_bytes": 1088,
+            "api_encoded_body_bytes": 788
+          },
+          {
+            "name": "editor_25_variants",
+            "repetition": 2,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 64.26454100000001,
+            "resource_transfer_bytes": 6105,
+            "api_encoded_body_bytes": 5805
+          },
+          {
+            "name": "editor_50_variants",
+            "repetition": 2,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 63.390625,
+            "resource_transfer_bytes": 11574,
+            "api_encoded_body_bytes": 11274
+          },
+          {
+            "name": "catalogue_hard_navigation",
+            "repetition": 3,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 64.63212500000009,
+            "resource_transfer_bytes": 2083317,
+            "api_encoded_body_bytes": 3939
+          },
+          {
+            "name": "catalogue_next_page",
+            "repetition": 3,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 83.86425000000008,
+            "resource_transfer_bytes": 4298,
+            "api_encoded_body_bytes": 3998
+          },
+          {
+            "name": "catalogue_search",
+            "repetition": 3,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 332.42949999999973,
+            "resource_transfer_bytes": 501,
+            "api_encoded_body_bytes": 201
+          },
+          {
+            "name": "editor_2_variants",
+            "repetition": 3,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 76.57195900000033,
+            "resource_transfer_bytes": 1088,
+            "api_encoded_body_bytes": 788
+          },
+          {
+            "name": "editor_25_variants",
+            "repetition": 3,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 63.835999999999785,
+            "resource_transfer_bytes": 6105,
+            "api_encoded_body_bytes": 5805
+          },
+          {
+            "name": "editor_50_variants",
+            "repetition": 3,
+            "requests": 1,
+            "errors": 0,
+            "duration_ms": 64.0590830000001,
+            "resource_transfer_bytes": 11574,
+            "api_encoded_body_bytes": 11274
+          }
+        ]
+      }
+    }
+  ]
+}

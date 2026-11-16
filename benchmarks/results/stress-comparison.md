@@ -1,42 +1,23 @@
-# 50- and 100-User Stress Comparison
+# High-Load Before/After Comparison
 
-Recorded November 15, 2026: **24 runs, 230,446 measured requests, zero HTTP/content failures, and zero interrupted iterations**. Each of the eight case/load combinations has three repetitions. Business fixtures and query profiles were unchanged afterward; the temporary account was removed.
+Each cell is a range of three run p95 values in milliseconds. The 25-user control is included alongside 50/100 VUs.
 
-## Latency
-
-Ranges below are individual-run p95 values in milliseconds, not pooled percentiles.
-
-| Endpoint | 25 VUs | 50 VUs | 100 VUs |
-| --- | ---: | ---: | ---: |
-| Catalogue | 77.61–88.01 | 151.76–173.74 | 470.05–474.17 |
-| Editor: 2 variants | 23.92–25.00 | 25.92–28.80 | 99.90–104.98 |
-| Editor: 25 variants | 101.33–134.47 | 397.53–404.53 | 1015.04–1026.90 |
-| Editor: 50 variants | 348.76–380.09 | 829.39–837.74 | 1932.24–1965.33 |
+| API | Before 25 | After 25 | Before 50 | After 50 | Before 100 | After 100 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Catalogue | 77.61–88.01 | 21.14–24.13 | 151.76–173.74 | 17.17–21.60 | 470.05–474.17 | 133.68–180.41 |
+| Editor: 2 variants | 23.92–25.00 | 20.95–25.27 | 25.92–28.80 | 24.01–25.43 | 99.90–104.98 | 113.51–116.88 |
+| Editor: 25 variants | 101.33–134.47 | 21.08–24.66 | 397.53–404.53 | 22.44–25.23 | 1015.04–1026.90 | 188.72–192.07 |
+| Editor: 50 variants | 348.76–380.09 | 25.83–27.83 | 829.39–837.74 | 21.26–22.13 | 1932.24–1965.33 | 282.33–283.05 |
 
 ## Throughput
 
-Median of per-run measured-window request rates. Includes the 200ms think time; not maximum capacity.
+Median measured-window requests/sec. Includes think time; not maximum capacity.
 
-| Endpoint | 25 VUs, req/s | 50 VUs, req/s | 100 VUs, req/s |
-| --- | ---: | ---: | ---: |
-| Catalogue | 106.56 | 172.46 | 173.25 |
-| Editor: 2 variants | 117.73 | 235.70 | 394.44 |
-| Editor: 25 variants | 95.28 | 98.70 | 95.14 |
-| Editor: 50 variants | 54.76 | 54.40 | 52.34 |
+| API | Before 25 | After 25 | Before 50 | After 50 | Before 100 | After 100 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Catalogue | 106.56 | 118.81 | 172.46 | 241.00 | 173.25 | 334.89 |
+| Editor: 2 variants | 117.73 | 118.79 | 235.70 | 237.37 | 394.44 | 354.45 |
+| Editor: 25 variants | 95.28 | 118.95 | 98.70 | 237.96 | 95.14 | 278.32 |
+| Editor: 50 variants | 54.76 | 117.32 | 54.40 | 238.10 | 52.34 | 226.04 |
 
-## Interpretation
-
-- The catalogue is near 173 req/s at both 50 and 100 VUs, while p95 increases from 152–174ms to 470–474ms.
-- The 25-variant editor remains near 95–99 req/s as p95 rises from 398–405ms at 50 VUs to 1.015–1.027 seconds at 100 VUs.
-- The 50-variant editor remains near 52–55 req/s across 25/50/100 VUs. Its p95 rises from 349–380ms to 829–838ms to 1.932–1.965 seconds.
-- The ordinary editor still gains throughput at 100 VUs, although its tail latency increases. Larger responses therefore reach a throughput plateau earlier under this workload.
-- These patterns suggest saturation and increased waiting under the tested configuration. They do not isolate an internal bottleneck by themselves. The separately measured query counts (8/54/104 for the editor) and source loops provide direct evidence of avoidable query amplification.
-- Prioritize batching editor inventory/prices, joining catalogue categories, and removing redundant frontend requests. Re-run the same matrix after those changes before deciding whether Redis is warranted.
-
-## Conditions and Evidence
-
-Same application and primary API measurement scripts as the completed baseline, with the supplied Django runserver/Vite configuration and existing fixtures. Fixed-user closed workload: 15s warm-up, 6s drain gap, 60s measured interval, 200ms think time, sequential runs. VUs share one authenticated merchant-member session per run and target hot fixture data. This is a local development stress comparison, not a production capacity claim.
-
-No latency SLO was enforced: passing here means valid measured responses and completed tests, not that two-second latency is acceptable. No write/adjustment contention was tested.
-
-See [per-run stress evidence](baseline-stress/api-runs.json), [run metadata and environment](baseline-stress/manifest.json), [resource samples](baseline-stress/resources.json), and [original baseline findings](comparison.md). The stress manifest references the identical shared fixture profile by path and hash.
+Maximum per-run invalid-response rate: 0.00% baseline, 0.00% optimized. All selected runs passed zero-error thresholds. Passing validation is not a latency SLO. See [full comparison](comparison.md) for all load levels, browser/SQL evidence, raw-data links, methodology and limitations.

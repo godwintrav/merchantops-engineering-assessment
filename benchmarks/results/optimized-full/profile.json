@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "merchant_id": 1,
+  "fixtures": {
+    "products": 2500,
+    "variants": 5071,
+    "inventory": 5071,
+    "activity_records": 1,
+    "editor_products": [
+      {
+        "id": 5,
+        "variants": 2
+      },
+      {
+        "id": 3,
+        "variants": 25
+      },
+      {
+        "id": 1,
+        "variants": 50
+      }
+    ]
+  },
+  "environment": {
+    "python": "3.12.16",
+    "django": "5.2.19",
+    "database_vendor": "mysql",
+    "database_version": [
+      8,
+      4,
+      13
+    ],
+    "debug": true
+  },
+  "scenarios": [
+    {
+      "name": "catalogue_page_1",
+      "path": "/api/products/?page=1",
+      "kind": "list",
+      "ids": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49
+      ],
+      "count": 2500,
+      "page": 1
+    },
+    {
+      "name": "catalogue_page_50",
+      "path": "/api/products/?page=50",
+      "kind": "list",
+      "ids": [
+        2451,
+        2453,
+        2455,
+        2457,
+        2459,
+        2461,
+        2463,
+        2465,
+        2467,
+        2469,
+        2471,
+        2473,
+        2475,
+        2477,
+        2479,
+        2481,
+        2483,
+        2485,
+        2487,
+        2489,
+        2491,
+        2493,
+        2495,
+        2497,
+        2499
+      ],
+      "count": 2500,
+      "page": 50
+    },
+    {
+      "name": "catalogue_page_100",
+      "path": "/api/products/?page=100",
+      "kind": "list",
+      "ids": [
+        4951,
+        4953,
+        4955,
+        4957,
+        4959,
+        4961,
+        4963,
+        4965,
+        4967,
+        4969,
+        4971,
+        4973,
+        4975,
+        4977,
+        4979,
+        4981,
+        4983,
+        4985,
+        4987,
+        4989,
+        4991,
+        4993,
+        4995,
+        4997,
+        4999
+      ],
+      "count": 2500,
+      "page": 100
+    },
+    {
+      "name": "search_common",
+      "path": "/api/products/?search=Assessment",
+      "kind": "list",
+      "ids": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49
+      ],
+      "count": 2500,
+      "search": "Assessment"
+    },
+    {
+      "name": "search_selective",
+      "path": "/api/products/?search=ASSESS-000005",
+      "kind": "list",
+      "ids": [
+        5
+      ],
+      "count": 1,
+      "search": "ASSESS-000005"
+    },
+    {
+      "name": "search_none",
+      "path": "/api/products/?search=benchmark-no-such-product-938174",
+      "kind": "list",
+      "ids": [],
+      "count": 0,
+      "search": "benchmark-no-such-product-938174"
+    },
+    {
+      "name": "editor_2_variants",
+      "path": "/api/products/5/editor/",
+      "kind": "editor",
+      "id": 5,
+      "variants": 2
+    },
+    {
+      "name": "editor_25_variants",
+      "path": "/api/products/3/editor/",
+      "kind": "editor",
+      "id": 3,
+      "variants": 25
+    },
+    {
+      "name": "editor_50_variants",
+      "path": "/api/products/1/editor/",
+      "kind": "editor",
+      "id": 1,
+      "variants": 50
+    },
+    {
+      "name": "activity_page_1",
+      "path": "/api/products/1/activity/?page=1",
+      "kind": "activity",
+      "count": 1,
+      "page": 1
+    }
+  ],
+  "query_profiles": [
+    {
+      "scenario": "catalogue_page_1",
+      "queries": 3,
+      "operations": {
+        "SELECT": 3
+      },
+      "response_bytes": 3926
+    },
+    {
+      "scenario": "catalogue_page_50",
+      "queries": 3,
+      "operations": {
+        "SELECT": 3
+      },
+      "response_bytes": 4031
+    },
+    {
+      "scenario": "catalogue_page_100",
+      "queries": 3,
+      "operations": {
+        "SELECT": 3
+      },
+      "response_bytes": 3984
+    },
+    {
+      "scenario": "search_common",
+      "queries": 3,
+      "operations": {
+        "SELECT": 3
+      },
+      "response_bytes": 3944
+    },
+    {
+      "scenario": "search_selective",
+      "queries": 3,
+      "operations": {
+        "SELECT": 3
+      },
+      "response_bytes": 201
+    },
+    {
+      "scenario": "search_none",
+      "queries": 2,
+      "operations": {
+        "SELECT": 2
+      },
+      "response_bytes": 52
+    },
+    {
+      "scenario": "editor_2_variants",
+      "queries": 5,
+      "operations": {
+        "SELECT": 5
+      },
+      "response_bytes": 788
+    },
+    {
+      "scenario": "editor_25_variants",
+      "queries": 5,
+      "operations": {
+        "SELECT": 5
+      },
+      "response_bytes": 5805
+    },
+    {
+      "scenario": "editor_50_variants",
+      "queries": 5,
+      "operations": {
+        "SELECT": 5
+      },
+      "response_bytes": 11274
+    },
+    {
+      "scenario": "activity_page_1",
+      "queries": 4,
+      "operations": {
+        "SELECT": 4
+      },
+      "response_bytes": 351
+    }
+  ],
+  "notes": [
+    "Diagnostic ORM query capture; timings intentionally excluded.",
+    "Forced authentication excludes session/authentication SQL.",
+    "No fixtures modified. Sparse activity history is not a scale benchmark."
+  ]
+}
