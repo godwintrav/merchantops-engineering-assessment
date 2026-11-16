@@ -67,6 +67,17 @@ python3 benchmarks/run.py profile --label candidate
 
 This discovers merchant-local IDs and ordinary/25/50-variant products, and captures query counts through a force-authenticated Django API client. Counts exclude session/authentication SQL and are collected separately from latency tests. It does not seed or reset data. Activity tests only cover existing history; a large-history benchmark needs documented fixtures.
 
+## Catalogue regression checks
+
+With the frontend running, use Node 22.19+ and the installed Chromium binary:
+
+```bash
+cd benchmarks
+npm run test:catalogue
+```
+
+These Playwright tests mock the product API, so they require no credentials or database fixtures. They verify one list request per catalogue load/page/search, displayed fields and response ordering, loading and empty states, and error/retry behavior. They are correctness/request-budget checks, separate from the authenticated timing benchmarks below.
+
 ## Individual measurements
 
 ```bash

@@ -6,6 +6,7 @@
     "node": ">=22.19"
   },
   "scripts": {
+    "test:catalogue": "playwright test tests/catalogue.spec.mjs",
     "browser": "node browser/workflows.mjs",
     "lighthouse": "node browser/lighthouse.mjs"
   },
