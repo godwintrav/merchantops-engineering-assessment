@@ -405,3 +405,26 @@ textarea { resize: vertical; }
 @media (prefers-reduced-motion: reduce) {
   .spinner { animation: none; }
 }
+
+.inventory-adjustment { padding: clamp(1rem, 4vw, 1.5rem); }
+.inventory-dialog {
+  width: min(40rem, calc(100% - 2rem));
+  max-height: calc(100dvh - 2rem);
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+  color: inherit;
+  background: var(--surface);
+  box-shadow: 0 1.5rem 5rem #17132d40;
+  overscroll-behavior: contain;
+}
+.inventory-dialog::backdrop { background: #17132d80; }
+.inventory-dialog-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 0.35rem; }
+.inventory-dialog-header h2 { margin: 0; font-size: 1.2rem; overflow-wrap: anywhere; }
+.inventory-dialog-close { display: grid; place-items: center; flex: none; width: 2rem; height: 2rem; padding: 0; border: 0; border-radius: 0.35rem; background: var(--soft); color: var(--muted); font-size: 1.5rem; cursor: pointer; }
+.inventory-dialog-close:disabled { opacity: 0.55; cursor: default; }
+.inventory-dialog-close:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.inventory-adjustment > p + p { margin-top: 0.35rem; }
+.inventory-preview { margin-top: 1rem; font-weight: 650; }
+.inventory-help { color: var(--muted); font-size: 0.8125rem; }
+.inventory-actions { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1rem; }

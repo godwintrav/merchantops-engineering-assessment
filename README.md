@@ -156,6 +156,30 @@ Run a production build:
 docker compose exec frontend npm run build
 ```
 
+## Browser tests (Playwright)
+
+Keep the frontend running at `http://127.0.0.1:5173`. Browser tests run on the host and require Node 22.19+ and Chromium. With nvm installed, run `nvm install 22` once if Node 22 is missing. Activate it with `nvm use 22` in every new terminal before running npm/npx commands.
+
+From the repository root:
+
+```bash
+cd benchmarks
+nvm use 22
+npm ci
+export PLAYWRIGHT_BROWSERS_PATH=/tmp/merchantops-playwright
+npx playwright install chromium
+npx playwright test
+```
+
+For subsequent runs, activate Node and use the same browser path:
+
+```bash
+nvm use 22
+PLAYWRIGHT_BROWSERS_PATH=/tmp/merchantops-playwright npx playwright test
+```
+
+Run that command from `benchmarks/`. These tests mock API responses and require no login credentials; MySQL concurrency and atomicity checks run separately in the backend suite. See [benchmarks/README.md](benchmarks/README.md) for individual suites and performance measurements. If a command reports `Unexpected token ?`, check `node --version` and run `nvm use 22` again.
+
 ## Python formatting
 
 The backend uses **Black 25.1.0** and **isort 6.0.1**, configured in `backend/pyproject.toml`. Development dependencies are listed in `backend/requirements-dev.txt` and are not required for normal application startup.

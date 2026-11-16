@@ -4,6 +4,7 @@ import { onBeforeRouteLeave, onBeforeRouteUpdate, useRoute, useRouter } from 'vu
 import { productImagePattern, products } from '../api'
 import { catalogueQuery } from '../router'
 import { useResource } from '../useResource'
+import InventoryAdjustmentForm from '../components/InventoryAdjustmentForm.vue'
 import ProductThumbnail from '../components/ProductThumbnail.vue'
 import RequestState from '../components/RequestState.vue'
 import StatusBadge from '../components/StatusBadge.vue'
@@ -23,6 +24,38 @@ const dirty = computed(() => changed.value.length > 0)
 const saving = ref(false)
 const saveError = ref('')
 const saved = ref(false)
+const inventoryOverrides = ref({})
+const adjustmentVariantId = ref(null)
+const adjustmentBusy = ref(false)
+const adjustmentDirty = ref(false)
+const selectedVariant = computed(() => {
+  const variant = product.value?.variants.find(item => item.id === adjustmentVariantId.value)
+  return variant ? { ...variant, inventory: inventoryFor(variant) } : null
+})
+const needsUnloadWarning = computed(() => dirty.value || saving.value || adjustmentBusy.value || adjustmentDirty.value)
+
+function inventoryFor(variant) {
+  return inventoryOverrides.value[variant.id] || variant.inventory
+}
+
+function openAdjustment(variant) {
+  if (adjustmentBusy.value || adjustmentVariantId.value === variant.id) return
+  if (adjustmentDirty.value && !window.confirm('Discard this unfinished inventory adjustment?')) return
+  adjustmentDirty.value = false
+  adjustmentVariantId.value = variant.id
+}
+
+async function closeAdjustment() {
+  const variantId = adjustmentVariantId.value
+  adjustmentDirty.value = false
+  adjustmentVariantId.value = null
+  await nextTick()
+  document.getElementById('adjust-stock-' + variantId)?.focus()
+}
+
+function inventorySaved(result) {
+  inventoryOverrides.value = { ...inventoryOverrides.value, [result.adjustment.variant_id]: result.inventory }
+}
 const formatPrice = new Intl.NumberFormat(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 const tiers = computed(() => [...new Set([
   'retail',
@@ -45,7 +78,8 @@ watch(product, (record) => {
 })
 
 function confirmLeave() {
-  if (saving.value) return false
+  if (saving.value || adjustmentBusy.value) return false
+  if (adjustmentDirty.value && !window.confirm('Discard this unfinished inventory adjustment?')) return false
   return !dirty.value || window.confirm('Discard unsaved changes to this product?')
 }
 
@@ -54,13 +88,16 @@ function warnBeforeUnload(event) {
   event.returnValue = ''
 }
 
-watch(dirty, (hasChanges) => {
+watch(needsUnloadWarning, (hasChanges) => {
   if (hasChanges) window.addEventListener('beforeunload', warnBeforeUnload)
   else window.removeEventListener('beforeunload', warnBeforeUnload)
 }, { flush: 'sync' })
 
 onBeforeRouteLeave(confirmLeave)
-onBeforeRouteUpdate((to, from) => to.params.id === from.params.id || confirmLeave())
+onBeforeRouteUpdate((to, from) => {
+  if (adjustmentBusy.value) return false
+  return to.params.id === from.params.id || confirmLeave()
+})
 
 onMounted(() => {
   registerSignOutGuard({
@@ -76,6 +113,7 @@ onScopeDispose(() => {
 })
 
 async function selectTab(name, focus = false) {
+  if (adjustmentBusy.value) return
   const query = name === 'general' ? {} : { tab: name }
   await router.replace({ name: 'editor', params: { id }, query })
   if (focus) {
@@ -147,7 +185,7 @@ async function save() {
 
     <div class="tabs" role="tablist" aria-label="Product information" @keydown="moveTab">
       <button v-for="name in tabs" :id="'tab-' + name" :key="name" type="button" role="tab"
-        :aria-selected="tab === name" :aria-controls="'panel-' + name" :tabindex="tab === name ? 0 : -1"
+        :disabled="adjustmentBusy" :aria-selected="tab === name" :aria-controls="'panel-' + name" :tabindex="tab === name ? 0 : -1"
         @click="selectTab(name)">
         {{ name }}
       </button>
@@ -228,20 +266,25 @@ async function save() {
       <div v-if="product.variants.length" class="table-scroll">
         <table class="data-table">
           <thead>
-            <tr><th scope="col">Variant</th><th scope="col">SKU</th><th scope="col" class="numeric">Quantity</th><th scope="col" class="numeric">Reserved</th><th scope="col" class="numeric">Available</th></tr>
+            <tr><th scope="col">Variant</th><th scope="col">SKU</th><th scope="col" class="numeric">Quantity</th><th scope="col" class="numeric">Reserved</th><th scope="col" class="numeric">Available</th><th scope="col">Actions</th></tr>
           </thead>
           <tbody>
             <tr v-for="variant in product.variants" :key="variant.id">
               <th scope="row">{{ variant.name }}</th>
               <td class="code">{{ variant.sku }}</td>
-              <td class="numeric">{{ variant.inventory?.quantity ?? '—' }}</td>
-              <td class="numeric">{{ variant.inventory?.reserved ?? '—' }}</td>
-              <td class="numeric">{{ variant.inventory ? variant.inventory.quantity - variant.inventory.reserved : '—' }}</td>
+              <td class="numeric">{{ inventoryFor(variant)?.quantity ?? '—' }}</td>
+              <td class="numeric">{{ inventoryFor(variant)?.reserved ?? '—' }}</td>
+              <td class="numeric">{{ inventoryFor(variant) ? inventoryFor(variant).quantity - inventoryFor(variant).reserved : '—' }}</td>
+              <td>
+                <button v-if="inventoryFor(variant)" :id="'adjust-stock-' + variant.id" class="button" type="button" :disabled="adjustmentBusy" :aria-expanded="adjustmentVariantId === variant.id" aria-haspopup="dialog" :aria-label="'Adjust stock for ' + variant.name" @click="openAdjustment(variant)">Adjust stock</button>
+                <span v-else>Inventory unavailable</span>
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
       <p v-else class="request-state">No variants for this product.</p>
+      <InventoryAdjustmentForm v-if="selectedVariant" :key="selectedVariant.id" :product-id="id" :variant="selectedVariant" @saved="inventorySaved" @busy="adjustmentBusy = $event" @dirty="adjustmentDirty = $event" @cancel="closeAdjustment" />
     </section>
 
     <section v-show="tab === 'availability'" id="panel-availability" class="panel tab-panel" role="tabpanel" aria-labelledby="tab-availability" tabindex="0">

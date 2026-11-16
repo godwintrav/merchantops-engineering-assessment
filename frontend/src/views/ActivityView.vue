@@ -58,11 +58,17 @@ watch(page, fetchActivity, { immediate: true })
           </thead>
           <tbody>
             <tr v-for="record in data.results" :key="record.id">
-              <th scope="row">{{ record.action === 'product.updated' ? 'Product updated' : record.action }}</th>
-              <td>{{ record.actor || 'Unknown' }}</td>
+              <th scope="row">{{ record.action === 'product.updated' ? 'Product updated' : record.action === 'inventory.adjusted' ? 'Inventory adjusted' : record.action }}</th>
+              <td>{{ record.actor || record.details?.operator_username || 'Unknown' }}</td>
               <td><time :datetime="record.created_at">{{ timestamp.format(new Date(record.created_at)) }}</time></td>
               <td>
-                <dl v-if="record.details?.changes && Object.keys(record.details.changes).length" class="change-list">
+                <dl v-if="record.action === 'inventory.adjusted'" class="change-list">
+                  <div><dt>Variant</dt><dd>{{ record.details.variant_name }} <span class="code">{{ record.details.variant_sku }}</span> (ID {{ record.details.variant_id }})</dd></div>
+                  <div><dt>Adjustment</dt><dd>{{ record.details.delta > 0 ? '+' : '' }}{{ record.details.delta }}</dd></div>
+                  <div><dt>Quantity</dt><dd>{{ record.details.quantity_before }} → {{ record.details.quantity_after }}</dd></div>
+                  <div><dt>Reason</dt><dd>{{ record.details.reason }}</dd></div>
+                </dl>
+                <dl v-else-if="record.details?.changes && Object.keys(record.details.changes).length" class="change-list">
                   <div v-for="(change, field) in record.details.changes" :key="field">
                     <dt class="title-case">{{ fieldNames[field] || field.replaceAll('_', ' ') }}</dt>
                     <dd>
@@ -80,7 +86,7 @@ watch(page, fetchActivity, { immediate: true })
       </div>
       <div v-else class="request-state" role="status">
         <strong>No activity yet</strong>
-        <p>Saved product changes will appear here.</p>
+        <p>Product changes and inventory adjustments will appear here.</p>
       </div>
       <PaginationControls v-if="data.count" :page="page" :result="data" label="records" singular="record" @change="changePage" />
     </template>

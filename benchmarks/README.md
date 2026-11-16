@@ -43,10 +43,11 @@ python3 benchmarks/summarize.py --label baseline-stress --include-threshold-fail
 
 ## Prepare a new run
 
-Run from the repository root. Keep Compose services running with the catalogue and complex fixtures from setup.sh. Use an active merchant-member account. Host tools: Python 3, Node 22.19+, and Chromium; k6 can run through Docker.
+Run from the repository root. Keep Compose services running with the catalogue and complex fixtures from setup.sh. Use an active merchant-member account. Host tools: Python 3, Node 22.19+, and Chromium; k6 can run through Docker. With nvm installed, run `nvm install 22` once if needed, then `nvm use 22` in each new terminal before npm/npx commands. An older active Node version can cause an `Unexpected token ?` error.
 
 ```bash
 cd benchmarks
+nvm use 22
 npm ci
 export PLAYWRIGHT_BROWSERS_PATH=/tmp/merchantops-playwright
 npx playwright install chromium
@@ -77,11 +78,14 @@ With the frontend running, use Node 22.19+ and the installed Chromium binary:
 
 ```bash
 cd benchmarks
+nvm use 22
+export PLAYWRIGHT_BROWSERS_PATH=/tmp/merchantops-playwright
 npm run test:catalogue
 npm run test:editor
+npx playwright test  # all 10 tests, including inventory API-helper and workflow checks
 ```
 
-These Playwright tests mock the product API, so they require no credentials or database fixtures. Catalogue checks verify one list request per load/page/search, displayed fields and ordering, loading/empty states, and error/retry behavior. Editor checks cover one GET for ordinary/complex products, populated/blank image paths, tab navigation, and image-only PATCH updates. These are correctness/request-budget checks, separate from the authenticated timing benchmarks below.
+These Playwright tests mock the product API, so they require no credentials or database fixtures. Catalogue checks verify one list request per load/page/search, displayed fields and ordering, loading/empty states, and error/retry behavior. Editor checks cover one GET for ordinary/complex products, populated/blank image paths, tab navigation, and image-only PATCH updates. Inventory checks also cover POST/CSRF, draft preservation, pending/error handling and activity rendering. These are correctness/request-budget checks, separate from the authenticated timing benchmarks below.
 
 ## Individual measurements
 
