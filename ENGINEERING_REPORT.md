@@ -114,7 +114,6 @@ Fresh setup passed in an isolated Compose project with alternate ports and new v
 - API idempotency keys are optional for compatibility; callers omitting them have no duplicate protection. The UI always supplies one. Recovery needs the same key; closing the tab/losing storage requires checking history. Different keys cannot identify the same real-world intent automatically.
 - Server keys have no automatic expiry and consume storage. They survive product/operator deletion through stored scalar identity; merchant deletion cascades them. Audit actor deletion nulls its FK, while product deletion cascades activity. This is not a tamper-proof or deletion-proof ledger.
 - Request authorization does not instantly revoke an already-running authorized transaction. Lock timeouts bound database lock waits, not every network/request failure. Read batching bounds round trips, while payload size and serialization still grow with related data.
-- Final commits, public-fork visibility, hosted CI and repository-URL submission must be confirmed before the assessment deadline. No upstream pull request is required.
 
 ### Improvements I Would Add Next
 
